@@ -1,0 +1,34 @@
+---
+title: "assignment4.qmd"
+format: html
+editor: visual
+---
+1)	Databases
+1-1)	Uber
+Purpose: connecting passengers and drivers
+We can select the ride based on our budget and time circumstances
+We select the destination as a passenger and it shows the distance, type of vehicles( lux, shared ride, van, bike) with different fees. Then we select the option and wait for the driver.
+1-2)	Bank application
+Easier transactions and revieing statement or account balance in real time
+It has a first page showing the budget and in the second page showing our transaction. 
+We can do deposit in the mobile application and transfer money.
+1-3)	Duolingo 
+The purpose is making language learning easier and accessible.
+It is a language learning application. It saves my courses and time that I spend on the courses. It has different stages for each course and game while we are learning
+
+2)	Teachers rank
+2-1) purpose: I want to have a database of teachers and see easily what is their score in students opinion about the course and teacher easily without schools criteria and survey that does not show the real feedback of students.
+Function: students add their comments and score to the teacher platform and it is visible for all people. Also the person can be anonymous and do not need to add their name
+Simple interface design: The first page student can select the name of teacher- select the score- add comments and post it
+I would add comparison dashboard for teachers in same field same university or school
+2-2) question website
+Purpose: for reporters and news agencies I want to design a platform to add their questions before meeting with president and if the ai in the website could find the previous answer will show them if they did not satisfy with the answer they can ask it again. 
+Function: the database will remove repetitive questions and show the questions on the board for president without the need for chaos in the meeting and the answer will be typed by AI immediately.
+Interface: there is one page for asking question just this and it store the question and bring it up for president to see the questions 
+
+2-3) purpose: volunteer database website to show all available voluntary locations for people. 
+Function: charities or voluntary opportunities are available in this website in the first page. People can select their location and type of activities categories then they will see available voluntary opportunities then they will select. They will guide to the second page which is the information and requirements of that voluntary then if they want they can submit information ( name, email address and phone number). 
+Interface: there are list of voluntary opportunities. People who are members of website. 
+
+5) what are things that current databases cannot do? I think they cannot update themselves automatically. They cannot change their relationship by themselves and if the person change the schema that may cause many other effect on whole database it means that it is not easy to change the relationships after we define one way.
+6) linkedin, whatsapp, youtube

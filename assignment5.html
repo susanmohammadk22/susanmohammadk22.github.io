@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>assignment1.qmd</title>
+<title>assignment5.qmd</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -150,15 +185,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running Code</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">assignment1.qmd</h1>
+<h1 class="title">assignment5.qmd</h1>
 </div>
 
 
@@ -175,11 +217,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To Explain or to Predict? They talked about the relationship between causal explanation and empirical prediction. The some fields causal explanatory model has a high prediction power. While in empirical model like NLP the focus is on empirical prediction. The main hypothesis in this study is causal versus predictive distinction has high effect on statistical modeling process and its results. Explanatory modeling and predictive modeling reflect the data mining and statistical analysis methos to explain and predict. And modeling means the whole process including definition, study design, and data collection for statistical usage. In this study they define explaining as causal explanation and explanatory needling as the use of statistical models for testing causal explanations. Predictive modeling uses data mining algorithms and statistical models to predict future observations until time t+k. these modeling summarized the data structure. While in causal theory (descriptive modeling) rely on measurable model to describe the data, like a regression model is used to capture dependent and independent variables to show the relationships between variables. They consider four area for differences between explanation and prediction models, including : Causation-association: in explanatory model f represents causal relationship, while in predictive model f records correlation between inputs and outputs. Theory data: in explanatory, f model is created based on the theory to be able to explain while in predictive, the explanatory and clarity of model is in lower priority than data. Retrospective-prospective: in explanatory relies on testing the hypothesis of previous or current observation, while in prediction assumes the future observations. Bias-variance: in explanatory modeling we attempt on minimizing the bias to obtain more accurate representation. While in predictive models the try to maximize the combination of bias and estimation variance to reach improved empirical precision. These are the steps in the statistical modeling process: Define goal, design study and collect data, prepare data, eda, choose variables, choose methods, evaluate, validate, and model selection, use mode and report</p>
-<p>They said consider both explanation power and prediction power as two dimension, as they are different qualities. There are some explanatory model have some level of predictive power to be considered scientifically useful and there are some predictive models have sufficient explanatory power to be scientifically useful. While , there exist predictive models that do not properly “explain” yet are scientifically valuable. (Bill Langford, Woit, 2006, pages x xii). Therefore, we should define our goal to optimize the right criteria and report both qualities to provide a complete picture of the model. Finally as statistics focuses on inference and less focus on predictive analysis, machine learning has been created.</p>
-<p>Statistical modeling Two cultures One culture is data are generated by a given data model Second culture use algorithms and treats the data mechanism as unknown As statistical community relies on data models, it kept statisticians from working a large range of interesting problems. In the article Leo Brieman defines two goal in analyzing data. 1)prediction: predict future responses to future input variables 2) information: extract information about how nature connects response variables to input variables. He defines two different approaches toward the goals Data modeling cuture. It assumes a stocustic data model for inside of the black box. The value of parameters are estimated from data and model The algorithmic modeling culture. The inside of the box is unknown and an algorithmic operatrion can accurately predict. After several projects and statistical research he found that the belief in the infallibility of data models was almost religious. It is a strange phenomenon- once model created, it becomes truth and the conclusion from it are infallible. While it is not correct. When we make small changes in the model can change complete while it is accurate. He said the picture of which covariates are important can vary significantly between two models having about same deviance. Aggregate over a large set of competing models can reduce the non-uniqueness while improving accuracy He believes that statisticians should focus on solving the problem instead of asking what data model they can create. The best solution might ba algorithmic model or data model or combination of both. So they need to use wide variety of tools. The roots of statistics is lie on working with data and checking theory against data. And he hoped that this century our field will return t its toots.</p>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+</section>
+<section id="running-code" class="level2">
+<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>You can add options to executable code like this</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
