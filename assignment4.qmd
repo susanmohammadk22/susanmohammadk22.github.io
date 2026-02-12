@@ -16,7 +16,6 @@ editor: visual
 Assignment2
 What are the differences between relation schema, relation and instance? Give an example using the university database to illustrate.
 
-relation schema in the database of the book is a class like instructor schema. which includes teacher name, class id, class location
 relation schema in the database of the book is a class like instructor schema and having several of this tables and make a connection between them then we will have schema of tables which are connected together. which includes teacher name, class id, class location
 the ralation is the raw in the instructure schema. 
 instance is the value in each cell
