@@ -1,3 +1,121 @@
 ---
 title: "assignment2.qmd"
 ---
+2/6/2026
+Question 4: What problems do you encounter when working with the dataset?
+Answer:
+1) when I paste the code inside of the assignment document I received this error.
+Error in `haven::read_dta()`:
+! This kind of input is not handled.
+Run `rlang::last_trace()` to see where the error occurred.
+> rlang::last_trace()
+<error/rlang_error>
+Error in `haven::read_dta()`:
+! This kind of input is not handled.
+---
+Backtrace:
+    ▆
+ 1. └─haven::read_dta("https://github.com/datageneration/home/blob/master/DataProgra\nmming/data/TEDS_2016.dta?raw=true")
+Run rlang::last_trace(drop = FALSE) to see 2 hidden frames.
+
+while Chat GPT said I should write read_stat instead of read_data.
+2) I paste this from the book:
+> # Prepare the analyze the Party ID variable 
+> # Assign label to the values (1=KMT, 2=DPP, 3=NP, 4=PFP, 5=TSU, 6=NPP, 7="NA")
+> 
+> TEDS_2016$PartyID <- factor(TEDS_2016$PartyID, labels=c("KMT","DPP","NP","PFP", "TSU", "NPP","NA"))
+> # Check the variable
+> attach(TEDS_2016)
+> head(PartyID)
+[1] NA  NA  KMT NA  NA  DPP
+Levels: KMT DPP NP PFP TSU NPP NA
+> 
+
+then I received very NA in the first column.
+Question 5:
+Answer: then when I installed the ## install.packages("descr"), and run the library I cuold see all data without NA.
+
+TEDS_2016$PartyID 
+      Frequency  Percent
+KMT         388  22.9586
+DPP         591  34.9704
+NP            3   0.1775
+PFP          32   1.8935
+TSU           5   0.2959
+NPP          43   2.5444
+NA          628  37.1598
+Total      1690 100.0000
+> 
+
+
+Questuin 8
+> TEDS_2016$Tondu<-as.numeric(TEDS_2016$Tondu,labels=c("Unification now”,
++ “Status quo, unif. in future”, “Status quo, decide later", "Status quo
++ forever", "Status quo, indep. in future", "Independence now”, “No response"))
+> library(haven)
+> > TEDS_2016$Tondu<-as.numeric(TEDS_2016$Tondu,labels=c("Unification now”,
+Error: unexpected '>' in ">"
+> + “Status quo, unif. in future”, “Status quo, decide later", "Status quo
+Error: unexpected input in "+ “"
+> + forever", "Status quo, indep. in future", "Independence now”, “No response"))
+Error: unexpected string constant in "+ forever", ""
+> TEDS_2016$Tondu<-as.numeric(TEDS_2016$Tondu,labels=c("Unification now”,
++ “Status quo, unif. in future”, “Status quo, decide later", "Status quo
++ forever", "Status quo, indep. in future", "Independence now”, “No response"))
+> TEDS_2016$Tondu<-as.numeric(TEDS_2016$Tondu,labels=c("Unification now”,
++ “Status quo, unif. in future”, “Status quo, decide later", "Status quo
++ forever", "Status quo, indep. in future", "Independence now”, “No response"))
+> TEDS_2016$Tondu<-as.numeric(TEDS_2016$Tondu,labels=c("Unification now”, “Status quo, unif. in future”, “Status quo, decide later", "Status quo forever", "Status quo, indep. in future", "Independence now”, “No response"))
+> attach(TEDS_2016)
+The following objects are masked from TEDS_2016 (pos = 14):
+
+    age, Age, Arear, Blue, Career, Career8, District, DPP, Econ_worse, econworse5, edu, Edu, Ethnic,
+    female, Govt_dont_care, Govt_for_public, green, Green, highincome, income, income_nm,
+    Independence, Inequality, inequality5, KMT, lowincome, Mainland_father, Minnan_father, nI2,
+    No_Party, noparty, north, npp, Party, PartyID, pfp, pubwelf5, Sex, South, sq, Taiwanese, Tondu,
+    Tondu3, Unification, voteblue, voteblue_nm, votedpp_1, votekmt, votekmt_1, votekmt_nm, votetsai,
+    votetsai_all, votetsai_nm, whitecollar
+
+> head(Tondu)
+[1] 3 5 3 5 9 4
+> tail(Tondu)
+[1] 2 3 4 4 3 3
+> library (descr)
+> freq(EDS_2016$Tondu)
+Error: object 'EDS_2016' not found
+>  freq(TEDS_2016$Tondu)
+TEDS_2016$Tondu 
+      Frequency Percent
+1            27   1.598
+2           180  10.651
+3           546  32.308
+4           328  19.408
+5           380  22.485
+6           108   6.391
+9           121   7.160
+Total      1690 100.000
+>
+> ggplot(TEDS_2016,aes(Tondu))+ geom_bar()
+> save.image("C:\\Users\\smvic\\Documents\\Knowledge Mining\\second session assignment\\.RData")
+> 
+
+I had a challenge when I wanted to make this code 
+> ggplot(TEDS_2016, aes(x = Tondu)) +
++   geom_bar(aes(y = (..count..)/sum(..count..))) +
++   scale_y_continuous(labels = percent) +
++   xlab("Taiwan–China Status Preference") +
++   ylab("Percentage of Respondents (%)")
+
+I did not know that what would be the x lable and y lable for this report
+
+
+
+
+2/10/2026
+
+2 questions after class
+
+originality and AI : it means to me that the way we ask questions and ask it prepare or create something that is the original part while the AI by itself cannot create something from the zero as it use algorithm and reading current data and information.
+
+What is AGI? Artifitial General Inteligence
+this type of AI is smarter and be close to human more compare to others as it can learn new skills. if this becomes reallity will be helpful in terms of finding new remedies for some cancer or finding new medication. but it will be a substitute for human

@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -184,6 +213,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>2/6/2026 Question 4: What problems do you encounter when working with the dataset? Answer: 1) when I paste the code inside of the assignment document I received this error. Error in <code>haven::read_dta()</code>: ! This kind of input is not handled. Run <code>rlang::last_trace()</code> to see where the error occurred. &gt; rlang::last_trace() <error rlang_error=""> Error in <code>haven::read_dta()</code>: ! This kind of input is not handled. — Backtrace: ▆ 1. └─haven::read_dta(“https://github.com/datageneration/home/blob/master/DataProgra/data/TEDS_2016.dta?raw=true”) Run rlang::last_trace(drop = FALSE) to see 2 hidden frames.</error></p>
+<p>while Chat GPT said I should write read_stat instead of read_data. 2) I paste this from the book: &gt; # Prepare the analyze the Party ID variable &gt; # Assign label to the values (1=KMT, 2=DPP, 3=NP, 4=PFP, 5=TSU, 6=NPP, 7=“NA”) &gt; &gt; TEDS_2016<span class="math inline">\(PartyID &lt;- factor(TEDS_2016\)</span>PartyID, labels=c(“KMT”,“DPP”,“NP”,“PFP”, “TSU”, “NPP”,“NA”)) &gt; # Check the variable &gt; attach(TEDS_2016) &gt; head(PartyID) [1] NA NA KMT NA NA DPP Levels: KMT DPP NP PFP TSU NPP NA &gt;</p>
+<p>then I received very NA in the first column. Question 5: Answer: then when I installed the ## install.packages(“descr”), and run the library I cuold see all data without NA.</p>
+<p>TEDS_2016$PartyID Frequency Percent KMT 388 22.9586 DPP 591 34.9704 NP 3 0.1775 PFP 32 1.8935 TSU 5 0.2959 NPP 43 2.5444 NA 628 37.1598 Total 1690 100.0000 &gt;</p>
+<p>Questuin 8 &gt; TEDS_2016<span class="math inline">\(Tondu&lt;-as.numeric(TEDS_2016\)</span>Tondu,labels=c(“Unification now”, + “Status quo, unif. in future”, “Status quo, decide later”, “Status quo + forever”, “Status quo, indep. in future”, “Independence now”, “No response”)) &gt; library(haven) &gt; &gt; TEDS_2016<span class="math inline">\(Tondu&lt;-as.numeric(TEDS_2016\)</span>Tondu,labels=c(“Unification now”, Error: unexpected ‘&gt;’ in “&gt;” &gt; + “Status quo, unif. in future”, “Status quo, decide later”, “Status quo Error: unexpected input in”+ “” &gt; + forever”, “Status quo, indep. in future”, “Independence now”, “No response”)) Error: unexpected string constant in “+ forever”, “” &gt; TEDS_2016<span class="math inline">\(Tondu&lt;-as.numeric(TEDS_2016\)</span>Tondu,labels=c(“Unification now”, + “Status quo, unif. in future”, “Status quo, decide later”, “Status quo + forever”, “Status quo, indep. in future”, “Independence now”, “No response”)) &gt; TEDS_2016<span class="math inline">\(Tondu&lt;-as.numeric(TEDS_2016\)</span>Tondu,labels=c(“Unification now”, + “Status quo, unif. in future”, “Status quo, decide later”, “Status quo + forever”, “Status quo, indep. in future”, “Independence now”, “No response”)) &gt; TEDS_2016<span class="math inline">\(Tondu&lt;-as.numeric(TEDS_2016\)</span>Tondu,labels=c(“Unification now”, “Status quo, unif. in future”, “Status quo, decide later”, “Status quo forever”, “Status quo, indep. in future”, “Independence now”, “No response”)) &gt; attach(TEDS_2016) The following objects are masked from TEDS_2016 (pos = 14):</p>
+<pre><code>age, Age, Arear, Blue, Career, Career8, District, DPP, Econ_worse, econworse5, edu, Edu, Ethnic,
+female, Govt_dont_care, Govt_for_public, green, Green, highincome, income, income_nm,
+Independence, Inequality, inequality5, KMT, lowincome, Mainland_father, Minnan_father, nI2,
+No_Party, noparty, north, npp, Party, PartyID, pfp, pubwelf5, Sex, South, sq, Taiwanese, Tondu,
+Tondu3, Unification, voteblue, voteblue_nm, votedpp_1, votekmt, votekmt_1, votekmt_nm, votetsai,
+votetsai_all, votetsai_nm, whitecollar</code></pre>
+<blockquote class="blockquote">
+<p>head(Tondu) [1] 3 5 3 5 9 4 tail(Tondu) [1] 2 3 4 4 3 3 library (descr) freq(EDS_2016<span class="math inline">\(Tondu)
+Error: object 'EDS_2016' not found
+freq(TEDS_2016\)</span>Tondu) TEDS_2016$Tondu Frequency Percent 1 27 1.598 2 180 10.651 3 546 32.308 4 328 19.408 5 380 22.485 6 108 6.391 9 121 7.160 Total 1690 100.000</p>
+<p>ggplot(TEDS_2016,aes(Tondu))+ geom_bar() save.image(“C:\Users\smvic\Documents\Knowledge Mining\second session assignment\.RData”)</p>
+</blockquote>
+<p>I had a challenge when I wanted to make this code &gt; ggplot(TEDS_2016, aes(x = Tondu)) + + geom_bar(aes(y = (..count..)/sum(..count..))) + + scale_y_continuous(labels = percent) + + xlab(“Taiwan–China Status Preference”) + + ylab(“Percentage of Respondents (%)”)</p>
+<p>I did not know that what would be the x lable and y lable for this report</p>
 
 
 
