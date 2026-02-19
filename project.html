@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>project.qmd</title>
+<title>Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -167,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">project.qmd</h1>
+<h1 class="title">Projects</h1>
 </div>
 
 
@@ -184,6 +184,72 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Project Name: Question Platform</p>
+<p>Database Design</p>
+<p>I want to have a website for questions from news agencies when they invited to an event. Or when People invited to an event they will see this panel for questions.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Table</th>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Participants</td>
+<td>person_id</td>
+<td>Unique ID for each participant</td>
+</tr>
+<tr class="even">
+<td>Participants</td>
+<td>first_name</td>
+<td>Person first name</td>
+</tr>
+<tr class="odd">
+<td>Participants</td>
+<td>last_name</td>
+<td>Person last name</td>
+</tr>
+<tr class="even">
+<td>Participants</td>
+<td>organization</td>
+<td>News agency or organization</td>
+</tr>
+<tr class="odd">
+<td>Participants</td>
+<td>state</td>
+<td>State of the participant</td>
+</tr>
+<tr class="even">
+<td>Questions</td>
+<td>question_id</td>
+<td>Unique question ID</td>
+</tr>
+<tr class="odd">
+<td>Questions</td>
+<td>person_id</td>
+<td>Links question to participant</td>
+</tr>
+<tr class="even">
+<td>Questions</td>
+<td>question_text</td>
+<td>Submitted question</td>
+</tr>
+<tr class="odd">
+<td>Questions</td>
+<td>answer_text</td>
+<td>Answer provided during event</td>
+</tr>
+<tr class="even">
+<td>Questions</td>
+<td>created_at</td>
+<td>Time question submitted</td>
+</tr>
+</tbody>
+</table>
+<p>I would like to add an AI tool to do text mining and remove similar questions and type the answer of that question in a live meeting also store the answer in the table in front of the question. then every time that people write similar question it recognize the answer and show them and do not store the repetitive question.</p>
+<p>The Goal: It is important because people ask repetitive questions sometimes and cannot listen to the person who is answering questions, therefore they can see the question and answer on the board in the meeting. Also before meeting they will see the answer of their question so they will not ask repetitive question. Therefore, I can save people times.</p>
 
 
 

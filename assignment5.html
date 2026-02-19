@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -199,8 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto">Quarto</a></li>
-  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running Code</a></li>
+  <li><a href="#answer" id="toc-answer" class="nav-link active" data-scroll-target="#answer">Answer:</a></li>
   </ul>
 </nav>
     </div>
@@ -226,26 +190,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-</section>
-<section id="running-code" class="level2">
-<h2 class="anchored" data-anchor-id="running-code">Running Code</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-<p>You can add options to executable code like this</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
-</div>
-</div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<p>EPPS 6354 Information Management</p>
+<p><strong>Assignment 3</strong></p>
+<p>Open the Online SQL interpreter (https://www.db-book.com/university-lab-dir/sqljs.html) 2. Write SQL codes to get a list of: i. Students IDs (hint: from the takes relation)</p>
+<section id="answer" class="level2">
+<h2 class="anchored" data-anchor-id="answer">Answer:</h2>
+<p>ID 00128 00128 12345 12345 12345 12345 19991 23121 44553 45678 45678 45678 54321 54321 55739 76543 76543 76653 98765 98765 98988 98988</p>
+<hr>
+<ol start="2" type="i">
+<li>Instructors</li>
+</ol>
+<p>Answer:</p>
+<p>select name from instructor</p>
+<p>name Srinivasan Wu Mozart Einstein El Said Gold Katz Califieri Singh Crick Brandt Kim</p>
+<hr>
+<ol start="3" type="i">
+<li>Departments Answer:</li>
+</ol>
+<p>select dept_name from department</p>
+<p>dept_name Biology Comp. Sci. Elec. Eng. Finance History Music Physics</p>
+<hr>
+<ol start="3" type="1">
+<li>Write in SQL codes to do following queries:</li>
+</ol>
+<ol type="i">
+<li>Find the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.</li>
+</ol>
+<p>ID name 00128 Zhang 12345 Shankar 45678 Levy 54321 Williams 76543 Brown 98765 Bourikas —</p>
+<ol start="2" type="i">
+<li>Add grades to the list</li>
+</ol>
+<p>ID name grade 00128 Zhang A 00128 Zhang A- 12345 Shankar C 12345 Shankar A 45678 Levy F 45678 Levy B+ 45678 Levy B 54321 Williams A- 54321 Williams B+ 76543 Brown A 98765 Bourikas C- 98765 Bourikas B —</p>
+<ol start="3" type="i">
+<li>Find the ID and name of each student who has not taken any course offered before 2017.</li>
+</ol>
+<p>ID name 00128 Zhang 12345 Shankar 19991 Brandt 23121 Chavez 44553 Peltier 45678 Levy 54321 Williams 55739 Sanchez 70557 Snow 76543 Brown 76653 Aoi 98765 Bourikas 98988 Tanaka</p>
+<hr>
+<ol start="4" type="i">
+<li>For each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor. dept_name max_salary Biology 72000 Comp. Sci. 92000 Elec. Eng. 80000 Finance 90000 History 62000 Music 40000 Physics 95000</li>
+</ol>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td>Find the lowest, across all departments, of the per-department maximum salary computed by the preceding query.</td>
+</tr>
+<tr class="even">
+<td>MIN(max_salary)= 40000</td>
+</tr>
+</tbody>
+</table>
+<ol start="6" type="i">
+<li>Add names to the list</li>
+</ol>
+<p>name salary Mozart 40000 —</p>
+<ol start="4" type="1">
+<li>Find instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)</li>
+</ol>
+<p>ID name 12121 Wu 15151 Mozart 22222 Einstein 32343 El Said 33456 Gold 45565 Katz 58583 Califieri 76543 Singh 98345 Kim</p>
 
 
 </section>

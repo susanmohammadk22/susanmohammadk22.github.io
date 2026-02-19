@@ -1,3 +1,35 @@
 ---
-title: "project.qmd"
+title: "Projects"
 ---
+
+Project Name: Question Platform
+
+
+Database Design
+
+
+I want to have a website for questions from news agencies when they invited to an event. Or when People invited to an event they will see this panel for questions.
+
+
+
+| Table | Field | Description |
+|------|------|-------------|
+| Participants | person_id | Unique ID for each participant |
+| Participants | first_name | Person first name |
+| Participants | last_name | Person last name |
+| Participants | organization | News agency or organization |
+| Participants | state | State of the participant |
+| Questions | question_id | Unique question ID |
+| Questions | person_id | Links question to participant |
+| Questions | question_text | Submitted question |
+| Questions | answer_text | Answer provided during event |
+| Questions | created_at | Time question submitted |
+
+
+
+I would like to add an AI tool to do text mining and remove similar questions and type the answer of that question in a live meeting also store the answer in the table in front of the question. then every time that people write similar question it recognize the answer and show them and do not store the repetitive question.
+
+The Goal:
+It is important because people ask repetitive questions sometimes and cannot listen to the person who is answering questions, therefore they can see the question and answer on the board in the meeting. Also before meeting they will see the answer of their question so they will not ask repetitive question. Therefore, I can save people times.
+
+
