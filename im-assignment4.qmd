@@ -1,3 +1,23 @@
 ---
 title: "IM-Assignment 4"
 ---
+
+1.  Explain the difference between a weak and a strong entity set. Use an example other than the one in Chapter 6 to illustrate. (Consult Ch. 6, 6.5.3)
+
+-   Answer: a strong entity set is a list of a data which act as a source for other data set. While a weak set is a small part of that big strong entity set. For example:
+
+-   strong entity set: Firm A Employees list ( including all corporate and local employees name, income, working hours, ....)
+
+-   Weak entity set: South Texas Plant - packaging employees name and working hours
+
+    2.  Design an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed. (Consult: Practice Exercise solutions on textbook website)
+
+    <!-- -->
+
+    a)  Draw the E-R diagram using draw.io. Read this website for
+
+Answer:
+
+\### E-R Diagram for Sports Team Scoring Statistics\
+\
+\![\](er-diagram.png)
