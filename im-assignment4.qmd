@@ -20,13 +20,14 @@ Answer:
 
 \### E-R Diagram for Sports Team Scoring Statistics\
 \
+\
 \![\](er-diagram.png)
 
 the volleyball match of school is a strong entity. the score, player 1 scoring statistics and player 2 statistics are weak entities. those circles are the keys that I used them in other tables from this relationship
 
 Answer to B) I assumed that the league table would be an stronger entity now than the school
 
-\![\](League entity.png)
+![](league-entity.png)
 
 ---
 
