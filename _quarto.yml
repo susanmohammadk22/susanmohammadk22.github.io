@@ -33,12 +33,14 @@ website:
             text: Lab02
         
 
-      - text: EPPS 6354
+      - text: EPPS 6354-IM
         menu:
           - href: assignment4.qmd
             text: Assignment 4
           - href: assignment5.qmd
             text: Assignment 5
+          - href: IM-assignment4
+            text: IM-Assignment 4
   
 
 
