@@ -204,6 +204,80 @@ ul.task-list li input[type="checkbox"] {
 </ol></li>
 </ul>
 <p>Answer:</p>
+<p>### E-R Diagram for Sports Team Scoring Statistics<br>
+<br>
+![](er-diagram.png)</p>
+<p>the volleyball match of school is a strong entity. the score, player 1 scoring statistics and player 2 statistics are weak entities. those circles are the keys that I used them in other tables from this relationship</p>
+<p>Answer to B) I assumed that the league table would be an stronger entity now than the school</p>
+<p>![](League entity.png)</p>
+<hr>
+<ol start="3" type="1">
+<li>SQL exercise:</li>
+</ol>
+<!-- -->
+<ol type="a">
+<li>Consider the query select course_id, semester, year, sec_id, avg (tot_cred) from takes natural join student where year = 2017 group by course_id, semester, year, sec_id having count (ID) &gt;= 2;</li>
+</ol>
+<!-- -->
+<ol type="i">
+<li><p>Explain why appending natural join section in the from clause would not change the result. (Consult Ch. 4, 4.1.1)</p>
+<p>because the course is offered twice in this year</p>
+<pre><code></code></pre></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Course_id</th>
+<th>semester</th>
+<th>year</th>
+<th>sec_id</th>
+<th>avg (tot_cred)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CS-101</td>
+<td>Fall</td>
+<td>2017</td>
+<td>1</td>
+<td>65</td>
+</tr>
+<tr class="even">
+<td>CS-190</td>
+<td>Spring</td>
+<td>2017</td>
+<td>2</td>
+<td>43</td>
+</tr>
+<tr class="odd">
+<td>CS-347</td>
+<td>Fall</td>
+<td>2017</td>
+<td>1</td>
+<td>67</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol type="i">
+<li><p>Test the results using the Online SQL interpreter (<a href="https://www.dbbook." class="uri">https://www.dbbook.</a> com/university-lab-dir/sqljs.html)</p>
+<p>the results that I put in the table are from the SQL interpreter</p>
+<hr></li>
+</ol>
+<!-- -->
+<ol start="2" type="a">
+<li>Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join). (Consult Ch. 4, 4.1.3)</li>
+</ol>
+<p><code>SELECT s.IDFROM student sLEFT OUTER JOIN takes tON s.ID = t.IDWHERE t.ID IS NULL;</code></p>
+<p>Anawer:</p>
+<pre><code>ID
+70557</code></pre>
 
 
 
