@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.5.0">
+  <diagram name="Page-1" id="W8c-Z_gOEEkK8M5aMItX">
+    <mxGraphModel dx="778" dy="500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-5" edge="1" parent="1" source="3hEhEnhhEIbxCmoCXezK-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="3hEhEnhhEIbxCmoCXezK-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-1" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=light-dark(#000000,#FFFFFF);" value="Scores" vertex="1">
+          <mxGeometry height="80" width="80" x="270" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-18" edge="1" parent="1" source="3hEhEnhhEIbxCmoCXezK-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="3hEhEnhhEIbxCmoCXezK-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-19" edge="1" parent="1" source="3hEhEnhhEIbxCmoCXezK-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="3hEhEnhhEIbxCmoCXezK-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-2" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Players in match 1" vertex="1">
+          <mxGeometry height="80" width="80" x="240" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-3" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Player 1 scoring statistics in match 1" vertex="1">
+          <mxGeometry height="80" width="80" x="385" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-4" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Player 2 scoring statistics in match 1" vertex="1">
+          <mxGeometry height="80" width="80" x="385" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;border-bottom: 1px dotted&quot;&gt;&lt;u&gt;Team1 scores&lt;/u&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="70" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="&lt;u&gt;Team 2 scores&lt;/u&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="40" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-8" edge="1" parent="1" source="3hEhEnhhEIbxCmoCXezK-7" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="3hEhEnhhEIbxCmoCXezK-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="190" as="sourcePoint" />
+            <mxPoint x="210" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-9" edge="1" parent="1" source="3hEhEnhhEIbxCmoCXezK-6" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="3hEhEnhhEIbxCmoCXezK-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="70" as="sourcePoint" />
+            <mxPoint x="400" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-17" edge="1" parent="1" source="3hEhEnhhEIbxCmoCXezK-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3hEhEnhhEIbxCmoCXezK-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-10" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Volleyball Match of Schools" vertex="1">
+          <mxGeometry height="80" width="80" x="170" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="&lt;u&gt;Team 1 players&lt;/u&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="50" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-14" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="&lt;u&gt;Team 2 players&lt;/u&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="130" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-15" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" target="3hEhEnhhEIbxCmoCXezK-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="180" y="280" as="sourcePoint" />
+            <mxPoint x="230" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3hEhEnhhEIbxCmoCXezK-16" edge="1" parent="1" source="3hEhEnhhEIbxCmoCXezK-12" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=-0.008;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;" target="3hEhEnhhEIbxCmoCXezK-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="130" y="250" as="sourcePoint" />
+            <mxPoint x="180" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
