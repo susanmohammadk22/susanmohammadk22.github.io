@@ -29,7 +29,7 @@ Answer to B) I assumed that the league table would be an stronger entity now tha
 
 ![](league-entity.png)
 
----
+------------------------------------------------------------------------
 
 3.  SQL exercise:
 
@@ -57,7 +57,7 @@ i.  Test the results using the Online SQL interpreter (<https://www.dbbook.> com
 
     the results that I put in the table are from the SQL interpreter
 
-    ---
+    ------------------------------------------------------------------------
 
 <!-- -->
 
