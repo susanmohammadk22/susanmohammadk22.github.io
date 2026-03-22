@@ -163,8 +163,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment-3-ml-exercise" id="toc-assignment-3-ml-exercise" class="nav-link active" data-scroll-target="#assignment-3-ml-exercise">Assignment 3: ML exercise</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -188,8 +194,27 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<hr>
+<section id="assignment-3-ml-exercise" class="level1">
+<h1>Assignment 3: ML exercise</h1>
+<p>library(haven)<br>
+<br>
+TEDS_2016 &lt;- read_stata(“https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true”)</p>
+<p>```{r}<br>
+names(TEDS_2016)<br>
+head(TEDS_2016)<br>
+```</p>
+<p>```{r}<br>
+model &lt;- lm(income ~ age + edu , data = TEDS_2016)<br>
+summary(model)<br>
+```</p>
+<p>```{r}<br>
+regplot(TEDS_2016$age, TEDS_2016$income)</p>
+<p>```{r}<br>
+regplot(TEDS_2016$age, TEDS_2016$edu)</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
