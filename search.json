@@ -180,5 +180,12 @@
     "title": "Projects",
     "section": "",
     "text": "Project Name: Question Platform\nDatabase Design\nI want to have a website for questions from news agencies when they invited to an event. Or when People invited to an event they will see this panel for questions.\n\n\n\nTable\nField\nDescription\n\n\n\n\nParticipants\nperson_id\nUnique ID for each participant\n\n\nParticipants\nfirst_name\nPerson first name\n\n\nParticipants\nlast_name\nPerson last name\n\n\nParticipants\norganization\nNews agency or organization\n\n\nParticipants\nstate\nState of the participant\n\n\nQuestions\nquestion_id\nUnique question ID\n\n\nQuestions\nperson_id\nLinks question to participant\n\n\nQuestions\nquestion_text\nSubmitted question\n\n\nQuestions\nanswer_text\nAnswer provided during event\n\n\nQuestions\ncreated_at\nTime question submitted\n\n\n\nI would like to add an AI tool to do text mining and remove similar questions and type the answer of that question in a live meeting also store the answer in the table in front of the question. then every time that people write similar question it recognize the answer and show them and do not store the repetitive question.\nThe Goal: It is important because people ask repetitive questions sometimes and cannot listen to the person who is answering questions, therefore they can see the question and answer on the board in the meeting. Also before meeting they will see the answer of their question so they will not ask repetitive question. Therefore, I can save people times."
+  },
+  {
+    "objectID": "assignment3.html",
+    "href": "assignment3.html",
+    "title": "assignment3.qmd",
+    "section": "",
+    "text": "Assignment 3: ML exercise\nlibrary(haven)\n\nTEDS_2016 &lt;- read_stata(“https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true”)\n```{r}\nnames(TEDS_2016)\nhead(TEDS_2016)\n```\n```{r}\nmodel &lt;- lm(income ~ age + edu , data = TEDS_2016)\nsummary(model)\n```\n```{r}\nregplot(TEDS_2016$age, TEDS_2016$income)\n```{r}\nregplot(TEDS_2016$age, TEDS_2016$edu)"
   }
 ]
