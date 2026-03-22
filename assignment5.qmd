@@ -6,7 +6,7 @@ toc-depth: 1
 editor: visual
 ---
 
-# Assignment 3  Question 1
+# Assignment 3 Question 1
 
 Open the Online SQL interpreter (https://www.db-book.com/university-lab-dir/sqljs.html) 2. Write SQL codes to get a list of: i. Students IDs (hint: from the takes relation)
 
@@ -54,9 +54,9 @@ ID name 00128 Zhang 12345 Shankar 19991 Brandt 23121 Chavez 44553 Peltier 45678 
 
 iv. For each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor. dept_name max_salary Biology 72000 Comp. Sci. 92000 Elec. Eng. 80000 Finance 90000 History 62000 Music 40000 Physics 95000
 
----
+------------------------------------------------------------------------
 
----
+------------------------------------------------------------------------
 
 vi. Add names to the list
 
@@ -82,7 +82,7 @@ Q2: cyclical graph is like a person who send request for having a software acces
 
 Q3: I think we do not need to make all of our entities strong and when a weak entity works and answer the requirement is good enough so it depends on the priorities and requirements that we decide for variables not just making all entities strong.
 
----
+------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
@@ -90,7 +90,7 @@ Q4:
 
 a\)
 
----
+------------------------------------------------------------------------
 
 i\)
 
@@ -104,7 +104,7 @@ And w.company_name = c.company_name,
 
 And e.city=c.city
 
----
+------------------------------------------------------------------------
 
 ii\)
 
@@ -120,7 +120,7 @@ And e.city=m.city
 
 And e.street=m.street
 
----
+------------------------------------------------------------------------
 
 iii\)
 
@@ -134,7 +134,7 @@ And w.salary\> s.salary,
 
 s.salary = Average_salary of all employees at c.id
 
----
+------------------------------------------------------------------------
 
 b\)
 
