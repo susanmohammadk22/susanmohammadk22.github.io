@@ -5,3 +5,23 @@ title: "assignment3.qmd"
 ---
 
 # Assignment 3: ML exercise
+
+library(haven)\
+\
+TEDS_2016 \<- read_stata("https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true")
+
+\`\`\`{r}\
+names(TEDS_2016)\
+head(TEDS_2016)\
+\`\`\`
+
+\`\`\`{r}\
+model \<- lm(income \~ age + edu , data = TEDS_2016)\
+summary(model)\
+\`\`\`
+
+\`\`\`{r}\
+regplot(TEDS_2016\$age, TEDS_2016\$income)
+
+\`\`\`{r}\
+regplot(TEDS_2016\$age, TEDS_2016\$edu)
