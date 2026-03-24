@@ -2,7 +2,7 @@
 title: "assignment3.qmd"
 ---
 
----
+------------------------------------------------------------------------
 
 # Assignment 3: ML exercise
 
@@ -23,18 +23,18 @@ summary(model)\
 \`\`\`{r}\
 regplot(TEDS_2016\$age, TEDS_2016\$income)
 
-![](Regplot age and income.png)
+![](Regplot%20age%20and%20income.png)
 
 \`\`\`{r}\
 regplot(TEDS_2016\$age, TEDS_2016\$edu)
 
-![](Regplot age and edu.png)
+![](Regplot%20age%20and%20edu.png)
 
 The problem was that as the model regplot did not allow me to add two independent variables, I think it is not a proper regression model for this question.
 
 It seems that we should use another regression model.
 
----
+------------------------------------------------------------------------
 
 # Prepare for class 8:
 
@@ -56,7 +56,7 @@ a.  Zhao, Wayne Xin, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, 
 b.  Chang, Yupeng, Xu Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen et al. 2024. “A survey on evaluation of large language models.” ACM transactions on intelligent systems and technology 15, no. 31-45.
 c.  Min, Bonan, Hayley Ross, Elior Sulem, Amir Pouran Ben Veyseh, Thien Huu Nguyen, Oscar Sainz, Eneko Agirre, Ilana Heintz, and Dan Roth. 2023. “Recent advances in natural language processing via large pre-trained language models: A survey.” ACM Computing Surveys 56, no. 2: 1-40.
 
-## Key concepts: 
+## Key concepts:
 
 -   Large Language Models (LLMs)
 
@@ -86,7 +86,7 @@ c.  Min, Bonan, Hayley Ross, Elior Sulem, Amir Pouran Ben Veyseh, Thien Huu Nguy
 
     -   Prompt-based Learning
 
-    -    NLP as Text Generation
+    -   NLP as Text Generation
 
 ## Diagram
 
