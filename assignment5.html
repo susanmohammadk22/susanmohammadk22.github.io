@@ -170,6 +170,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#assignment-3-question-1" id="toc-assignment-3-question-1" class="nav-link active" data-scroll-target="#assignment-3-question-1">Assignment 3 Question 1</a></li>
   <li><a href="#assignment5" id="toc-assignment5" class="nav-link" data-scroll-target="#assignment5"><strong>Assignment5:</strong></a></li>
+  <li><a href="#assignment-6" id="toc-assignment-6" class="nav-link" data-scroll-target="#assignment-6">Assignment 6</a></li>
   </ul>
 </nav>
     </div>
@@ -285,8 +286,74 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <p>b)</p>
 <p><img src="images/clipboard-1272876556.png" class="img-fluid" width="419"></p>
+</section>
+<section id="assignment-6" class="level1">
+<h1>Assignment 6</h1>
+<ol type="1">
+<li>Look up websites containing the following data representations:</li>
+</ol>
+<!-- -->
+<ol type="a">
+<li>Using JSON</li>
+<li>Using XML Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database.</li>
+</ol>
+<p>I selected the website of Flagstar bank for this question. I asked Chat GPT where can I find JSON then I found it then I saw Json codes there.</p>
+<p>I clicked on www.flagstar.com.json?t=1</p>
+<p>I paste part of the larg codes in that page of JSON structure:</p>
+<pre><code>      "criteria": "click",          
+      "comparison": "any"  }  ] },    
+      "resources": [      
+      {         
+      "resource_id": "49583",      
+      "resource_type": "goal"</code></pre>
+<p>I did not find any XML on this website</p>
+<p>but I previously used XML in power automate to call the power app link and creating a token to send in the outlook mailbox and it was as like as this</p>
+<p>“<br><br><a href="https://apps.powerapps.com/play/YOUR_APP_ID?tenantId=YOUR_TENANT_ID&amp;token=&quot; &amp; locToken &amp; &quot;">Click here to start the survey</a>”, {Importance: “High”}</p>
+<p>in the website I saw a great and nice structure of coding and it was easy to understand to some extent, while when I used XML I did not understood why I should use the term ‘br&gt;’ several times at the beginning of sentences or at the end of it, so it was complicated to understand and following the codes, for me.</p>
+<hr>
+<ol start="2" type="1">
+<li>SQL exercise:</li>
+</ol>
+<!-- -->
+<ol type="i">
+<li>Express the following query in SQL using no subqueries and no set operations. (Hint: left outer join) select ID from student except select s id from advisor where i ID is not null</li>
+<li>Using the university schema, write an SQL query to find the names and IDs of those instructors who teach every course taught in his or her department (i.e., every course that appears in the course relation with the instructor’s department name). Order result by name</li>
+</ol>
+<hr>
+<p>answer:</p>
+<p><img src="images/clipboard-650742211.png" class="img-fluid"></p>
+<p>SELECT ID</p>
+<p>FROM student</p>
+<p>LEFT OUTER JOIN advisor</p>
+<p>ON ID = advisor.s_id AND advisor.i_id IS NOT NULL</p>
+<p>WHERE advisor.s_id IS NULL;</p>
+<p><img src="images/clipboard-2552435613.png" class="img-fluid"></p>
+<ul>
+<li><p>SELECT instructor.ID, instructor.name</p></li>
+<li><p>FROM instructor</p></li>
+<li><p>WHERE NOT EXISTS(</p></li>
+<li><p>SELECT course.course_id</p></li>
+<li><p>FROM course</p></li>
+<li><p>WHERE course.dept_name=instructor.dept_name</p></li>
+</ul>
+<p>it did not works</p>
+<hr>
+<p>question 3</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3880082850.png" class="img-fluid figure-img"></p>
+<figcaption>it did not run the codes</figcaption>
+</figure>
+</div>
+<section id="prepare-for-class-8" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-for-class-8">prepare for class 8</h2>
+<p>the business that I asked Deepseek for creating an ERdiagram for it</p>
+<p>create ER Diagram for this business I have an ecommerce website for selling construction materials. I have two type of customers. B2B and B2C. I have some section for sustainable houses and wants to sell those items to its customers who cares about environment and sustainability. I have a customer service online section to chat with customers and return and logistic section for delivering products. also I have the section for payment for procucts that people buy from my website that way they can pay the fees. also I have some section for consultants and designers to help people to have idea what should they buy. the designer section is completely AI agent service and it is free for B2C customers (for house owners who shop from us and it will be available after successful transaction.</p>
+<p><img src="images/clipboard-2381338939.png" class="img-fluid"></p>
+<p>the error is that I do not see a star schema in the diagram. it did not connected some of tables there and it missed the connection of key items</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

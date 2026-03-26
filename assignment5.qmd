@@ -139,3 +139,92 @@ s.salary = Average_salary of all employees at c.id
 b\)
 
 ![](images/clipboard-1272876556.png){width="419"}
+
+# Assignment 6
+
+1.  Look up websites containing the following data representations:
+
+<!-- -->
+
+a)  Using JSON
+b)  Using XML Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database.
+
+I selected the website of Flagstar bank for this question. I asked Chat GPT where can I find JSON then I found it then I saw Json codes there.
+
+I clicked on www.flagstar.com.json?t=1
+
+I paste part of the larg codes in that page of JSON structure:
+
+```         
+      "criteria": "click",          
+      "comparison": "any"  }  ] },    
+      "resources": [      
+      {         
+      "resource_id": "49583",      
+      "resource_type": "goal"
+```
+
+I did not find any XML on this website
+
+but I previously used XML in power automate to call the power app link and creating a token to send in the outlook mailbox and it was as like as this
+
+"<br><br><a href='https://apps.powerapps.com/play/YOUR_APP_ID?tenantId=YOUR_TENANT_ID&token=" & locToken & "'>Click here to start the survey</a>", {Importance: "High"}
+
+in the website I saw a great and nice structure of coding and it was easy to understand to some extent, while when I used XML I did not understood why I should use the term 'br\>' several times at the beginning of sentences or at the end of it, so it was complicated to understand and following the codes, for me.
+
+------------------------------------------------------------------------
+
+2.  SQL exercise:
+
+<!-- -->
+
+i.  Express the following query in SQL using no subqueries and no set operations. (Hint: left outer join) select ID from student except select s id from advisor where i ID is not null
+ii. Using the university schema, write an SQL query to find the names and IDs of those instructors who teach every course taught in his or her department (i.e., every course that appears in the course relation with the instructor’s department name). Order result by name
+
+------------------------------------------------------------------------
+
+answer:
+
+![](images/clipboard-650742211.png)
+
+SELECT ID
+
+FROM student
+
+LEFT OUTER JOIN advisor
+
+ON ID = advisor.s_id AND advisor.i_id IS NOT NULL
+
+WHERE advisor.s_id IS NULL;
+
+![](images/clipboard-2552435613.png)
+
+-   SELECT instructor.ID, instructor.name
+
+-   FROM instructor
+
+-   WHERE NOT EXISTS(
+
+-   SELECT course.course_id
+
+-   FROM course
+
+-   WHERE course.dept_name=instructor.dept_name
+
+it did not works
+
+---
+
+question 3
+
+![it did not run the codes](images/clipboard-3880082850.png)
+
+## prepare for class 8
+
+the business that I asked Deepseek for creating an ERdiagram for it
+
+create ER Diagram for this business I have an ecommerce website for selling construction materials. I have two type of customers. B2B and B2C. I have some section for sustainable houses and wants to sell those items to its customers who cares about environment and sustainability. I have a customer service online section to chat with customers and return and logistic section for delivering products. also I have the section for payment for procucts that people buy from my website that way they can pay the fees. also I have some section for consultants and designers to help people to have idea what should they buy. the designer section is completely AI agent service and it is free for B2C customers (for house owners who shop from us and it will be available after successful transaction.
+
+![](images/clipboard-2381338939.png)
+
+the error is that I do not see a star schema in the diagram. it did not connected some of tables there and it missed the connection of key items
