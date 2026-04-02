@@ -171,6 +171,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#assignment-3-question-1" id="toc-assignment-3-question-1" class="nav-link active" data-scroll-target="#assignment-3-question-1">Assignment 3 Question 1</a></li>
   <li><a href="#assignment5" id="toc-assignment5" class="nav-link" data-scroll-target="#assignment5"><strong>Assignment5:</strong></a></li>
   <li><a href="#assignment-6" id="toc-assignment-6" class="nav-link" data-scroll-target="#assignment-6">Assignment 6</a></li>
+  <li><a href="#assignment-7" id="toc-assignment-7" class="nav-link" data-scroll-target="#assignment-7">Assignment 7</a></li>
   </ul>
 </nav>
     </div>
@@ -292,8 +293,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Look up websites containing the following data representations:</p>
 <ul>
 <li></li>
-<li>Using JSON</li>
-<li>Using XML Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database.</li>
+<li><p>Using JSON</p></li>
+<li><p>Using XML Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database.</p></li>
 </ul>
 <p>I selected the website of Flagstar bank for this question. I asked Chat GPT where can I find JSON then I found it then I saw Json codes there.</p>
 <p>I clicked on www.flagstar.com.json?t=1</p>
@@ -349,8 +350,117 @@ ul.task-list li input[type="checkbox"] {
 <p>create ER Diagram for this business I have an ecommerce website for selling construction materials. I have two type of customers. B2B and B2C. I have some section for sustainable houses and wants to sell those items to its customers who cares about environment and sustainability. I have a customer service online section to chat with customers and return and logistic section for delivering products. also I have the section for payment for procucts that people buy from my website that way they can pay the fees. also I have some section for consultants and designers to help people to have idea what should they buy. the designer section is completely AI agent service and it is free for B2C customers (for house owners who shop from us and it will be available after successful transaction.</p>
 <p><img src="images/clipboard-2381338939.png" class="img-fluid"></p>
 <p>the error is that I do not see a star schema in the diagram. it did not connected some of tables there and it missed the connection of key items</p>
+</section>
+</section>
+<section id="assignment-7" class="level1">
+<h1>Assignment 7</h1>
+<p>part1</p>
+<p>This is a standard relational schema for a university database, often used in database system textbooks (like Silberschatz, Korth, and Sudarshan). It effectively captures the relationships between departments, students, instructors, and the courses they offer.</p>
+<p>Here is a breakdown of the core components and how they connect:</p>
+<section id="core-entities" class="level3">
+<h3 class="anchored" data-anchor-id="core-entities"><strong>1. Core Entities</strong></h3>
+<ul>
+<li><p><strong>Location:</strong> <code>classroom</code> defines where classes happen.</p></li>
+<li><p><strong>Organization:</strong> <code>department</code> acts as the hub, linking students, instructors, and courses.</p></li>
+<li><p><strong>People:</strong> <code>student</code> and <code>instructor</code> contain basic profile information.</p></li>
+<li><p><strong>Curriculum:</strong> <code>course</code> defines the subject, while <code>section</code> represents a specific offering of that course (time/place).</p></li>
+</ul>
+</section>
+<section id="key-relationships" class="level3">
+<h3 class="anchored" data-anchor-id="key-relationships"><strong>2. Key Relationships</strong></h3>
+<p>The schema uses several <strong>Foreign Keys</strong> to maintain referential integrity:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Table</strong></td>
+<td><strong>Links to…</strong></td>
+<td><strong>Purpose</strong></td>
+</tr>
+<tr class="even">
+<td><strong>course</strong></td>
+<td><code>department</code></td>
+<td>Associates a course with its organizing department.</td>
+</tr>
+<tr class="odd">
+<td><strong>section</strong></td>
+<td><code>course</code> &amp; <code>classroom</code></td>
+<td>Links a specific class to its parent course and its physical location.</td>
+</tr>
+<tr class="even">
+<td><strong>teaches</strong></td>
+<td><code>instructor</code> &amp; <code>section</code></td>
+<td>Maps which instructor is teaching which specific class section.</td>
+</tr>
+<tr class="odd">
+<td><strong>takes</strong></td>
+<td><code>student</code> &amp; <code>section</code></td>
+<td>Tracks student enrollment and their final grades.</td>
+</tr>
+<tr class="even">
+<td><strong>advisor</strong></td>
+<td><code>student</code> &amp; <code>instructor</code></td>
+<td>A many-to-one mapping of students to their faculty advisors.</td>
+</tr>
+<tr class="odd">
+<td><strong>prereq</strong></td>
+<td><code>course</code> (Self-referential)</td>
+<td>Defines which courses must be taken before others.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="integrity-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="integrity-constraints"><strong>3. Integrity Constraints</strong></h3>
+<p>You’ve included several important SQL constraints:</p>
+<ul>
+<li><p><strong><code>check</code> clauses:</strong> Ensure data validity (e.g., <code>budget &gt; 0</code>, <code>credits &gt; 0</code>, and specific semester names).</p></li>
+<li><p><strong><code>on delete set null</code>:</strong> If a department or classroom is deleted, the referencing record remains but the link is cleared.</p></li>
+<li><p><strong><code>on delete cascade</code>:</strong> If a student or course is deleted, all related enrollment/teaching records are automatically removed to prevent orphaned data.</p></li>
+</ul>
+<p><strong>Are you working on specific queries for your “Query Evaluation” lab?</strong> I can help you write the SQL for data retrieval or explain how a query optimizer might handle joins across these tables.</p>
+</section>
+<section id="gemini-said" class="level2">
+<h2 class="anchored" data-anchor-id="gemini-said">Gemini said</h2>
+<p>Here are the SQL queries based on the schema provided for your AI Lab. These queries utilize standard SQL features like aggregations, joins, correlated subqueries, and window functions.</p>
+<section id="query-1-aggregation" class="level3">
+<h3 class="anchored" data-anchor-id="query-1-aggregation"><strong>Query 1 — Aggregation</strong></h3>
+<p>To find the enrollments and average student credits per department, we join the <code>student</code> table with the <code>takes</code> table.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT      dept_name,      COUNT(*) AS total_enrollments,      AVG(tot_cred) AS avg_student_credits FROM student JOIN takes ON student.ID = takes.ID GROUP BY dept_name ORDER BY total_enrollments DESC; </code></pre>
+</section>
+<section id="query-2-multi-table-join" class="level3">
+<h3 class="anchored" data-anchor-id="query-2-multi-table-join"><strong>Query 2 — Multi-Table Join</strong></h3>
+<p>This query requires joining <code>instructor</code>, <code>teaches</code>, and <code>takes</code> to count students per section, filtering with a <code>HAVING</code> clause for the enrollment threshold.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT      i.name,      i.dept_name,      t.course_id,      t.semester,      t.year,      COUNT(tk.ID) AS student_count FROM instructor i JOIN teaches t ON i.ID = t.ID JOIN takes tk ON      t.course_id = tk.course_id AND      t.sec_id = tk.sec_id AND      t.semester = tk.semester AND      t.year = tk.year GROUP BY i.ID, i.name, i.dept_name, t.course_id, t.sec_id, t.semester, t.year HAVING COUNT(tk.ID) &gt;= 10; </code></pre>
+</section>
+<section id="query-3-correlated-subquery" class="level3">
+<h3 class="anchored" data-anchor-id="query-3-correlated-subquery"><strong>Query 3 — Correlated Subquery</strong></h3>
+<p>The logic here is to find courses where there is <strong>no</strong> section that lacks an ‘A’ student.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT title FROM course c WHERE NOT EXISTS (     SELECT 1      FROM section s      WHERE s.course_id = c.course_id     AND NOT EXISTS (         SELECT 1          FROM takes tk          WHERE tk.course_id = s.course_id          AND tk.sec_id = s.sec_id          AND tk.semester = s.semester          AND tk.year = s.year          AND tk.grade = 'A'     ) ); </code></pre>
+</section>
+<section id="query-4-window-function" class="level3">
+<h3 class="anchored" data-anchor-id="query-4-window-function"><strong>Query 4 — Window Function</strong></h3>
+<p>We use <code>RANK()</code> to order by salary and <code>PERCENT_RANK()</code> to find the relative standing within each department.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT      name,      dept_name,      salary,     RANK() OVER (PARTITION BY dept_name ORDER BY salary DESC) AS dept_salary_rank,     PERCENT_RANK() OVER (PARTITION BY dept_name ORDER BY salary DESC) AS salary_percentile FROM instructor; </code></pre>
+</section>
+<section id="query-5-complex-query" class="level3">
+<h3 class="anchored" data-anchor-id="query-5-complex-query"><strong>Query 5 — Complex Query</strong></h3>
+<p>This combines an aggregation filter (for the 3 departments) with a subquery to ensure the student hasn’t taken their advisor’s class.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT s.name FROM student s JOIN takes tk ON s.ID = tk.ID JOIN course c ON tk.course_id = c.course_id WHERE s.ID NOT IN (     -- Subquery: Students who HAVE taken a course with their advisor     SELECT a.s_ID     FROM advisor a     JOIN teaches t ON a.i_ID = t.ID     JOIN takes tk2 ON          t.course_id = tk2.course_id AND          t.sec_id = tk2.sec_id AND          t.semester = tk2.semester AND          t.year = tk2.year     WHERE tk2.ID = a.s_ID ) GROUP BY s.ID, s.name HAVING COUNT(DISTINCT c.dept_name) &gt;= 3; </code></pre>
+<p><strong>Would you like me to explain the logic behind Query 5’s “NOT IN” clause or show</strong></p>
+<p>This is the answer that I received form Gemini after I pased the codes and queries from PDF file I did not write a prompt I just used the pdf file of class. then I pased it here.</p>
 
 
+</section>
 </section>
 </section>
 

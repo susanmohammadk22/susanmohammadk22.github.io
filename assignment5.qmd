@@ -145,7 +145,9 @@ b\)
 Look up websites containing the following data representations:
 
 -   
+
 -   Using JSON
+
 -   Using XML Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database.
 
 I selected the website of Flagstar bank for this question. I asked Chat GPT where can I find JSON then I found it then I saw Json codes there.
@@ -212,7 +214,7 @@ WHERE advisor.s_id IS NULL;
 
 it did not works
 
----
+------------------------------------------------------------------------
 
 question 3
 
@@ -227,3 +229,105 @@ create ER Diagram for this business I have an ecommerce website for selling cons
 ![](images/clipboard-2381338939.png)
 
 the error is that I do not see a star schema in the diagram. it did not connected some of tables there and it missed the connection of key items
+
+# Assignment 7
+
+part1
+
+This is a standard relational schema for a university database, often used in database system textbooks (like Silberschatz, Korth, and Sudarshan). It effectively captures the relationships between departments, students, instructors, and the courses they offer.
+
+Here is a breakdown of the core components and how they connect:
+
+### **1. Core Entities**
+
+-   **Location:** `classroom` defines where classes happen.
+
+-   **Organization:** `department` acts as the hub, linking students, instructors, and courses.
+
+-   **People:** `student` and `instructor` contain basic profile information.
+
+-   **Curriculum:** `course` defines the subject, while `section` represents a specific offering of that course (time/place).
+
+### **2. Key Relationships**
+
+The schema uses several **Foreign Keys** to maintain referential integrity:
+
+|  |  |  |
+|----|----|----|
+| **Table** | **Links to...** | **Purpose** |
+| **course** | `department` | Associates a course with its organizing department. |
+| **section** | `course` & `classroom` | Links a specific class to its parent course and its physical location. |
+| **teaches** | `instructor` & `section` | Maps which instructor is teaching which specific class section. |
+| **takes** | `student` & `section` | Tracks student enrollment and their final grades. |
+| **advisor** | `student` & `instructor` | A many-to-one mapping of students to their faculty advisors. |
+| **prereq** | `course` (Self-referential) | Defines which courses must be taken before others. |
+
+### **3. Integrity Constraints**
+
+You've included several important SQL constraints:
+
+-   **`check` clauses:** Ensure data validity (e.g., `budget > 0`, `credits > 0`, and specific semester names).
+
+-   **`on delete set null`:** If a department or classroom is deleted, the referencing record remains but the link is cleared.
+
+-   **`on delete cascade`:** If a student or course is deleted, all related enrollment/teaching records are automatically removed to prevent orphaned data.
+
+**Are you working on specific queries for your "Query Evaluation" lab?** I can help you write the SQL for data retrieval or explain how a query optimizer might handle joins across these tables.
+
+## Gemini said
+
+Here are the SQL queries based on the schema provided for your AI Lab. These queries utilize standard SQL features like aggregations, joins, correlated subqueries, and window functions.
+
+### **Query 1 — Aggregation**
+
+To find the enrollments and average student credits per department, we join the `student` table with the `takes` table.
+
+**SQL**
+
+```         
+SELECT      dept_name,      COUNT(*) AS total_enrollments,      AVG(tot_cred) AS avg_student_credits FROM student JOIN takes ON student.ID = takes.ID GROUP BY dept_name ORDER BY total_enrollments DESC; 
+```
+
+### **Query 2 — Multi-Table Join**
+
+This query requires joining `instructor`, `teaches`, and `takes` to count students per section, filtering with a `HAVING` clause for the enrollment threshold.
+
+**SQL**
+
+```         
+SELECT      i.name,      i.dept_name,      t.course_id,      t.semester,      t.year,      COUNT(tk.ID) AS student_count FROM instructor i JOIN teaches t ON i.ID = t.ID JOIN takes tk ON      t.course_id = tk.course_id AND      t.sec_id = tk.sec_id AND      t.semester = tk.semester AND      t.year = tk.year GROUP BY i.ID, i.name, i.dept_name, t.course_id, t.sec_id, t.semester, t.year HAVING COUNT(tk.ID) >= 10; 
+```
+
+### **Query 3 — Correlated Subquery**
+
+The logic here is to find courses where there is **no** section that lacks an 'A' student.
+
+**SQL**
+
+```         
+SELECT title FROM course c WHERE NOT EXISTS (     SELECT 1      FROM section s      WHERE s.course_id = c.course_id     AND NOT EXISTS (         SELECT 1          FROM takes tk          WHERE tk.course_id = s.course_id          AND tk.sec_id = s.sec_id          AND tk.semester = s.semester          AND tk.year = s.year          AND tk.grade = 'A'     ) ); 
+```
+
+### **Query 4 — Window Function**
+
+We use `RANK()` to order by salary and `PERCENT_RANK()` to find the relative standing within each department.
+
+**SQL**
+
+```         
+SELECT      name,      dept_name,      salary,     RANK() OVER (PARTITION BY dept_name ORDER BY salary DESC) AS dept_salary_rank,     PERCENT_RANK() OVER (PARTITION BY dept_name ORDER BY salary DESC) AS salary_percentile FROM instructor; 
+```
+
+### **Query 5 — Complex Query**
+
+This combines an aggregation filter (for the 3 departments) with a subquery to ensure the student hasn't taken their advisor's class.
+
+**SQL**
+
+```         
+SELECT s.name FROM student s JOIN takes tk ON s.ID = tk.ID JOIN course c ON tk.course_id = c.course_id WHERE s.ID NOT IN (     -- Subquery: Students who HAVE taken a course with their advisor     SELECT a.s_ID     FROM advisor a     JOIN teaches t ON a.i_ID = t.ID     JOIN takes tk2 ON          t.course_id = tk2.course_id AND          t.sec_id = tk2.sec_id AND          t.semester = tk2.semester AND          t.year = tk2.year     WHERE tk2.ID = a.s_ID ) GROUP BY s.ID, s.name HAVING COUNT(DISTINCT c.dept_name) >= 3; 
+```
+
+**Would you like me to explain the logic behind Query 5's "NOT IN" clause or show**
+
+This is the answer that I received form Gemini after I pased the codes and queries from PDF file I did not write a prompt I just used the pdf file of class. then I pased it here.
