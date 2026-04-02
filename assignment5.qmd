@@ -142,12 +142,11 @@ b\)
 
 # Assignment 6
 
-1.  Look up websites containing the following data representations:
+Look up websites containing the following data representations:
 
-<!-- -->
-
-a)  Using JSON
-b)  Using XML Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database.
+-   
+-   Using JSON
+-   Using XML Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database.
 
 I selected the website of Flagstar bank for this question. I asked Chat GPT where can I find JSON then I found it then I saw Json codes there.
 
