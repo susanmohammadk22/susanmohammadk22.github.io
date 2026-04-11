@@ -97,10 +97,29 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./project.html" aria-current="page"> 
-<span class="menu-text">Project</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="./project.html">
+ <span class="dropdown-text">Project Overview</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./app.html">
+ <span class="dropdown-text">Submit Question</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./speaker.html">
+ <span class="dropdown-text">Speaker Dashboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./display.html">
+ <span class="dropdown-text">Live Display</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./cv.pdf"> 
 <span class="menu-text">CV</span></a>
@@ -163,8 +182,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#question-platform" id="toc-question-platform" class="nav-link active" data-scroll-target="#question-platform">Question Platform</a>
+  <ul class="collapse">
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
+  <li><a href="#ai-pipeline" id="toc-ai-pipeline" class="nav-link" data-scroll-target="#ai-pipeline">AI Pipeline</a>
+  <ul class="collapse">
+  <li><a href="#question-submission" id="toc-question-submission" class="nav-link" data-scroll-target="#question-submission">1. Question Submission</a></li>
+  <li><a href="#similarity-detection" id="toc-similarity-detection" class="nav-link" data-scroll-target="#similarity-detection">2. Similarity Detection</a></li>
+  <li><a href="#topic-classification" id="toc-topic-classification" class="nav-link" data-scroll-target="#topic-classification">3. Topic Classification</a></li>
+  <li><a href="#live-display" id="toc-live-display" class="nav-link" data-scroll-target="#live-display">4. Live Display</a></li>
+  </ul></li>
+  <li><a href="#technologies-used" id="toc-technologies-used" class="nav-link" data-scroll-target="#technologies-used">Technologies Used</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -254,8 +291,63 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>I would like to add an AI tool to do text mining and remove similar questions and type the answer of that question in a live meeting also store the answer in the table in front of the question. then every time that people write similar question it recognize the answer and show them and do not store the repetitive question.</p>
 <p>The Goal: It is important because people ask repetitive questions sometimes and cannot listen to the person who is answering questions, therefore they can see the question and answer on the board in the meeting. Also before meeting they will see the answer of their question so they will not ask repetitive question. Therefore, I can save people times.</p>
+<section id="question-platform" class="level1">
+<h1>Question Platform</h1>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<ul>
+<li><p>Build a platform for conferences or seminars questions that:</p></li>
+<li><p>Collects questions from participants in real-time</p></li>
+<li><p>Classifies questions by topic using AI</p></li>
+<li><p>Detects duplicates using embedding similarity</p></li>
+<li><p>Displays questions live on screen</p></li>
+</ul>
+</section>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
+</section>
+<section id="ai-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="ai-pipeline">AI Pipeline</h2>
+<section id="question-submission" class="level3">
+<h3 class="anchored" data-anchor-id="question-submission">1. Question Submission</h3>
+<ul>
+<li><p>User types question → AI validates</p></li>
+<li><p>Generates embedding (vector representation)</p></li>
+</ul>
+</section>
+<section id="similarity-detection" class="level3">
+<h3 class="anchored" data-anchor-id="similarity-detection">2. Similarity Detection</h3>
+<ul>
+<li><p>Compares with existing questions using cosine similarity</p></li>
+<li><p>If similarity &gt; 0.85 → shows warning</p></li>
+</ul>
+</section>
+<section id="topic-classification" class="level3">
+<h3 class="anchored" data-anchor-id="topic-classification">3. Topic Classification</h3>
+<ul>
+<li>Automatically assigns topic using pre-trained model</li>
+</ul>
+</section>
+<section id="live-display" class="level3">
+<h3 class="anchored" data-anchor-id="live-display">4. Live Display</h3>
+<ul>
+<li><p>Selected questions appear on speaker screen</p></li>
+<li><p>Real-time typing simulation</p></li>
+</ul>
+</section>
+</section>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
+<ul>
+<li><p><strong>R + Shiny</strong> - Interactive dashboard</p></li>
+<li><p><strong>PostgreSQL</strong> - Data storage</p></li>
+<li><p><strong>Quarto</strong> - Documentation website</p></li>
+<li><p><strong>AI Embeddings</strong> - Similarity detection</p></li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

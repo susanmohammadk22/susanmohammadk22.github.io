@@ -13,8 +13,8 @@ website:
         text: About
       - href: research.qmd
         text: Research
-        
-        text: Project
+      
+      - text: Project
         menu:
           - href: project.qmd
             text: Project Overview
