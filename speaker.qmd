@@ -1,0 +1,171 @@
+---
+title: "Speaker Dashboard"
+format: html
+server: shiny
+---
+
+## \## Questions Queue
+
+
+---
+
+```yaml
+
+
+## 🎤 Moderate Questions
+
+```{r}
+#| context: server
+#| echo: false
+
+library(shiny)
+library(DT)
+
+# UI
+ui <- fluidPage(
+  titlePanel("Speaker Dashboard"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      h4("Controls"),
+      actionButton("refresh", "🔄 Refresh", class = "btn-primary"),
+      br(), br(),
+      actionButton("select_btn", "✅ Select Question", class = "btn-success"),
+      actionButton("reject_btn", "❌ Reject Question", class = "btn-danger"),
+      br(), br(),
+      hr(),
+      h4("Statistics"),
+      textOutput("stats"),
+      br(),
+      h4("Selected Question"),
+      verbatimTextOutput("selected_display")
+    ),
+    
+    mainPanel(
+      h4("Pending Questions"),
+      DTOutput("questions_table"),
+      br(),
+      h4("Approved Questions"),
+      DTOutput("approved_table")
+    )
+  )
+)
+
+# Server
+server <- function(input, output, session) {
+  
+  # Reactive values
+  pending_questions <- reactiveVal(
+    data.frame(
+      ID = 1:5,
+      Question = c(
+        "How does AI embedding work?",
+        "What is the accuracy of the model?",
+        "Can we export data to CSV?",
+        "How to handle multiple languages?",
+        "Is the system real-time?"
+      ),
+      Country = c("USA", "China", "UK", "France", "Germany"),
+      Topic = c("AI", "AI", "Analytics", "Multilingual", "Performance"),
+      Submitted = c("10:30 AM", "10:32 AM", "10:35 AM", "10:38 AM", "10:40 AM"),
+      Status = rep("Pending", 5),
+      stringsAsFactors = FALSE
+    )
+  )
+  
+  approved_questions <- reactiveVal(
+    data.frame(
+      ID = integer(),
+      Question = character(),
+      Country = character(),
+      Topic = character(),
+      Selected_Time = character(),
+      stringsAsFactors = FALSE
+    )
+  )
+  
+  selected_row <- reactiveVal(NULL)
+  
+  # Render pending table
+  output$questions_table <- renderDT({
+    datatable(pending_questions(),
+              selection = 'single',
+              options = list(pageLength = 10))
+  })
+  
+  # Render approved table
+  output$approved_table <- renderDT({
+    datatable(approved_questions(),
+              options = list(pageLength = 10))
+  })
+  
+  # Capture selected row
+  observeEvent(input$questions_table_rows_selected, {
+    selected_row(input$questions_table_rows_selected)
+    
+    if(!is.null(selected_row())) {
+      q <- pending_questions()[selected_row(), ]
+      output$selected_display <- renderPrint({
+        cat("Question ID:", q$ID, "\n")
+        cat("Question:", q$Question, "\n")
+        cat("Country:", q$Country, "\n")
+        cat("Topic:", q$Topic)
+      })
+    }
+  })
+  
+  # Select question
+  observeEvent(input$select_btn, {
+    req(selected_row())
+    
+    selected <- pending_questions()[selected_row(), ]
+    
+    # Add to approved
+    new_approved <- data.frame(
+      ID = selected$ID,
+      Question = selected$Question,
+      Country = selected$Country,
+      Topic = selected$Topic,
+      Selected_Time = format(Sys.time(), "%I:%M %p"),
+      stringsAsFactors = FALSE
+    )
+    
+    current_approved <- approved_questions()
+    approved_questions(rbind(current_approved, new_approved))
+    
+    # Remove from pending
+    current_pending <- pending_questions()
+    pending_questions(current_pending[-selected_row(), ])
+    
+    # Reset selection
+    selected_row(NULL)
+    output$selected_display <- renderPrint({cat("No question selected")})
+    
+    showNotification("Question selected for live display!", type = "success")
+  })
+  
+  # Reject question
+  observeEvent(input$reject_btn, {
+    req(selected_row())
+    
+    current_pending <- pending_questions()
+    pending_questions(current_pending[-selected_row(), ])
+    selected_row(NULL)
+    output$selected_display <- renderPrint({cat("No question selected")})
+    
+    showNotification("Question rejected", type = "warning")
+  })
+  
+  # Refresh
+  observeEvent(input$refresh, {
+    showNotification("Refreshing...", type = "message")
+  })
+  
+  # Stats
+  output$stats <- renderPrint({
+    cat("Pending:", nrow(pending_questions()), "\n")
+    cat("Approved:", nrow(approved_questions()))
+  })
+}
+
+shinyApp(ui, server)

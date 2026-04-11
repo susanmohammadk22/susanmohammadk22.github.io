@@ -1,0 +1,12 @@
+name: QEvent
+title: QEvent
+username: qevent
+account: qevent
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17098875
+bundleId: 11834972
+url: https://qevent.shinyapps.io/QEvent/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

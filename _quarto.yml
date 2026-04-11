@@ -13,8 +13,18 @@ website:
         text: About
       - href: research.qmd
         text: Research
-      - href: project.qmd
+        
         text: Project
+        menu:
+          - href: project.qmd
+            text: Project Overview
+          - href: app.qmd
+            text: Submit Question
+          - href: speaker.qmd
+            text: Speaker Dashboard
+          - href: display.qmd
+            text: Live Display
+            
       - href: cv.pdf
         text: CV
 

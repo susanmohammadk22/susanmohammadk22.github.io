@@ -1,0 +1,160 @@
+---
+title: "Submit Question"
+format: html
+server: shiny
+---
+
+\
+\## Submit Your Question\
+```{r}
+#| context: server
+#| echo: false
+
+library(shiny)
+
+# UI
+ui <- fluidPage(
+  titlePanel("Submit Your Question"),
+  
+  wellPanel(
+    textAreaInput("question", 
+                  "Type your question:", 
+                  rows = 5, 
+                  width = "100%",
+                  placeholder = "e.g., What is the future of AI in education?"),
+    
+    selectInput("question_country", 
+                "Which country is this question about?",
+                choices = c("Select a country" = "", 
+                           "United States", "China", "Russia", 
+                           "United Kingdom", "France", "Germany",
+                           "Iran", "Israel", "Saudi Arabia", 
+                           "Other")),
+    
+    actionButton("submit", "Submit Question", 
+                 class = "btn-primary",
+                 icon = icon("paper-plane"))
+  ),
+  
+  verbatimTextOutput("status")
+)
+
+# Server
+server <- function(input, output, session) {
+  
+  # Simulate AI topic classification
+  classify_topic <- function(question) {
+    question_lower <- tolower(question)
+    
+    if(grepl("ai|artificial intelligence|machine learning|deep learning", question_lower)) {
+      return("Artificial Intelligence")
+    } else if(grepl("data|database|sql|analytics", question_lower)) {
+      return("Data Science")
+    } else if(grepl("policy|law|regulation|government", question_lower)) {
+      return("Policy & Regulation")
+    } else if(grepl("economy|trade|market|business", question_lower)) {
+      return("Economy & Trade")
+    } else {
+      return("General")
+    }
+  }
+  
+  # Simulate embedding generation (random vector for demo)
+  get_embedding <- function(text) {
+    set.seed(nchar(text))  # برای بازتولیدپذیری
+    runif(384)  # 384-dimensional embedding
+  }
+  
+  # Cosine similarity
+  cosine_similarity <- function(a, b) {
+    sum(a * b) / (sqrt(sum(a^2)) * sqrt(sum(b^2)))
+  }
+  
+  # Check for duplicate questions
+  check_duplicate <- function(new_embedding, existing_embeddings) {
+    if(length(existing_embeddings) == 0) return(FALSE)
+    
+    similarities <- sapply(existing_embeddings, function(e) {
+      cosine_similarity(new_embedding, e)
+    })
+    
+    return(max(similarities) > 0.85)
+  }
+  
+  # Storage for existing embeddings (in memory for demo)
+  existing_embeddings <- list()
+  question_counter <- 0
+  
+  observeEvent(input$submit, {
+    req(input$question)
+    req(input$question_country)
+    
+    # Show processing modal
+    showModal(modalDialog(
+      title = "Processing",
+      "Analyzing your question...",
+      easyClose = FALSE,
+      footer = NULL
+    ))
+    
+    # Simulate processing delay
+    Sys.sleep(1)
+    
+    # Classify topic
+    topic <- classify_topic(input$question)
+    
+    # Generate embedding
+    new_emb <- get_embedding(input$question)
+    
+    # Check for duplicates
+    is_duplicate <- check_duplicate(new_emb, existing_embeddings)
+    
+    removeModal()
+    
+    if(is_duplicate) {
+      showModal(modalDialog(
+        title = "⚠️ Similar Question Found",
+        "A very similar question has already been submitted. Do you still want to submit?",
+        footer = tagList(
+          modalButton("Cancel"),
+          actionButton("confirm_submit", "Submit Anyway", class = "btn-warning")
+        )
+      ))
+    } else {
+      # Save question
+      question_counter <- question_counter + 1
+      existing_embeddings[[question_counter]] <- new_emb
+      
+      output$status <- renderPrint({
+        cat("✅ Question submitted successfully!\n\n")
+        cat("📝 Question:", input$question, "\n")
+        cat("🌍 Country:", input$question_country, "\n")
+        cat("🏷️  Topic:", topic, "\n")
+        cat("🆔 Question ID:", question_counter, "\n")
+        cat("📅 Time:", Sys.time(), "\n")
+        cat("\nYour question will be reviewed by the speaker.")
+      })
+      
+      showNotification("Question submitted!", type = "success")
+    }
+  })
+  
+  observeEvent(input$confirm_submit, {
+    removeModal()
+    
+    question_counter <- question_counter + 1
+    existing_embeddings[[question_counter]] <- get_embedding(input$question)
+    
+    output$status <- renderPrint({
+      cat("✅ Question submitted (duplicate override)!\n\n")
+      cat("📝 Question:", input$question, "\n")
+      cat("🌍 Country:", input$question_country, "\n")
+      cat("🆔 Question ID:", question_counter, "\n")
+    })
+    
+    showNotification("Question submitted!", type = "success")
+  })
+}
+
+# Run the app
+shinyApp(ui, server)
