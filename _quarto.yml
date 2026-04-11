@@ -56,7 +56,10 @@ website:
 
 format:
   html:
-    theme: lumen
+    theme: 
+      - cosmo      # More colorful
+      - flatly     # Clean blue accents
+      - journal    # Bold colors    
     css: styles.css
     toc: true
 
