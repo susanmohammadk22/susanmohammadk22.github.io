@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IM-Assignment 4</title>
+<title>Speaker Dashboard – Susan Mohammad</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ebdb3d5cefd4bb795acb1814c75944fb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9e133ab9bec6b3198fd0c64f0675a10c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,6 +79,11 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Susan Mohammad</span>
+    </a>
+  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -110,25 +115,14 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./app.html">
  <span class="dropdown-text">Submit Question</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./speaker.html">
- <span class="dropdown-text">Speaker Dashboard</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./display.html">
- <span class="dropdown-text">Live Display</span></a>
-  </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./cv.pdf"> 
-<span class="menu-text">CV</span></a>
-  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6323" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">EPPS 6323</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-coursework" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Coursework</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-epps-6323">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-coursework">    
+        <li class="dropdown-header">Data Analysis (EPPS 6323)</li>
         <li>
     <a class="dropdown-item" href="./assignment1.html">
  <span class="dropdown-text">Assignment 1</span></a>
@@ -150,13 +144,8 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./Lab02.html">
  <span class="dropdown-text">Lab02</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6354-im" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">EPPS 6354-IM</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-epps-6354-im">    
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Information Management (EPPS 6354)</li>
         <li>
     <a class="dropdown-item" href="./assignment4.html">
  <span class="dropdown-text">Assignment 4</span></a>
@@ -171,6 +160,15 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/susanmohammadk22"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -182,15 +180,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#speaker-dashboard" id="toc-speaker-dashboard" class="nav-link active" data-scroll-target="#speaker-dashboard">Speaker Dashboard</a></li>
+  <li><a href="#connect-to-your-database" id="toc-connect-to-your-database" class="nav-link" data-scroll-target="#connect-to-your-database">CONNECT TO YOUR DATABASE</a></li>
+  <li><a href="#ui" id="toc-ui" class="nav-link" data-scroll-target="#ui">UI</a></li>
+  <li><a href="#server" id="toc-server" class="nav-link" data-scroll-target="#server">Server</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">IM-Assignment 4</h1>
+<h1 class="title">Speaker Dashboard</h1>
 </div>
 
 
@@ -207,99 +214,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ol type="1">
-<li>Explain the difference between a weak and a strong entity set. Use an example other than the one in Chapter 6 to illustrate. (Consult Ch. 6, 6.5.3)</li>
-</ol>
-<ul>
-<li><p>Answer: a strong entity set is a list of a data which act as a source for other data set. While a weak set is a small part of that big strong entity set. For example:</p></li>
-<li><p>strong entity set: Firm A Employees list ( including all corporate and local employees name, income, working hours, ….)</p></li>
-<li><p>Weak entity set: South Texas Plant - packaging employees name and working hours</p>
-<ol start="2" type="1">
-<li>Design an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed. (Consult: Practice Exercise solutions on textbook website)</li>
-</ol>
-<!-- -->
-<ol type="a">
-<li>Draw the E-R diagram using draw.io. Read this website for</li>
-</ol></li>
-</ul>
-<p>Answer:</p>
-<p>### E-R Diagram for Sports Team Scoring Statistics<br>
-<br>
-<br>
-![](er-diagram.png)</p>
-<p>the volleyball match of school is a strong entity. the score, player 1 scoring statistics and player 2 statistics are weak entities. those circles are the keys that I used them in other tables from this relationship</p>
-<p>Answer to B) I assumed that the league table would be an stronger entity now than the school</p>
-<p><img src="league-entity.png" class="img-fluid"></p>
-<hr>
-<ol start="3" type="1">
-<li>SQL exercise:</li>
-</ol>
-<!-- -->
-<ol type="a">
-<li>Consider the query select course_id, semester, year, sec_id, avg (tot_cred) from takes natural join student where year = 2017 group by course_id, semester, year, sec_id having count (ID) &gt;= 2;</li>
-</ol>
-<!-- -->
-<ol type="i">
-<li><p>Explain why appending natural join section in the from clause would not change the result. (Consult Ch. 4, 4.1.1)</p>
-<p>because the course is offered twice in this year</p>
-<pre><code></code></pre></li>
-</ol>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Course_id</th>
-<th>semester</th>
-<th>year</th>
-<th>sec_id</th>
-<th>avg (tot_cred)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CS-101</td>
-<td>Fall</td>
-<td>2017</td>
-<td>1</td>
-<td>65</td>
-</tr>
-<tr class="even">
-<td>CS-190</td>
-<td>Spring</td>
-<td>2017</td>
-<td>2</td>
-<td>43</td>
-</tr>
-<tr class="odd">
-<td>CS-347</td>
-<td>Fall</td>
-<td>2017</td>
-<td>1</td>
-<td>67</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ol type="i">
-<li><p>Test the results using the Online SQL interpreter (<a href="https://www.dbbook." class="uri">https://www.dbbook.</a> com/university-lab-dir/sqljs.html)</p>
-<p>the results that I put in the table are from the SQL interpreter</p>
-<hr></li>
-</ol>
-<!-- -->
-<ol start="2" type="a">
-<li>Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join). (Consult Ch. 4, 4.1.3)</li>
-</ol>
-<p><code>SELECT s.IDFROM student sLEFT OUTER JOIN takes tON s.ID = t.IDWHERE t.ID IS NULL;</code></p>
-<p>Anawer:</p>
-<pre><code>ID
-70557</code></pre>
+<section id="speaker-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="speaker-dashboard">Speaker Dashboard</h2>
+<p>#| context: server #| echo: false</p>
+<p>library(shiny) library(DBI) library(RPostgres) library(DT)</p>
+</section>
+<section id="connect-to-your-database" class="level1">
+<h1>CONNECT TO YOUR DATABASE</h1>
+<p>con &lt;- dbConnect( RPostgres::Postgres(), dbname = “Questionk22”, host = “localhost”, port = 5432, user = “postgres”, password = “Aa@0011231238”<br>
+)</p>
+</section>
+<section id="ui" class="level1">
+<h1>UI</h1>
+<p>ui &lt;- fluidPage( titlePanel(“Speaker Dashboard”),</p>
+<p>sidebarLayout( sidebarPanel( actionButton(“refresh”, “Refresh”), actionButton(“select”, “Select Question”), actionButton(“reject”, “Reject”), verbatimTextOutput(“stats”) ), mainPanel( h4(“Pending Questions”), DTOutput(“questions_table”) ) ) )</p>
+</section>
+<section id="server" class="level1">
+<h1>Server</h1>
+<p>server &lt;- function(input, output, session) {</p>
+<p>load_questions &lt;- reactive({ dbGetQuery(con, ” SELECT question_id, question_text, country_name, participant_name, organization FROM fact_questions fq JOIN dim_countries dc ON fq.country_id = dc.country_id WHERE status = ‘pending’ ORDER BY submitted_at DESC “) })</p>
+<p>output$questions_table &lt;- renderDT({ datatable(load_questions(), selection = ‘single’) })</p>
+<p>output$stats &lt;- renderPrint({ pending &lt;- dbGetQuery(con, “SELECT COUNT(*) FROM fact_questions WHERE status = ‘pending’“) cat(”Pending:“, pending[1,1]) }) }</p>
+<p>shinyApp(ui, server)</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
