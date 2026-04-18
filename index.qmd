@@ -1,11 +1,33 @@
 ---
-title: "2026-website"
+title: "Susan Mohammad"
 ---
 
-This is a Quarto website.
+## Welcome
+I am a data-driven professional specializing in **Econometrics, Continuous Improvement, and Process Automation**. My background combines over seven years of experience in the banking and IT industries.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: {.grid}
 
-```{r}
-1 + 1
-```
+::: {.g-col-6}
+### 🛠 Technical Toolbox
+
+| Category | Tools |
+|---|---|
+| **Programming** | R (Tidyverse, Shiny, Quarto), Python (Pandas, Numpy), SQL |
+| **Quantitative** | Econometric Modeling, Time Series Analysis, Hypothesis Testing, Machine Learning |
+| **Automation** | Power Platform (Power Apps, Power Automate), RPA, GitHub Actions, SharePoint |
+:::
+
+## 🚀 Featured Projects
+
+::: {.callout-note appearance="minimal"}
+### QEvent Application
+**The Tech:** R & Shiny, SQLite.
+**Impact:** Streamlines data collection and event logic, allowing speakers to filter questions and preventing event chaos.
+[View Project](https://github.com/susanmohammadk22/QEvent)
+:::
+
+::: {.callout-note appearance="minimal"}
+### Flight Delay Prediction (DFW)
+**The Tech:** Python, Lasso & Random Forest Regressions.
+**Insight:** Analyzes weather impact and propagated delays at DFW Airport to improve operational efficiency.
+:::

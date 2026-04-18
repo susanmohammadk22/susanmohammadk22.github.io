@@ -1,11 +1,14 @@
 project:
   type: website
-  output-dir: .
+  output-dir: _site
 
 website:
-  title: ""
+  title: "Susan Mohammad"
+  search: true
 
   navbar:
+    background: primary
+    type: dark
     right:
       - href: index.qmd
         text: Home
@@ -13,23 +16,15 @@ website:
         text: About
       - href: research.qmd
         text: Research
-      
       - text: Project
         menu:
           - href: project.qmd
             text: Project Overview
           - href: app.qmd
             text: Submit Question
-          - href: speaker.qmd
-            text: Speaker Dashboard
-          - href: display.qmd
-            text: Live Display
-            
-      - href: cv.pdf
-        text: CV
-
-      - text: EPPS 6323
+      - text: Coursework
         menu:
+          - text: "Data Analysis (EPPS 6323)"            
           - href: assignment1.qmd
             text: Assignment 1
           - href: assignment2.qmd
@@ -41,27 +36,29 @@ website:
             text: Lab01
           - href: Lab02.qmd
             text: Lab02
-        
-
-      - text: EPPS 6354-IM
-        menu:
+          - text: "---"
+          - text: "Information Management (EPPS 6354)"        
           - href: assignment4.qmd
             text: Assignment 4
           - href: assignment5.qmd
             text: Assignment 5
           - href: im-assignment4.qmd
             text: IM-Assignment 4
-  
+            
+      - href: cv.pdf
+        text: CV
+      - icon: github
+        href: https://github.com/susanmohammadk22 
 
 
 format:
   html:
     theme: 
-      - cosmo      # More colorful
-      - flatly     # Clean blue accents
+      - Lux      # More colorful
       - journal    # Bold colors    
     css: styles.css
     toc: true
+    toc-location: right
 
 editor: visual
 

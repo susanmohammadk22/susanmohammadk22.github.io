@@ -216,9 +216,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ui" id="toc-ui" class="nav-link active" data-scroll-target="#ui">UI</a></li>
+  <li><a href="#submit-your-question" id="toc-submit-your-question" class="nav-link active" data-scroll-target="#submit-your-question">Submit Your Question</a></li>
+  <li><a href="#connect-to-your-database" id="toc-connect-to-your-database" class="nav-link" data-scroll-target="#connect-to-your-database">CONNECT TO YOUR DATABASE</a></li>
+  <li><a href="#ui" id="toc-ui" class="nav-link" data-scroll-target="#ui">UI</a></li>
   <li><a href="#server" id="toc-server" class="nav-link" data-scroll-target="#server">Server</a></li>
-  <li><a href="#run-the-app" id="toc-run-the-app" class="nav-link" data-scroll-target="#run-the-app">Run the app</a></li>
   </ul>
 </nav>
     </div>
@@ -244,121 +245,52 @@ window.Quarto = {
 </header>
 
 
-<p><br>
-## Submit Your Question<br>
-#| context: server #| echo: false</p>
-<p>library(shiny)</p>
+<section id="submit-your-question" class="level2">
+<h2 class="anchored" data-anchor-id="submit-your-question">Submit Your Question</h2>
+<p>#| context: server #| echo: false</p>
+<p>library(shiny) library(DBI) library(RPostgres)</p>
+</section>
+<section id="connect-to-your-database" class="level1">
+<h1>CONNECT TO YOUR DATABASE</h1>
+<p>con &lt;- dbConnect( RPostgres::Postgres(), dbname = “Question22”,<br>
+host = “localhost”, port = 5432, user = “postgres”, password = “Aa@0011231238”<br>
+)</p>
+</section>
 <section id="ui" class="level1">
 <h1>UI</h1>
 <p>ui &lt;- fluidPage( titlePanel(“Submit Your Question”),</p>
-<p>wellPanel( textAreaInput(“question”, “Type your question:”, rows = 5, width = “100%”, placeholder = “e.g., What is the future of AI in education?”),</p>
-<pre><code>selectInput("question_country", 
-            "Which country is this question about?",
-            choices = c("Select a country" = "", 
-                       "United States", "China", "Russia", 
-                       "United Kingdom", "France", "Germany",
-                       "Iran", "Israel", "Saudi Arabia", 
-                       "Other")),
+<p>wellPanel( textAreaInput(“question”, “Type your question:”, rows = 5, width = “100%”),</p>
+<pre><code># Get countries from your dim_countries table
+selectInput("question_country", "Which country is this question about?",
+            choices = dbGetQuery(con, "SELECT country_name FROM dim_countries")$country_name),
 
-actionButton("submit", "Submit Question", 
-             class = "btn-primary",
-             icon = icon("paper-plane"))</code></pre>
+textInput("reporter_name", "Your Name:", placeholder = "John Smith"),
+textInput("organization", "Organization:", placeholder = "BBC, CNN, etc."),
+
+actionButton("submit", "Submit Question", class = "btn-primary")</code></pre>
 <p>),</p>
 <p>verbatimTextOutput(“status”) )</p>
 </section>
 <section id="server" class="level1">
 <h1>Server</h1>
 <p>server &lt;- function(input, output, session) {</p>
-<p># Simulate AI topic classification classify_topic &lt;- function(question) { question_lower &lt;- tolower(question)</p>
-<pre><code>if(grepl("ai|artificial intelligence|machine learning|deep learning", question_lower)) {
-  return("Artificial Intelligence")
-} else if(grepl("data|database|sql|analytics", question_lower)) {
-  return("Data Science")
-} else if(grepl("policy|law|regulation|government", question_lower)) {
-  return("Policy &amp; Regulation")
-} else if(grepl("economy|trade|market|business", question_lower)) {
-  return("Economy &amp; Trade")
-} else {
-  return("General")
-}</code></pre>
-<p>}</p>
-<p># Simulate embedding generation (random vector for demo) get_embedding &lt;- function(text) { set.seed(nchar(text)) # برای بازتولیدپذیری runif(384) # 384-dimensional embedding }</p>
-<p># Cosine similarity cosine_similarity &lt;- function(a, b) { sum(a * b) / (sqrt(sum(a^2)) * sqrt(sum(b^2))) }</p>
-<p># Check for duplicate questions check_duplicate &lt;- function(new_embedding, existing_embeddings) { if(length(existing_embeddings) == 0) return(FALSE)</p>
-<pre><code>similarities &lt;- sapply(existing_embeddings, function(e) {
-  cosine_similarity(new_embedding, e)
-})
-
-return(max(similarities) &gt; 0.85)</code></pre>
-<p>}</p>
-<p># Storage for existing embeddings (in memory for demo) existing_embeddings &lt;- list() question_counter &lt;- 0</p>
 <p>observeEvent(input<span class="math inline">\(submit, {
-    req(input\)</span>question) req(input$question_country)</p>
-<pre><code># Show processing modal
-showModal(modalDialog(
-  title = "Processing",
-  "Analyzing your question...",
-  easyClose = FALSE,
-  footer = NULL
-))
-
-# Simulate processing delay
-Sys.sleep(1)
-
-# Classify topic
-topic &lt;- classify_topic(input$question)
-
-# Generate embedding
-new_emb &lt;- get_embedding(input$question)
-
-# Check for duplicates
-is_duplicate &lt;- check_duplicate(new_emb, existing_embeddings)
-
-removeModal()
-
-if(is_duplicate) {
-  showModal(modalDialog(
-    title = "⚠️ Similar Question Found",
-    "A very similar question has already been submitted. Do you still want to submit?",
-    footer = tagList(
-      modalButton("Cancel"),
-      actionButton("confirm_submit", "Submit Anyway", class = "btn-warning")
-    )
-  ))
-} else {
-  # Save question
-  question_counter &lt;- question_counter + 1
-  existing_embeddings[[question_counter]] &lt;- new_emb
-  
-  output$status &lt;- renderPrint({
-    cat("✅ Question submitted successfully!\n\n")
-    cat("📝 Question:", input$question, "\n")
-    cat("🌍 Country:", input$question_country, "\n")
-    cat("🏷️  Topic:", topic, "\n")
-    cat("🆔 Question ID:", question_counter, "\n")
-    cat("📅 Time:", Sys.time(), "\n")
-    cat("\nYour question will be reviewed by the speaker.")
-  })
-  
-  showNotification("Question submitted!", type = "success")
-}</code></pre>
-<p>})</p>
-<p>observeEvent(input$confirm_submit, { removeModal()</p>
-<pre><code>question_counter &lt;- question_counter + 1
-existing_embeddings[[question_counter]] &lt;- get_embedding(input$question)
+    req(input\)</span>question, input<span class="math inline">\(question_country, input\)</span>reporter_name)</p>
+<pre><code># INSERT into your fact_questions table
+dbExecute(con, "
+  INSERT INTO fact_questions (question_text, country_id, participant_name, organization, submitted_at)
+  VALUES ($1, (SELECT country_id FROM dim_countries WHERE country_name = $2), $3, $4, NOW())
+", params = list(input$question, input$question_country, input$reporter_name, input$organization))
 
 output$status &lt;- renderPrint({
-  cat("✅ Question submitted (duplicate override)!\n\n")
-  cat("📝 Question:", input$question, "\n")
-  cat("🌍 Country:", input$question_country, "\n")
-  cat("🆔 Question ID:", question_counter, "\n")
+  cat("✅ Question submitted!\n")
+  cat("Reporter:", input$reporter_name, "\n")
+  cat("Organization:", input$organization, "\n")
+  cat("Country:", input$question_country, "\n")
 })
 
-showNotification("Question submitted!", type = "success")</code></pre>
+showNotification("Submitted!", type = "success")</code></pre>
 <p>}) }</p>
-</section>
-<section id="run-the-app" class="level1">
-<h1>Run the app</h1>
 <p>shinyApp(ui, server)</p>
 
 

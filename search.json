@@ -4,7 +4,7 @@
     "href": "speaker.html",
     "title": "Speaker Dashboard",
     "section": "",
-    "text": "## 🎤 Moderate Questions\n\n\n::: {.cell context='server'}\n::: {.cell-output .cell-output-stderr}\nWarning: package ‘shiny’ was built under R version 4.5.3\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\nWarning: package ‘DT’ was built under R version 4.5.3\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\nAttaching package: ‘DT’\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\nThe following objects are masked from ‘package:shiny’:\ndataTableOutput, renderDataTable\n```\n:::\n\nShiny applications not supported in static R Markdown documents\n\n:::"
+    "text": "#| context: server #| echo: false\nlibrary(shiny) library(DBI) library(RPostgres) library(DT)"
   },
   {
     "objectID": "speaker.html#questions-queue",
@@ -172,7 +172,7 @@
     "href": "app.html",
     "title": "Submit Question",
     "section": "",
-    "text": "## Submit Your Question\n#| context: server #| echo: false\nlibrary(shiny)\n\nUI\nui &lt;- fluidPage( titlePanel(“Submit Your Question”),\nwellPanel( textAreaInput(“question”, “Type your question:”, rows = 5, width = “100%”, placeholder = “e.g., What is the future of AI in education?”),\nselectInput(\"question_country\", \n            \"Which country is this question about?\",\n            choices = c(\"Select a country\" = \"\", \n                       \"United States\", \"China\", \"Russia\", \n                       \"United Kingdom\", \"France\", \"Germany\",\n                       \"Iran\", \"Israel\", \"Saudi Arabia\", \n                       \"Other\")),\n\nactionButton(\"submit\", \"Submit Question\", \n             class = \"btn-primary\",\n             icon = icon(\"paper-plane\"))\n),\nverbatimTextOutput(“status”) )\n\n\nServer\nserver &lt;- function(input, output, session) {\n# Simulate AI topic classification classify_topic &lt;- function(question) { question_lower &lt;- tolower(question)\nif(grepl(\"ai|artificial intelligence|machine learning|deep learning\", question_lower)) {\n  return(\"Artificial Intelligence\")\n} else if(grepl(\"data|database|sql|analytics\", question_lower)) {\n  return(\"Data Science\")\n} else if(grepl(\"policy|law|regulation|government\", question_lower)) {\n  return(\"Policy & Regulation\")\n} else if(grepl(\"economy|trade|market|business\", question_lower)) {\n  return(\"Economy & Trade\")\n} else {\n  return(\"General\")\n}\n}\n# Simulate embedding generation (random vector for demo) get_embedding &lt;- function(text) { set.seed(nchar(text)) # برای بازتولیدپذیری runif(384) # 384-dimensional embedding }\n# Cosine similarity cosine_similarity &lt;- function(a, b) { sum(a * b) / (sqrt(sum(a^2)) * sqrt(sum(b^2))) }\n# Check for duplicate questions check_duplicate &lt;- function(new_embedding, existing_embeddings) { if(length(existing_embeddings) == 0) return(FALSE)\nsimilarities &lt;- sapply(existing_embeddings, function(e) {\n  cosine_similarity(new_embedding, e)\n})\n\nreturn(max(similarities) &gt; 0.85)\n}\n# Storage for existing embeddings (in memory for demo) existing_embeddings &lt;- list() question_counter &lt;- 0\nobserveEvent(input\\(submit, {\n    req(input\\)question) req(input$question_country)\n# Show processing modal\nshowModal(modalDialog(\n  title = \"Processing\",\n  \"Analyzing your question...\",\n  easyClose = FALSE,\n  footer = NULL\n))\n\n# Simulate processing delay\nSys.sleep(1)\n\n# Classify topic\ntopic &lt;- classify_topic(input$question)\n\n# Generate embedding\nnew_emb &lt;- get_embedding(input$question)\n\n# Check for duplicates\nis_duplicate &lt;- check_duplicate(new_emb, existing_embeddings)\n\nremoveModal()\n\nif(is_duplicate) {\n  showModal(modalDialog(\n    title = \"⚠️ Similar Question Found\",\n    \"A very similar question has already been submitted. Do you still want to submit?\",\n    footer = tagList(\n      modalButton(\"Cancel\"),\n      actionButton(\"confirm_submit\", \"Submit Anyway\", class = \"btn-warning\")\n    )\n  ))\n} else {\n  # Save question\n  question_counter &lt;- question_counter + 1\n  existing_embeddings[[question_counter]] &lt;- new_emb\n  \n  output$status &lt;- renderPrint({\n    cat(\"✅ Question submitted successfully!\\n\\n\")\n    cat(\"📝 Question:\", input$question, \"\\n\")\n    cat(\"🌍 Country:\", input$question_country, \"\\n\")\n    cat(\"🏷️  Topic:\", topic, \"\\n\")\n    cat(\"🆔 Question ID:\", question_counter, \"\\n\")\n    cat(\"📅 Time:\", Sys.time(), \"\\n\")\n    cat(\"\\nYour question will be reviewed by the speaker.\")\n  })\n  \n  showNotification(\"Question submitted!\", type = \"success\")\n}\n})\nobserveEvent(input$confirm_submit, { removeModal()\nquestion_counter &lt;- question_counter + 1\nexisting_embeddings[[question_counter]] &lt;- get_embedding(input$question)\n\noutput$status &lt;- renderPrint({\n  cat(\"✅ Question submitted (duplicate override)!\\n\\n\")\n  cat(\"📝 Question:\", input$question, \"\\n\")\n  cat(\"🌍 Country:\", input$question_country, \"\\n\")\n  cat(\"🆔 Question ID:\", question_counter, \"\\n\")\n})\n\nshowNotification(\"Question submitted!\", type = \"success\")\n}) }\n\n\nRun the app\nshinyApp(ui, server)"
+    "text": "#| context: server #| echo: false\nlibrary(shiny) library(DBI) library(RPostgres)"
   },
   {
     "objectID": "assignment2.html",
@@ -271,5 +271,19 @@
     "title": "EPPS 6323: Lab02 R programming basics II",
     "section": "",
     "text": "summary(lm(medv~lstat*age,data=Boston))\n\n\nCall:\nlm(formula = medv ~ lstat * age, data = Boston)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-15.806  -4.045  -1.333   2.085  27.552 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 36.0885359  1.4698355  24.553  &lt; 2e-16 ***\nlstat       -1.3921168  0.1674555  -8.313 8.78e-16 ***\nage         -0.0007209  0.0198792  -0.036   0.9711    \nlstat:age    0.0041560  0.0018518   2.244   0.0252 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.149 on 502 degrees of freedom\nMultiple R-squared:  0.5557,    Adjusted R-squared:  0.5531 \nF-statistic: 209.3 on 3 and 502 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "app.html#submit-your-question",
+    "href": "app.html#submit-your-question",
+    "title": "Submit Question",
+    "section": "",
+    "text": "#| context: server #| echo: false\nlibrary(shiny) library(DBI) library(RPostgres)"
+  },
+  {
+    "objectID": "speaker.html#speaker-dashboard",
+    "href": "speaker.html#speaker-dashboard",
+    "title": "Speaker Dashboard",
+    "section": "",
+    "text": "#| context: server #| echo: false\nlibrary(shiny) library(DBI) library(RPostgres) library(DT)"
   }
 ]

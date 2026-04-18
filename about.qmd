@@ -1,9 +1,17 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-About this site
+I am a **Process Transformation Engineer** with a passion for using data and AI to solve complex business challenges. With over seven years of experience across the banking, IT, and retail industries, I specialize in bridging the gap between operational efficiency and advanced analytical modeling. I have a Lean and Six Sigma black belt.
 
-```{r}
-1 + 1
-```
+### Professional Journey
+
+At **Snapp**, I focused on analyzing operational data to support innovative services like Snapp Box and Snapp Food, achieving significant improvements in productivity through automation.
+
+Currently, I am leveraging my **Master of Economics** and quantitative skill set at **University of Texas at Dallas** and working at **Comerica/ Fifth Third Bank**. My work focuses on optimizing risk controls and implementing automated data solutions to ensure regulatory compliance and operational accuracy in a high-stakes financial environment.
+
+### Skills & Interests
+
+-   **Strategic Communication:** Expert at translating complex data insights for executive stakeholders and regional staff.
+-   **Continuous Learning:** Always exploring new techniques in Machine Learning, R, and Python to stay at the forefront of data science.
+-   **Problem Solving:** I thrive in "chaos," using structured frameworks to bring order and efficiency to complex workflows.
