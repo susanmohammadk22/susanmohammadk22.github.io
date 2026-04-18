@@ -1,47 +1,47 @@
 {
   "about.qmd": {
-    "about.html": "32dba20d"
-  },
-  "index.qmd": {
-    "index.html": "492714a6"
-  },
-  "assignment1.qmd": {
-    "assignment1.html": "f63149c8"
-  },
-  "assignment2.qmd": {
-    "assignment2.html": "a4d5e7b3"
-  },
-  "assignment3.qmd": {
-    "assignment3.html": "178af7c6"
-  },
-  "project.qmd": {
-    "project.html": "c4c10459"
-  },
-  "research.qmd": {
-    "research.html": "cbe1d4a9"
-  },
-  "assignment4.qmd": {
-    "assignment4.html": "8ea659c9"
-  },
-  "assignment5.qmd": {
-    "assignment5.html": "1711c103"
-  },
-  "Lab01.qmd": {
-    "Lab01.html": "9b870d84"
-  },
-  "Lab02.qmd": {
-    "Lab02.html": "113798c8"
-  },
-  "im-assignment4.qmd": {
-    "im-assignment4.html": "a33393c9"
+    "about.html": "2a454ae4"
   },
   "app.qmd": {
-    "app.html": "78a58e51"
+    "app.html": "218ae1c6"
+  },
+  "assignment1.qmd": {
+    "assignment1.html": "8f4cb461"
+  },
+  "assignment2.qmd": {
+    "assignment2.html": "8fde4c42"
+  },
+  "assignment3.qmd": {
+    "assignment3.html": "68daadbf"
+  },
+  "assignment4.qmd": {
+    "assignment4.html": "7007f575"
+  },
+  "assignment5.qmd": {
+    "assignment5.html": "d288f5d9"
   },
   "display.qmd": {
-    "display.html": "47dac7c9"
+    "display.html": "0a0c3ea9"
+  },
+  "im-assignment4.qmd": {
+    "im-assignment4.html": "c9e614d7"
+  },
+  "index.qmd": {
+    "index.html": "c7709457"
+  },
+  "Lab01.qmd": {
+    "Lab01.html": "9ae74c67"
+  },
+  "Lab02.qmd": {
+    "Lab02.html": "c88af0fc"
+  },
+  "project.qmd": {
+    "project.html": "d13379d3"
+  },
+  "research.qmd": {
+    "research.html": "a20a9a62"
   },
   "speaker.qmd": {
-    "speaker.html": "01cc14c4"
+    "speaker.html": "bd3f8e66"
   }
 }

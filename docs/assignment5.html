@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Assignment 5 – Susan Mohammad</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9e133ab9bec6b3198fd0c64f0675a10c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Susan Mohammad</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-project">    
+        <li>
+    <a class="dropdown-item" href="./project.html">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-coursework" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Coursework</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-coursework">    
+        <li class="dropdown-header">Data Analysis (EPPS 6323)</li>
+        <li>
+    <a class="dropdown-item" href="./assignment1.html">
+ <span class="dropdown-text">Assignment 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment2.html">
+ <span class="dropdown-text">Assignment 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment3.html">
+ <span class="dropdown-text">Assignment 3</span></a>
+  </li>  
+        <li class="dropdown-header">Labs</li>
+        <li>
+    <a class="dropdown-item" href="./Lab01.html">
+ <span class="dropdown-text">Lab01</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Lab02.html">
+ <span class="dropdown-text">Lab02</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Information Management (EPPS 6354)</li>
+        <li>
+    <a class="dropdown-item" href="./assignment4.html">
+ <span class="dropdown-text">Assignment 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./assignment5.html">
+ <span class="dropdown-text">Assignment 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./im-assignment4.html">
+ <span class="dropdown-text">IM-Assignment 4</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/susanmohammadk22"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment-3-question-1" id="toc-assignment-3-question-1" class="nav-link active" data-scroll-target="#assignment-3-question-1">Assignment 3 Question 1</a></li>
+  <li><a href="#assignment5" id="toc-assignment5" class="nav-link" data-scroll-target="#assignment5"><strong>Assignment5:</strong></a></li>
+  <li><a href="#assignment-6" id="toc-assignment-6" class="nav-link" data-scroll-target="#assignment-6">Assignment 6</a></li>
+  <li><a href="#assignment-7" id="toc-assignment-7" class="nav-link" data-scroll-target="#assignment-7">Assignment 7</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 5</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="assignment-3-question-1" class="level1">
+<h1>Assignment 3 Question 1</h1>
+<p>Open the Online SQL interpreter (https://www.db-book.com/university-lab-dir/sqljs.html) 2. Write SQL codes to get a list of: i. Students IDs (hint: from the takes relation)</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p>ID 00128 00128 12345 12345 12345 12345 19991 23121 44553 45678 45678 45678 54321 54321 55739 76543 76543 76653 98765 98765 98988 98988</p>
+<hr>
+<ol start="2" type="i">
+<li>Instructors</li>
+</ol>
+<p>Answer:</p>
+<p>select name from instructor</p>
+<p>name Srinivasan Wu Mozart Einstein El Said Gold Katz Califieri Singh Crick Brandt Kim</p>
+<hr>
+<ol start="3" type="i">
+<li>Departments Answer:</li>
+</ol>
+<p>select dept_name from department</p>
+<p>dept_name Biology Comp. Sci. Elec. Eng. Finance History Music Physics</p>
+<hr>
+<ol start="3" type="1">
+<li>Write in SQL codes to do following queries:</li>
+</ol>
+<!-- -->
+<ol type="i">
+<li>Find the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.</li>
+</ol>
+<p>ID name 00128 Zhang 12345 Shankar 45678 Levy 54321 Williams 76543 Brown 98765 Bourikas —</p>
+<ol start="2" type="i">
+<li>Add grades to the list</li>
+</ol>
+<p>ID name grade 00128 Zhang A 00128 Zhang A- 12345 Shankar C 12345 Shankar A 45678 Levy F 45678 Levy B+ 45678 Levy B 54321 Williams A- 54321 Williams B+ 76543 Brown A 98765 Bourikas C- 98765 Bourikas B —</p>
+<ol start="3" type="i">
+<li>Find the ID and name of each student who has not taken any course offered before 2017.</li>
+</ol>
+<p>ID name 00128 Zhang 12345 Shankar 19991 Brandt 23121 Chavez 44553 Peltier 45678 Levy 54321 Williams 55739 Sanchez 70557 Snow 76543 Brown 76653 Aoi 98765 Bourikas 98988 Tanaka</p>
+<hr>
+<ol start="4" type="i">
+<li>For each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor. dept_name max_salary Biology 72000 Comp. Sci. 92000 Elec. Eng. 80000 Finance 90000 History 62000 Music 40000 Physics 95000</li>
+</ol>
+<hr>
+<hr>
+<ol start="6" type="i">
+<li>Add names to the list</li>
+</ol>
+<p>name salary Mozart 40000 —</p>
+<ol start="4" type="1">
+<li>Find instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)</li>
+</ol>
+<p>ID name 12121 Wu 15151 Mozart 22222 Einstein 32343 El Said 33456 Gold 45565 Katz 58583 Califieri 76543 Singh 98345 Kim</p>
+<hr>
+</section>
+</section>
+<section id="assignment5" class="level1">
+<h1><strong>Assignment5:</strong></h1>
+<hr>
+<p>Q1: disconnected graph: is like two different team having their own database like HR team having database of employees and financial team having database of invoices.</p>
+<hr>
+<p>Q2: cyclical graph is like a person who send request for having a software access, the access is sent to another team to review, they send it to the requester manager for approval then they provide the access and send the software access to requester. Finally the person install the software.</p>
+<hr>
+<p>Q3: I think we do not need to make all of our entities strong and when a weak entity works and answer the requirement is good enough so it depends on the priorities and requirements that we decide for variables not just making all entities strong.</p>
+<hr>
+<hr>
+<p>Q4:</p>
+<p>a)</p>
+<hr>
+<p>i)</p>
+<p>Select e.id and e.name</p>
+<p>from employee as e, works as w, company as c, manages as m</p>
+<p>Where e.id = w.id</p>
+<p>And w.company_name = c.company_name,</p>
+<p>And e.city=c.city</p>
+<hr>
+<p>ii)</p>
+<p>Select e.id and e.name</p>
+<p>from employee as e, works as w, company as c, manages as m</p>
+<p>Where e.id = m.id</p>
+<p>And manager_id=m.id</p>
+<p>And e.city=m.city</p>
+<p>And e.street=m.street</p>
+<hr>
+<p>iii)</p>
+<p>Select e.id and e.name</p>
+<p>from employee as e, works as w, company as c, manages as m</p>
+<p>Where e.id = w.id</p>
+<p>And w.salary&gt; s.salary,</p>
+<p>s.salary = Average_salary of all employees at c.id</p>
+<hr>
+<p>b)</p>
+<p><img src="images/clipboard-1272876556.png" class="img-fluid" width="419"></p>
+</section>
+<section id="assignment-6" class="level1">
+<h1>Assignment 6</h1>
+<p>Look up websites containing the following data representations:</p>
+<ul>
+<li></li>
+<li><p>Using JSON</p></li>
+<li><p>Using XML Analyze the websites in terms of structure and composition. Name the technology/methods use for creating the web database.</p></li>
+</ul>
+<p>I selected the website of Flagstar bank for this question. I asked Chat GPT where can I find JSON then I found it then I saw Json codes there.</p>
+<p>I clicked on www.flagstar.com.json?t=1</p>
+<p>I paste part of the larg codes in that page of JSON structure:</p>
+<pre><code>      "criteria": "click",          
+      "comparison": "any"  }  ] },    
+      "resources": [      
+      {         
+      "resource_id": "49583",      
+      "resource_type": "goal"</code></pre>
+<p>I did not find any XML on this website</p>
+<p>but I previously used XML in power automate to call the power app link and creating a token to send in the outlook mailbox and it was as like as this</p>
+<p>“<br><br><a href="https://apps.powerapps.com/play/YOUR_APP_ID?tenantId=YOUR_TENANT_ID&amp;token=&quot; &amp; locToken &amp; &quot;">Click here to start the survey</a>”, {Importance: “High”}</p>
+<p>in the website I saw a great and nice structure of coding and it was easy to understand to some extent, while when I used XML I did not understood why I should use the term ‘br&gt;’ several times at the beginning of sentences or at the end of it, so it was complicated to understand and following the codes, for me.</p>
+<hr>
+<ol start="2" type="1">
+<li>SQL exercise:</li>
+</ol>
+<!-- -->
+<ol type="i">
+<li>Express the following query in SQL using no subqueries and no set operations. (Hint: left outer join) select ID from student except select s id from advisor where i ID is not null</li>
+<li>Using the university schema, write an SQL query to find the names and IDs of those instructors who teach every course taught in his or her department (i.e., every course that appears in the course relation with the instructor’s department name). Order result by name</li>
+</ol>
+<hr>
+<p>answer:</p>
+<p><img src="images/clipboard-650742211.png" class="img-fluid"></p>
+<p>SELECT ID</p>
+<p>FROM student</p>
+<p>LEFT OUTER JOIN advisor</p>
+<p>ON ID = advisor.s_id AND advisor.i_id IS NOT NULL</p>
+<p>WHERE advisor.s_id IS NULL;</p>
+<p><img src="images/clipboard-2552435613.png" class="img-fluid"></p>
+<ul>
+<li><p>SELECT instructor.ID, instructor.name</p></li>
+<li><p>FROM instructor</p></li>
+<li><p>WHERE NOT EXISTS(</p></li>
+<li><p>SELECT course.course_id</p></li>
+<li><p>FROM course</p></li>
+<li><p>WHERE course.dept_name=instructor.dept_name</p></li>
+</ul>
+<p>it did not works</p>
+<hr>
+<p>question 3</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3880082850.png" class="img-fluid figure-img"></p>
+<figcaption>it did not run the codes</figcaption>
+</figure>
+</div>
+<section id="prepare-for-class-8" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-for-class-8">prepare for class 8</h2>
+<p>the business that I asked Deepseek for creating an ERdiagram for it</p>
+<p>create ER Diagram for this business I have an ecommerce website for selling construction materials. I have two type of customers. B2B and B2C. I have some section for sustainable houses and wants to sell those items to its customers who cares about environment and sustainability. I have a customer service online section to chat with customers and return and logistic section for delivering products. also I have the section for payment for procucts that people buy from my website that way they can pay the fees. also I have some section for consultants and designers to help people to have idea what should they buy. the designer section is completely AI agent service and it is free for B2C customers (for house owners who shop from us and it will be available after successful transaction.</p>
+<p><img src="images/clipboard-2381338939.png" class="img-fluid"></p>
+<p>the error is that I do not see a star schema in the diagram. it did not connected some of tables there and it missed the connection of key items</p>
+</section>
+</section>
+<section id="assignment-7" class="level1">
+<h1>Assignment 7</h1>
+<p>part1</p>
+<p>This is a standard relational schema for a university database, often used in database system textbooks (like Silberschatz, Korth, and Sudarshan). It effectively captures the relationships between departments, students, instructors, and the courses they offer.</p>
+<p>Here is a breakdown of the core components and how they connect:</p>
+<section id="core-entities" class="level3">
+<h3 class="anchored" data-anchor-id="core-entities"><strong>1. Core Entities</strong></h3>
+<ul>
+<li><p><strong>Location:</strong> <code>classroom</code> defines where classes happen.</p></li>
+<li><p><strong>Organization:</strong> <code>department</code> acts as the hub, linking students, instructors, and courses.</p></li>
+<li><p><strong>People:</strong> <code>student</code> and <code>instructor</code> contain basic profile information.</p></li>
+<li><p><strong>Curriculum:</strong> <code>course</code> defines the subject, while <code>section</code> represents a specific offering of that course (time/place).</p></li>
+</ul>
+</section>
+<section id="key-relationships" class="level3">
+<h3 class="anchored" data-anchor-id="key-relationships"><strong>2. Key Relationships</strong></h3>
+<p>The schema uses several <strong>Foreign Keys</strong> to maintain referential integrity:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Table</strong></td>
+<td><strong>Links to…</strong></td>
+<td><strong>Purpose</strong></td>
+</tr>
+<tr class="even">
+<td><strong>course</strong></td>
+<td><code>department</code></td>
+<td>Associates a course with its organizing department.</td>
+</tr>
+<tr class="odd">
+<td><strong>section</strong></td>
+<td><code>course</code> &amp; <code>classroom</code></td>
+<td>Links a specific class to its parent course and its physical location.</td>
+</tr>
+<tr class="even">
+<td><strong>teaches</strong></td>
+<td><code>instructor</code> &amp; <code>section</code></td>
+<td>Maps which instructor is teaching which specific class section.</td>
+</tr>
+<tr class="odd">
+<td><strong>takes</strong></td>
+<td><code>student</code> &amp; <code>section</code></td>
+<td>Tracks student enrollment and their final grades.</td>
+</tr>
+<tr class="even">
+<td><strong>advisor</strong></td>
+<td><code>student</code> &amp; <code>instructor</code></td>
+<td>A many-to-one mapping of students to their faculty advisors.</td>
+</tr>
+<tr class="odd">
+<td><strong>prereq</strong></td>
+<td><code>course</code> (Self-referential)</td>
+<td>Defines which courses must be taken before others.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="integrity-constraints" class="level3">
+<h3 class="anchored" data-anchor-id="integrity-constraints"><strong>3. Integrity Constraints</strong></h3>
+<p>You’ve included several important SQL constraints:</p>
+<ul>
+<li><p><strong><code>check</code> clauses:</strong> Ensure data validity (e.g., <code>budget &gt; 0</code>, <code>credits &gt; 0</code>, and specific semester names).</p></li>
+<li><p><strong><code>on delete set null</code>:</strong> If a department or classroom is deleted, the referencing record remains but the link is cleared.</p></li>
+<li><p><strong><code>on delete cascade</code>:</strong> If a student or course is deleted, all related enrollment/teaching records are automatically removed to prevent orphaned data.</p></li>
+</ul>
+<p><strong>Are you working on specific queries for your “Query Evaluation” lab?</strong> I can help you write the SQL for data retrieval or explain how a query optimizer might handle joins across these tables.</p>
+</section>
+<section id="gemini-said" class="level2">
+<h2 class="anchored" data-anchor-id="gemini-said">Gemini said</h2>
+<p>Here are the SQL queries based on the schema provided for your AI Lab. These queries utilize standard SQL features like aggregations, joins, correlated subqueries, and window functions.</p>
+<section id="query-1-aggregation" class="level3">
+<h3 class="anchored" data-anchor-id="query-1-aggregation"><strong>Query 1 — Aggregation</strong></h3>
+<p>To find the enrollments and average student credits per department, we join the <code>student</code> table with the <code>takes</code> table.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT      dept_name,      COUNT(*) AS total_enrollments,      AVG(tot_cred) AS avg_student_credits FROM student JOIN takes ON student.ID = takes.ID GROUP BY dept_name ORDER BY total_enrollments DESC; </code></pre>
+</section>
+<section id="query-2-multi-table-join" class="level3">
+<h3 class="anchored" data-anchor-id="query-2-multi-table-join"><strong>Query 2 — Multi-Table Join</strong></h3>
+<p>This query requires joining <code>instructor</code>, <code>teaches</code>, and <code>takes</code> to count students per section, filtering with a <code>HAVING</code> clause for the enrollment threshold.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT      i.name,      i.dept_name,      t.course_id,      t.semester,      t.year,      COUNT(tk.ID) AS student_count FROM instructor i JOIN teaches t ON i.ID = t.ID JOIN takes tk ON      t.course_id = tk.course_id AND      t.sec_id = tk.sec_id AND      t.semester = tk.semester AND      t.year = tk.year GROUP BY i.ID, i.name, i.dept_name, t.course_id, t.sec_id, t.semester, t.year HAVING COUNT(tk.ID) &gt;= 10; </code></pre>
+</section>
+<section id="query-3-correlated-subquery" class="level3">
+<h3 class="anchored" data-anchor-id="query-3-correlated-subquery"><strong>Query 3 — Correlated Subquery</strong></h3>
+<p>The logic here is to find courses where there is <strong>no</strong> section that lacks an ‘A’ student.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT title FROM course c WHERE NOT EXISTS (     SELECT 1      FROM section s      WHERE s.course_id = c.course_id     AND NOT EXISTS (         SELECT 1          FROM takes tk          WHERE tk.course_id = s.course_id          AND tk.sec_id = s.sec_id          AND tk.semester = s.semester          AND tk.year = s.year          AND tk.grade = 'A'     ) ); </code></pre>
+</section>
+<section id="query-4-window-function" class="level3">
+<h3 class="anchored" data-anchor-id="query-4-window-function"><strong>Query 4 — Window Function</strong></h3>
+<p>We use <code>RANK()</code> to order by salary and <code>PERCENT_RANK()</code> to find the relative standing within each department.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT      name,      dept_name,      salary,     RANK() OVER (PARTITION BY dept_name ORDER BY salary DESC) AS dept_salary_rank,     PERCENT_RANK() OVER (PARTITION BY dept_name ORDER BY salary DESC) AS salary_percentile FROM instructor; </code></pre>
+</section>
+<section id="query-5-complex-query" class="level3">
+<h3 class="anchored" data-anchor-id="query-5-complex-query"><strong>Query 5 — Complex Query</strong></h3>
+<p>This combines an aggregation filter (for the 3 departments) with a subquery to ensure the student hasn’t taken their advisor’s class.</p>
+<p><strong>SQL</strong></p>
+<pre><code>SELECT s.name FROM student s JOIN takes tk ON s.ID = tk.ID JOIN course c ON tk.course_id = c.course_id WHERE s.ID NOT IN (     -- Subquery: Students who HAVE taken a course with their advisor     SELECT a.s_ID     FROM advisor a     JOIN teaches t ON a.i_ID = t.ID     JOIN takes tk2 ON          t.course_id = tk2.course_id AND          t.sec_id = tk2.sec_id AND          t.semester = tk2.semester AND          t.year = tk2.year     WHERE tk2.ID = a.s_ID ) GROUP BY s.ID, s.name HAVING COUNT(DISTINCT c.dept_name) &gt;= 3; </code></pre>
+<p><strong>Would you like me to explain the logic behind Query 5’s “NOT IN” clause or show</strong></p>
+<p>This is the answer that I received form Gemini after I pased the codes and queries from PDF file I did not write a prompt I just used the pdf file of class. then I pased it here.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

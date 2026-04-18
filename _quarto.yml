@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: .
+  output-dir: docs
 
 website:
   title: "Susan Mohammad"
@@ -19,9 +19,8 @@ website:
       - text: Project
         menu:
           - href: project.qmd
-            text: Project Overview
-          - href: app.qmd
-            text: Submit Question
+            text: Projects
+
       - text: Coursework
         menu:
           - text: "Data Analysis (EPPS 6323)"            
