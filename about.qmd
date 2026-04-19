@@ -2,16 +2,28 @@
 title: "About Me"
 ---
 
-I am a **Process Transformation Engineer** with a passion for using data and AI to solve complex business challenges. With over seven years of experience across the banking, IT, and retail industries, I specialize in bridging the gap between operational efficiency and advanced analytical modeling. I have a Lean and Six Sigma black belt.
+I am a **Process Transformation Engineer**with a strong foundation in econometrics, statistical analysis, and intelligent automation. My career has centered on improving how organizations work—using data to identify risks, redesign processes, and implement controls that strengthen accuracy, compliance, and efficiency.
+I hold a **Lean Six Sigma Black Belt** and am completing my **Master of Economics** at the University of Texas at Dallas, where I am expanding my expertise in machine learning, text analytics, and AI‑enabled decision systems.
 
+
+---
 ### Professional Journey
 
-At **Snapp**, I focused on analyzing operational data to support innovative services like Snapp Box and Snapp Food, achieving significant improvements in productivity through automation.
+In my current role at Comerica/ Fifth-Third Bank, I analyze workflows, identify operational and compliance risks, and design improved controls. I also lead automation initiatives using Power Apps, SharePoint, and Power Automate—reducing manual effort and improving process transparency. My work supports continuous improvement and ensures that business units operate with stronger controls and clearer accountability.
 
-Currently, I am leveraging my **Master of Economics** and quantitative skill set at **University of Texas at Dallas** and working at **Comerica/ Fifth Third Bank**. My work focuses on optimizing risk controls and implementing automated data solutions to ensure regulatory compliance and operational accuracy in a high-stakes financial environment.
+At Snapp (Ride‑Share Platform), I led enterprise‑wide improvement initiatives powered by analytics, automation, and KPI analysis. I helped modernize CRM systems, introduced RPA solutions, and supported large‑scale technology solutions that improved productivity and operational agility.
+
 
 ### Skills & Interests
 
 -   **Strategic Communication:** Expert at translating complex data insights for executive stakeholders and regional staff.
--   **Continuous Learning:** Always exploring new techniques in Machine Learning, R, and Python to stay at the forefront of data science.
 -   **Problem Solving:** I thrive in "chaos," using structured frameworks to bring order and efficiency to complex workflows.
+
+## What I’m Exploring Now
+
+- Text embedding for semantic similarity  
+- AI‑assisted question classification  
+- Predictive modeling   
+- Intelligent automation using R, Python, and Power Platform  
+
+I’m passionate about building systems that combine **data, automation, and AI** to solve real‑world problems.

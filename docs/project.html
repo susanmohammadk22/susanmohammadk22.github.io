@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9e133ab9bec6b3198fd0c64f0675a10c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0c86f800422ac82d2a7a51bc8f02a127.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -184,16 +184,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#project-name-qevent-application" id="toc-project-name-qevent-application" class="nav-link active" data-scroll-target="#project-name-qevent-application">Project Name: QEvent Application</a>
   <ul class="collapse">
   <li><a href="#live-application" id="toc-live-application" class="nav-link" data-scroll-target="#live-application">Live Application</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#ai-pipeline" id="toc-ai-pipeline" class="nav-link" data-scroll-target="#ai-pipeline">AI Pipeline</a>
+  <li><a href="#ai-extension-in-progress" id="toc-ai-extension-in-progress" class="nav-link" data-scroll-target="#ai-extension-in-progress">AI Extension (In Progress)</a>
   <ul class="collapse">
-  <li><a href="#question-submission" id="toc-question-submission" class="nav-link" data-scroll-target="#question-submission">1. Question Submission</a></li>
-  <li><a href="#similarity-detection" id="toc-similarity-detection" class="nav-link" data-scroll-target="#similarity-detection">2. Similarity Detection</a></li>
-  <li><a href="#topic-classification" id="toc-topic-classification" class="nav-link" data-scroll-target="#topic-classification">3. Topic Classification</a></li>
-  <li><a href="#live-display" id="toc-live-display" class="nav-link" data-scroll-target="#live-display">4. Live Display</a></li>
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why This Matters</a></li>
+  <li><a href="#technologies" id="toc-technologies" class="nav-link" data-scroll-target="#technologies">Technologies</a></li>
   </ul></li>
-  <li><a href="#technologies-used" id="toc-technologies-used" class="nav-link" data-scroll-target="#technologies-used">Technologies Used</a></li>
   </ul></li>
+  <li><a href="#flight-delay-prediction-dfw" id="toc-flight-delay-prediction-dfw" class="nav-link" data-scroll-target="#flight-delay-prediction-dfw">Flight Delay Prediction (DFW)</a></li>
   </ul>
 </nav>
     </div>
@@ -221,67 +218,52 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="project-name-qevent-application" class="level1">
 <h1>Project Name: QEvent Application</h1>
-<p>The <strong>QEvent Application</strong> is a specialized system built with R and Shiny for event logic and response tracking. It utilizes a country detection algorithm and a SQLite backend to manage participant questions in real-time.</p>
+<p>The <strong>QEvent Application</strong> is a specialized system built with R and Shiny for event logic and response tracking. It utilizes a country detection algorithm and a SQLite backend to manage participant questions in real-time. It allows speakers to filter, classify, and display audience questions during live events.</p>
 <section id="live-application" class="level3">
 <h3 class="anchored" data-anchor-id="live-application">Live Application</h3>
 <p>You can interact with the live system below.</p>
 <iframe src="https://qevent.shinyapps.io/QEvent/" width="100%" height="800px" style="border:none;">
 </iframe>
+</section>
+<section id="ai-extension-in-progress" class="level2">
+<h2 class="anchored" data-anchor-id="ai-extension-in-progress">AI Extension (In Progress)</h2>
+<p>I am developing an AI module that:</p>
+<ul>
+<li>Detects duplicate questions using text embeddings<br>
+</li>
+<li>Classifies questions by topic<br>
+</li>
+<li>Suggests answers based on historical responses<br>
+</li>
+<li>Prevents repetitive submissions<br>
+</li>
+<li>Displays questions and answers live on screen</li>
+</ul>
+<section id="why-this-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-matters">Why This Matters</h3>
+<p>Large meetings often suffer from repeated questions and missed answers. This system reduces redundancy, improves clarity, and enhances the experience for both speakers and participants.</p>
+</section>
+<section id="technologies" class="level3">
+<h3 class="anchored" data-anchor-id="technologies">Technologies</h3>
+<ul>
+<li><strong>Frontend:</strong> R + Shiny<br>
+</li>
+<li><strong>Database:</strong> SQLite / PostgreSQL<br>
+</li>
+<li><strong>AI Engine:</strong> Embedding models for semantic similarity<br>
+</li>
+<li><strong>Documentation:</strong> Quarto</li>
+</ul>
 <hr>
-<p>I would like to add an AI tool to do text mining and remove similar questions and type the answer of that question in a live meeting also store the answer in the table in front of the question. then every time that people write similar question it recognize the answer and show them and do not store the repetitive question.</p>
-<p>The Goal: It is important because people ask repetitive questions sometimes and cannot listen to the person who is answering questions, therefore they can see the question and answer on the board in the meeting. Also before meeting they will see the answer of their question so they will not ask repetitive question. Therefore, I can save people times.</p>
-</section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<ul>
-<li><p>Build a platform for conferences or seminars questions that:</p></li>
-<li><p>Collects questions from participants in real-time</p></li>
-<li><p>Classifies questions by topic using AI</p></li>
-<li><p>Detects duplicates using embedding similarity</p></li>
-<li><p>Displays questions live on screen</p></li>
-</ul>
-</section>
-<section id="ai-pipeline" class="level2">
-<h2 class="anchored" data-anchor-id="ai-pipeline">AI Pipeline</h2>
-<section id="question-submission" class="level3">
-<h3 class="anchored" data-anchor-id="question-submission">1. Question Submission</h3>
-<ul>
-<li><p>User types question → Natural Language Processing (NLP) pre-processing</p></li>
-<li><p>Generates embedding (vector representation)</p></li>
-</ul>
-</section>
-<section id="similarity-detection" class="level3">
-<h3 class="anchored" data-anchor-id="similarity-detection">2. Similarity Detection</h3>
-<ul>
-<li><p>Compares with existing questions using cosine similarity</p></li>
-<li><p>If similarity &gt; 0.85 → shows warning</p></li>
-</ul>
-</section>
-<section id="topic-classification" class="level3">
-<h3 class="anchored" data-anchor-id="topic-classification">3. Topic Classification</h3>
-<ul>
-<li>Automatically assigns topic using pre-trained model</li>
-</ul>
-</section>
-<section id="live-display" class="level3">
-<h3 class="anchored" data-anchor-id="live-display">4. Live Display</h3>
-<ul>
-<li><p>Selected questions appear on speaker screen</p></li>
-<li><p>Real-time typing simulation</p></li>
-</ul>
 </section>
 </section>
-<section id="technologies-used" class="level2">
-<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
-<ul>
-<li><p><strong>Frontend/Logic:</strong> R + Shiny</p></li>
-<li><p><strong>Database:</strong> SQLite / PostgreSQL</p></li>
-<li><p><strong>Documentation:</strong> Quarto</p></li>
-<li><p><strong>AI Engine:</strong> Text Embedding Models for Similarity Detection</p></li>
-</ul>
+</section>
+<section id="flight-delay-prediction-dfw" class="level1">
+<h1>Flight Delay Prediction (DFW)</h1>
+<p>A predictive modeling project analyzing weather patterns, operational factors, and propagated delays to forecast flight delays at DFW Airport.</p>
+<p><strong>Tech:</strong> Python, Pandas, NumPy, Scikit‑learn, Lasso, Random Forest</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

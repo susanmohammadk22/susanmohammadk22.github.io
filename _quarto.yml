@@ -53,8 +53,7 @@ website:
 format:
   html:
     theme: 
-      - Lux      # More colorful
-      - journal    # Bold colors    
+      - Lux   
     css: styles.css
     toc: true
     toc-location: right

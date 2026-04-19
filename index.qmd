@@ -3,31 +3,37 @@ title: "Susan Mohammad"
 ---
 
 ## Welcome
-I am a data-driven professional specializing in **Econometrics, Continuous Improvement, and Process Automation**. My background combines over seven years of experience in the banking and IT industries.
 
+I am a Process Transformation Engineer with seven years of experience improving operational performance across banking, IT, and large‑scale digital platforms. My work focuses on using **data, automation, and emerging AI techniques** to streamline workflows, reduce risk, and support smarter decision‑making.
+
+I combine a strong quantitative foundation—through my Master of Economics—with hands‑on experience in automation, KPI modeling, and intelligent systems design. I enjoy building tools that make complex processes simpler, faster, and more transparent.
+
+---
+
+
+###  Technical Toolbox
 ::: {.grid}
 
 ::: {.g-col-6}
-### 🛠 Technical Toolbox
 
-| Category | Tools |
-|---|---|
-| **Programming** | R (Tidyverse, Shiny, Quarto), Python (Pandas, Numpy), SQL |
-| **Quantitative** | Econometric Modeling, Time Series Analysis, Hypothesis Testing, Machine Learning |
-| **Automation** | Power Platform (Power Apps, Power Automate), RPA, GitHub Actions, SharePoint |
+
+**Programming** 
+R (Tidyverse, Shiny, Quarto)
+Python (Pandas, Numpy)
+SQL
+
+### Analytics & Modeling
+- Econometrics  
+- Time Series  
+- Statistical Modeling  
+- Machine Learning (Foundational)  
+
+### Automation & Systems
+- Power Apps  
+- Power Automate  
+- RPA  
+- GitHub Actions  
+- SharePoint 
+:::
 :::
 
-## 🚀 Featured Projects
-
-::: {.callout-note appearance="minimal"}
-### QEvent Application
-**The Tech:** R & Shiny, SQLite.
-**Impact:** Streamlines data collection and event logic, allowing speakers to filter questions and preventing event chaos.
-[View Project](https://github.com/susanmohammadk22/QEvent)
-:::
-
-::: {.callout-note appearance="minimal"}
-### Flight Delay Prediction (DFW)
-**The Tech:** Python, Lasso & Random Forest Regressions.
-**Insight:** Analyzes weather impact and propagated delays at DFW Airport to improve operational efficiency.
-:::

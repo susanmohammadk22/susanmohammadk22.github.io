@@ -4,7 +4,7 @@ title: "Projects"
 
 # Project Name: QEvent Application
 
-The **QEvent Application** is a specialized system built with R and Shiny for event logic and response tracking. It utilizes a country detection algorithm and a SQLite backend to manage participant questions in real-time.
+The **QEvent Application** is a specialized system built with R and Shiny for event logic and response tracking. It utilizes a country detection algorithm and a SQLite backend to manage participant questions in real-time. It allows speakers to filter, classify, and display audience questions during live events.
 
 ### Live Application
 
@@ -14,57 +14,29 @@ You can interact with the live system below.
 
 </iframe>
 
-------------------------------------------------------------------------
+## AI Extension (In Progress)
 
-I would like to add an AI tool to do text mining and remove similar questions and type the answer of that question in a live meeting also store the answer in the table in front of the question. then every time that people write similar question it recognize the answer and show them and do not store the repetitive question.
+I am developing an AI module that:
 
-The Goal: It is important because people ask repetitive questions sometimes and cannot listen to the person who is answering questions, therefore they can see the question and answer on the board in the meeting. Also before meeting they will see the answer of their question so they will not ask repetitive question. Therefore, I can save people times.
+- Detects duplicate questions using text embeddings  
+- Classifies questions by topic  
+- Suggests answers based on historical responses  
+- Prevents repetitive submissions  
+- Displays questions and answers live on screen  
 
-## Objectives
+### Why This Matters
+Large meetings often suffer from repeated questions and missed answers. This system reduces redundancy, improves clarity, and enhances the experience for both speakers and participants.
 
--   Build a platform for conferences or seminars questions that:
+### Technologies
+- **Frontend:** R + Shiny  
+- **Database:** SQLite / PostgreSQL  
+- **AI Engine:** Embedding models for semantic similarity  
+- **Documentation:** Quarto  
 
--   Collects questions from participants in real-time
+---
 
--   Classifies questions by topic using AI
+# Flight Delay Prediction (DFW)
 
--   Detects duplicates using embedding similarity
+A predictive modeling project analyzing weather patterns, operational factors, and propagated delays to forecast flight delays at DFW Airport.
 
--   Displays questions live on screen
-
-## AI Pipeline
-
-### 1. Question Submission
-
--   User types question → Natural Language Processing (NLP) pre-processing
-
--   Generates embedding (vector representation)
-
-### 2. Similarity Detection
-
--   Compares with existing questions using cosine similarity
-
--   If similarity \> 0.85 → shows warning
-
-### 3. Topic Classification
-
--   Automatically assigns topic using pre-trained model
-
-### 4. Live Display
-
--   Selected questions appear on speaker screen
-
--   Real-time typing simulation
-
-## Technologies Used
-
-* **Frontend/Logic:** R + Shiny
-
-* **Database:** SQLite / PostgreSQL
-
-* **Documentation:** Quarto
-
-* **AI Engine:** Text Embedding Models for Similarity Detection
-
-
-
+**Tech:** Python, Pandas, NumPy, Scikit‑learn, Lasso, Random Forest  
