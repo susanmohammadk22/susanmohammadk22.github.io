@@ -39,4 +39,17 @@ Large meetings often suffer from repeated questions and missed answers. This sys
 
 A predictive modeling project analyzing weather patterns, operational factors, and propagated delays to forecast flight delays at DFW Airport.
 
-**Tech:** Python, Pandas, NumPy, Scikit‑learn, Lasso, Random Forest  
+**Tech:** Python, Pandas, NumPy, Scikit‑learn, Lasso, Random Forest 
+
+
+
+## NBA Player Stats & Gallery
+
+This application provides a dynamic interface to explore NBA player data stored in a relational database. By integrating a SQLite backend with a Shiny front-end, I created a tool that allows for real-time data filtering and image rendering.
+
+<iframe src="https://qevent.shinyapps.io/nba-final/" width="100%" height="600px" style="border:none;"></iframe>
+
+
+[View Source Code on GitHub](https://github.com/YOUR_USERNAME/NBA-Project)
+
+**Technical Stack:** R (Shiny), SQLite, DT (DataTables), CSS.
