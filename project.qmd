@@ -18,37 +18,39 @@ You can interact with the live system below.
 
 I am developing an AI module that:
 
-- Detects duplicate questions using text embeddings  
-- Classifies questions by topic  
-- Suggests answers based on historical responses  
-- Prevents repetitive submissions  
-- Displays questions and answers live on screen  
+-   Detects duplicate questions using text embeddings\
+-   Classifies questions by topic\
+-   Suggests answers based on historical responses\
+-   Prevents repetitive submissions\
+-   Displays questions and answers live on screen
 
 ### Why This Matters
+
 Large meetings often suffer from repeated questions and missed answers. This system reduces redundancy, improves clarity, and enhances the experience for both speakers and participants.
 
 ### Technologies
-- **Frontend:** R + Shiny  
-- **Database:** SQLite / PostgreSQL  
-- **AI Engine:** Embedding models for semantic similarity  
-- **Documentation:** Quarto  
 
----
+-   **Frontend:** R + Shiny\
+-   **Database:** SQLite / PostgreSQL\
+-   **AI Engine:** Embedding models for semantic similarity\
+-   **Documentation:** Quarto
+
+------------------------------------------------------------------------
 
 # Flight Delay Prediction (DFW)
 
-A predictive modeling project analyzing weather patterns, operational factors, and propagated delays to forecast flight delays at DFW Airport.
+A predictive modeling project analyzing weather patterns, operational factors, and propagated delays to identify airport pairs that should not share a pilot due to weather-related delays.I used Lasso, Random Forest for methodologies for this project.
 
-**Tech:** Python, Pandas, NumPy, Scikit‑learn, Lasso, Random Forest 
-
+**Tech:** R, tidyverse, glmnet, randomForest
 
 
 ## NBA Player Stats & Gallery
 
 This application provides a dynamic interface to explore NBA player data stored in a relational database. By integrating a SQLite backend with a Shiny front-end, I created a tool that allows for real-time data filtering and image rendering.
 
-<iframe src="https://qevent.shinyapps.io/nba-final/" width="100%" height="600px" style="border:none;"></iframe>
+<iframe src="https://qevent.shinyapps.io/nba-final/" width="100%" height="600px" style="border:none;">
 
+</iframe>
 
 [View Source Code on GitHub](https://github.com/YOUR_USERNAME/NBA-Project)
 
