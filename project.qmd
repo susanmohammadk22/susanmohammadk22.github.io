@@ -43,6 +43,7 @@ A predictive modeling project analyzing weather patterns, operational factors, a
 
 **Tech:** R, tidyverse, glmnet, randomForest
 
+[GitHub Repository](https://github.com/susanmohammadk22/airline-weather-risk-analysis)
 
 ## NBA Player Stats & Gallery
 
