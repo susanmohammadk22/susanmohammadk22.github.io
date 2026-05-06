@@ -19,7 +19,9 @@ website:
       - text: Project
         menu:
           - href: project.qmd
-            text: Projects
+            text: Applications
+          - href: voting-bills-analysis.qmd
+            text: "Voting Bills Analysis"
 
       - text: Coursework
         menu:

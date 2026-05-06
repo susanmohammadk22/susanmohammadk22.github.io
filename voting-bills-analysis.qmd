@@ -1,0 +1,28 @@
+---
+title: "Voting Bills Analysis"
+---
+# Research Subject:
+## Voting Bills Across Red, Blue, and Purple States
+## My contribution: 
+I did the litreture review and ran the LDA, ngram analysis.
+
+## Files and codes:
+To access to codes and files for our team analysis please click on the following links.
+--- 
+**Files:**
+- [Setup Script](00_setup.R)
+- [Legiscan Draft 1](LegiscanDraft 1.R)
+- [Metadata Processing](01_metadata.R)
+- [Data Preprocessing](02_preprocessing.R)
+- [TF-IDF Analysis](03_tfidf.R)  
+- [Topic Modeling](04_Ida.R)
+- [LLM Classification](05_llm_classification.R)
+- [Validation Code](06_validation.R)
+- [AI Collaboration Log](07_ai_collab_log.R)
+
+**Documentation:**
+- [Preprocessing Guide](02_preprocessing_explained.html) | [Markdown](02_preprocessing_explained.md)
+- [TF-IDF Guide](03_tfidf_explained.html) | [Markdown](03_tfidf_explained.md)
+- [LDA Guide](04_Ida_explained.html) | [Markdown](04_Ida_explained.md)
+- [LLM Guide](05_llm_explained.html) | [Markdown](05_llm_explained.md)
+- [Validation Documentation](06_validation_explained.md)
