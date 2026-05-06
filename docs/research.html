@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>research.qmd – Susan Mohammad</title>
+<title>Research Project – Susan Mohammad</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,11 @@ ul.task-list li input[type="checkbox"] {
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-project">    
         <li>
     <a class="dropdown-item" href="./project.html">
- <span class="dropdown-text">Projects</span></a>
+ <span class="dropdown-text">Applications</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./voting-bills-analysis.html">
+ <span class="dropdown-text">Voting Bills Analysis</span></a>
   </li>  
     </ul>
   </li>
@@ -176,15 +180,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link active" data-scroll-target="#research-question">Research Question:</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">research.qmd</h1>
+<h1 class="title">Research Project</h1>
 </div>
 
 
@@ -201,8 +211,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="research-question" class="level1">
+<h1>Research Question:</h1>
+<p>What language patterns differentiate voting bills that pass from bills that fail? Area/Topic:</p>
+<p>State legislature bills on voting. As voting in the US is conducted on the state level, states have a wide breadth of authority over their own internal voting laws. Policies like voter ID, voter registration requirements, and ballot access laws are topics of debate within state legislatures. By examining these laws and proposed laws in close detail, patterns can start to emerge and be noted.</p>
+<p>Research Statement:</p>
+<p>Many bills are proposed and passed within state legislatures even when restricting to bills only related to voting. Due to the large number of bills and their length, it is difficult for a single individual or even a team or researchers to analyze them all in depth. By employing knowledge mining methodology these bills can be examined more in depth.</p>
+<p>Knowledge mining methods would be applied to identify patterns in proposed bills that did not end up passing when compared to bills that did end up passing. Additionally, these bills can be analyzed in conjunction with state and legislature specific factors such as partisanship.</p>
+<p>Method:</p>
+<p>Knowledge mining text analysis methods would be utilized to analyze the content of state legislature election bills. This text data mining will help highlight relationships and patterns within the text and can handle larger amounts of text than a human would be able to.</p>
+<p>Step 1: N-gram analysis ↓ Identify key multi-word phrases that distinguish bills (e.g., “reasonable impediment” vs “strict photo ID”) ↓ Step 2: Topic modeling ↓ Discover if bills cluster by substantive themes Test if passed/failed bills differ in topic proportions ↓ Step 3: Wordfish ↓ Scale bills on underlying restrictiveness dimension Test if dimension predicts passage (logistic regression)</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

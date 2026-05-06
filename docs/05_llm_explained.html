@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Me – Susan Mohammad</title>
+<title>llm_explained – Susan Mohammad</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -185,62 +185,98 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#professional-journey" id="toc-professional-journey" class="nav-link active" data-scroll-target="#professional-journey">Professional Journey</a></li>
-  <li><a href="#skills-interests" id="toc-skills-interests" class="nav-link" data-scroll-target="#skills-interests">Skills &amp; Interests</a></li>
-  <li><a href="#what-im-exploring-now" id="toc-what-im-exploring-now" class="nav-link" data-scroll-target="#what-im-exploring-now">What I’m Exploring Now</a></li>
+  <li><a href="#script-05-ai-assisted-classification-plain-english-explanation" id="toc-script-05-ai-assisted-classification-plain-english-explanation" class="nav-link active" data-scroll-target="#script-05-ai-assisted-classification-plain-english-explanation">Script 05: AI-Assisted Classification — Plain-English Explanation</a>
+  <ul class="collapse">
+  <li><a href="#what-this-step-did" id="toc-what-this-step-did" class="nav-link" data-scroll-target="#what-this-step-did">What this step did</a></li>
+  <li><a href="#what-the-output-files-contain" id="toc-what-the-output-files-contain" class="nav-link" data-scroll-target="#what-the-output-files-contain">What the output files contain</a></li>
+  <li><a href="#top-line-numbers-from-the-actual-run-51-bills" id="toc-top-line-numbers-from-the-actual-run-51-bills" class="nav-link" data-scroll-target="#top-line-numbers-from-the-actual-run-51-bills">Top-line numbers from the actual run (51 bills)</a></li>
+  <li><a href="#anything-surprising-or-worth-flagging" id="toc-anything-surprising-or-worth-flagging" class="nav-link" data-scroll-target="#anything-surprising-or-worth-flagging">Anything surprising or worth flagging</a></li>
+  <li><a href="#what-the-next-script-uses-this-for" id="toc-what-the-next-script-uses-this-for" class="nav-link" data-scroll-target="#what-the-next-script-uses-this-for">What the next script uses this for</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About Me</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>I am a <strong>Process Transformation Engineer</strong>with a strong foundation in econometrics, statistical analysis, and intelligent automation. My career has centered on improving how organizations work—using data to identify risks, redesign processes, and implement controls that strengthen accuracy, compliance, and efficiency. I hold a <strong>Lean Six Sigma Black Belt</strong> and am completing my <strong>Master of Economics</strong> at the University of Texas at Dallas, where I am expanding my expertise in machine learning, text analytics, and AI‑enabled decision systems.</p>
-<hr>
-<section id="professional-journey" class="level3">
-<h3 class="anchored" data-anchor-id="professional-journey">Professional Journey</h3>
-<p>In my current role at Comerica/ Fifth-Third Bank, I analyze workflows, identify operational and compliance risks, and design improved controls. I also lead automation initiatives using Power Apps, SharePoint, and Power Automate—reducing manual effort and improving process transparency. My work supports continuous improvement and ensures that business units operate with stronger controls and clearer accountability.</p>
-<p>At Snapp (Ride‑Share Platform), I led enterprise‑wide improvement initiatives powered by analytics, automation, and KPI analysis. I helped modernize CRM systems, introduced RPA solutions, and supported large‑scale technology solutions that improved productivity and operational agility.</p>
-</section>
-<section id="skills-interests" class="level3">
-<h3 class="anchored" data-anchor-id="skills-interests">Skills &amp; Interests</h3>
+<section id="script-05-ai-assisted-classification-plain-english-explanation" class="level1">
+<h1>Script 05: AI-Assisted Classification — Plain-English Explanation</h1>
+<section id="what-this-step-did" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-step-did">What this step did</h2>
+<p>This step sent each bill’s text to an AI language model (Claude Opus 4.6) and asked it to classify the bill into one of three categories:</p>
 <ul>
-<li><strong>Strategic Communication:</strong> Expert at translating complex data insights for executive stakeholders and regional staff.</li>
-<li><strong>Problem Solving:</strong> I thrive in “chaos,” using structured frameworks to bring order and efficiency to complex workflows.</li>
+<li><strong>RESTRICTIVE</strong> — adds new requirements, restrictions, or barriers that could reduce voter participation or access (stricter ID requirements, shorter registration windows, reduced polling hours, increased signature thresholds)</li>
+<li><strong>EXPANSIVE</strong> — expands, protects, or facilitates voter access or participation (automatic voter registration, extended early voting, vote-by-mail expansion, restoring voting rights)</li>
+<li><strong>NEUTRAL</strong> — procedural or administrative changes without a clear directional impact on voter access (updating forms, renaming offices, clarifying definitions, adjusting deadlines for election officials)</li>
+</ul>
+<p>The AI received each bill’s title and up to the first 8,000 words of text, then returned a label and a one-to-two sentence rationale explaining the key provision(s) that drove its decision.</p>
+<p>The classification was run in two rounds: 33 bills in the first round, then 18 new bills added in round 2 — existing labels were preserved and only the new bills were sent to the API. Every API call included error-handling and exponential backoff for rate limiting (up to 2-minute waits between retries).</p>
+</section>
+<section id="what-the-output-files-contain" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-output-files-contain">What the output files contain</h2>
+<ul>
+<li><strong><code>data/llm_labels.rds</code></strong> — Full results: bill ID, label, rationale, state, year, trifecta</li>
+<li><strong><code>results/llm_labels.csv</code></strong> — Human-readable version of the same</li>
+<li><strong><code>results/labels_by_trifecta.csv</code></strong> — Cross-tabulation of label × trifecta with counts and percentages</li>
+<li><strong><code>figures/labels_by_trifecta.png</code></strong> — Horizontal stacked bar chart showing the label split per group</li>
 </ul>
 </section>
-<section id="what-im-exploring-now" class="level2">
-<h2 class="anchored" data-anchor-id="what-im-exploring-now">What I’m Exploring Now</h2>
-<ul>
-<li>Text embedding for semantic similarity<br>
-</li>
-<li>AI‑assisted question classification<br>
-</li>
-<li>Predictive modeling<br>
-</li>
-<li>Intelligent automation using R, Python, and Power Platform</li>
-</ul>
-<p>I’m passionate about building systems that combine <strong>data, automation, and AI</strong> to solve real‑world problems.</p>
+<section id="top-line-numbers-from-the-actual-run-51-bills" class="level2">
+<h2 class="anchored" data-anchor-id="top-line-numbers-from-the-actual-run-51-bills">Top-line numbers from the actual run (51 bills)</h2>
+<p><strong>All 51 bills were successfully classified.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>n bills</th>
+<th>RESTRICTIVE</th>
+<th>NEUTRAL</th>
+<th>EXPANSIVE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unified Republican</td>
+<td>13</td>
+<td><strong>100%</strong></td>
+<td>0%</td>
+<td>0%</td>
+</tr>
+<tr class="even">
+<td>Unified Democratic</td>
+<td>24</td>
+<td><strong>58%</strong></td>
+<td>33%</td>
+<td>8%</td>
+</tr>
+<tr class="odd">
+<td>Divided Government</td>
+<td>14</td>
+<td>0%</td>
+<td><strong>86%</strong></td>
+<td>14%</td>
+</tr>
+</tbody>
+</table>
+<p>Overall: 27 Restrictive (53%), 20 Neutral (39%), 4 Expansive (8%)</p>
+</section>
+<section id="anything-surprising-or-worth-flagging" class="level2">
+<h2 class="anchored" data-anchor-id="anything-surprising-or-worth-flagging">Anything surprising or worth flagging</h2>
+<p><strong>100% of Republican-trifecta bills are Restrictive.</strong> Every one of the 13 R-trifecta bills was classified as adding new requirements or restrictions — covering redistricting, elector certification steps, petition signature thresholds, and absentee ballot procedures. The rubric applies strictly: any bill that adds a new requirement, even a minor procedural one, qualifies as Restrictive.</p>
+<p><strong>58% of Democratic-trifecta bills are also Restrictive.</strong> This is counterintuitive but explainable. Most come from Minnesota, which in 2025 passed multiple absentee ballot reform bills. Many of these add new administrative steps — new envelope verification requirements, updated timeline rules, new audit procedures — that trigger the “adds new requirements” criterion even though the political intent was to modernize and standardize voting, not restrict it. The remaining 33% are Neutral (procedural changes with no directional impact) and only 8% are Expansive.</p>
+<p><strong>Divided Government states are overwhelmingly Neutral (86%).</strong> This is the clearest finding from the expanded corpus: states where no single party has full control pass procedural, administrative bills rather than taking strong access positions. Only 14% of Divided-government bills are Expansive, and none are Restrictive — consistent with the political dynamic where neither party can impose major access changes unilaterally.</p>
+<p><strong>The Neutral category grew substantially in round 2.</strong> The 18 new bills (CT, IL, MD, PA, WI, NC, NV) were all classified as Neutral. This shifted the overall distribution from the first run (which was 82% Restrictive) to a more balanced picture (53% Restrictive, 39% Neutral) — suggesting the original 33-bill corpus was not representative of the full range of voting legislation.</p>
+<p><strong>Important caveat on the rubric:</strong> The AI applies the three-category rubric literally. A bill that modernizes absentee voting by both expanding access (new drop boxes) and adding requirements (new ID verification step) must receive a single label. The rationale field for each bill documents which specific provision drove the decision. For full transparency, <code>results/llm_labels.csv</code> contains the rationale for all 51 bills.</p>
+</section>
+<section id="what-the-next-script-uses-this-for" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-next-script-uses-this-for">What the next script uses this for</h2>
+<p>Script 06 exports 10 randomly selected bills for independent human coding to check whether the AI’s classifications match expert human judgment. The validation sample is stratified across the three trifecta groups.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Me – Susan Mohammad</title>
+<title>preprocessing_explained – Susan Mohammad</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -185,62 +185,147 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#professional-journey" id="toc-professional-journey" class="nav-link active" data-scroll-target="#professional-journey">Professional Journey</a></li>
-  <li><a href="#skills-interests" id="toc-skills-interests" class="nav-link" data-scroll-target="#skills-interests">Skills &amp; Interests</a></li>
-  <li><a href="#what-im-exploring-now" id="toc-what-im-exploring-now" class="nav-link" data-scroll-target="#what-im-exploring-now">What I’m Exploring Now</a></li>
+  <li><a href="#script-02-preprocessing-plain-english-explanation" id="toc-script-02-preprocessing-plain-english-explanation" class="nav-link active" data-scroll-target="#script-02-preprocessing-plain-english-explanation">Script 02: Preprocessing — Plain-English Explanation</a>
+  <ul class="collapse">
+  <li><a href="#what-this-step-did" id="toc-what-this-step-did" class="nav-link" data-scroll-target="#what-this-step-did">What this step did</a></li>
+  <li><a href="#what-the-output-files-contain" id="toc-what-the-output-files-contain" class="nav-link" data-scroll-target="#what-the-output-files-contain">What the output files contain</a></li>
+  <li><a href="#top-line-numbers-from-the-actual-run" id="toc-top-line-numbers-from-the-actual-run" class="nav-link" data-scroll-target="#top-line-numbers-from-the-actual-run">Top-line numbers from the actual run</a></li>
+  <li><a href="#anything-surprising-or-worth-flagging" id="toc-anything-surprising-or-worth-flagging" class="nav-link" data-scroll-target="#anything-surprising-or-worth-flagging">Anything surprising or worth flagging</a></li>
+  <li><a href="#what-the-next-script-uses-this-for" id="toc-what-the-next-script-uses-this-for" class="nav-link" data-scroll-target="#what-the-next-script-uses-this-for">What the next script uses this for</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About Me</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>I am a <strong>Process Transformation Engineer</strong>with a strong foundation in econometrics, statistical analysis, and intelligent automation. My career has centered on improving how organizations work—using data to identify risks, redesign processes, and implement controls that strengthen accuracy, compliance, and efficiency. I hold a <strong>Lean Six Sigma Black Belt</strong> and am completing my <strong>Master of Economics</strong> at the University of Texas at Dallas, where I am expanding my expertise in machine learning, text analytics, and AI‑enabled decision systems.</p>
-<hr>
-<section id="professional-journey" class="level3">
-<h3 class="anchored" data-anchor-id="professional-journey">Professional Journey</h3>
-<p>In my current role at Comerica/ Fifth-Third Bank, I analyze workflows, identify operational and compliance risks, and design improved controls. I also lead automation initiatives using Power Apps, SharePoint, and Power Automate—reducing manual effort and improving process transparency. My work supports continuous improvement and ensures that business units operate with stronger controls and clearer accountability.</p>
-<p>At Snapp (Ride‑Share Platform), I led enterprise‑wide improvement initiatives powered by analytics, automation, and KPI analysis. I helped modernize CRM systems, introduced RPA solutions, and supported large‑scale technology solutions that improved productivity and operational agility.</p>
+<section id="script-02-preprocessing-plain-english-explanation" class="level1">
+<h1>Script 02: Preprocessing — Plain-English Explanation</h1>
+<section id="what-this-step-did" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-step-did">What this step did</h2>
+<p>This step converted bill PDF files into clean, analyzable text. Think of it as turning a stack of legal documents into a structured dataset of words that a computer can work with.</p>
+<p>The project collected bills in two rounds: an original set of 50 bills, and a second round of 33 additional bills pulled from new states to improve geographic balance (adding IL, CO, CT, MD for Democratic-trifecta coverage and PA, WI, NC, NV for Divided-government coverage). That brings the starting total to 83 PDFs.</p>
+<p>For each PDF, the script: 1. Extracted all printed text from every page 2. Cleaned up formatting artifacts (page numbers, hyphenated line breaks, special characters) 3. Split the text into individual words and removed common filler words (“the”, “and”, “shall”, “enacted”) that appear everywhere and would mask meaningful differences 4. Condensed words to their root form (“voters”, “voting”, “voted” → “vote”) so the same concept isn’t counted as three separate words 5. Assembled all cleaned words into a structured format ready for analysis</p>
 </section>
-<section id="skills-interests" class="level3">
-<h3 class="anchored" data-anchor-id="skills-interests">Skills &amp; Interests</h3>
+<section id="what-the-output-files-contain" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-output-files-contain">What the output files contain</h2>
 <ul>
-<li><strong>Strategic Communication:</strong> Expert at translating complex data insights for executive stakeholders and regional staff.</li>
-<li><strong>Problem Solving:</strong> I thrive in “chaos,” using structured frameworks to bring order and efficiency to complex workflows.</li>
+<li><strong><code>data/bill_text.rds</code></strong> — One row per bill: cleaned full text, state, year, trifecta group</li>
+<li><strong><code>data/bill_corpus.rds</code></strong> — The same text in a format designed for text-analysis software</li>
+<li><strong><code>data/bill_tokens.rds</code></strong> — Each bill broken into its individual cleaned word stems</li>
+<li><strong><code>data/bill_dfm.rds</code></strong> — A word-count matrix: rows = bills, columns = unique words. This is the input for both the distinctive-word analysis (script 03) and the topic grouping (script 04)</li>
 </ul>
 </section>
-<section id="what-im-exploring-now" class="level2">
-<h2 class="anchored" data-anchor-id="what-im-exploring-now">What I’m Exploring Now</h2>
+<section id="top-line-numbers-from-the-actual-run" class="level2">
+<h2 class="anchored" data-anchor-id="top-line-numbers-from-the-actual-run">Top-line numbers from the actual run</h2>
 <ul>
-<li>Text embedding for semantic similarity<br>
-</li>
-<li>AI‑assisted question classification<br>
-</li>
-<li>Predictive modeling<br>
-</li>
-<li>Intelligent automation using R, Python, and Power Platform</li>
+<li><strong>Bills started with: 83</strong> (50 original + 33 added in round 2)</li>
+<li><strong>Bills with usable text: 51</strong> (62%)</li>
+<li><strong>Bills excluded: 32</strong> — unreadable PDFs (corrupted files or PDFs with no embedded text)</li>
+<li><strong>Unique word stems in vocabulary: 2,589</strong> (after removing stopwords and rare/universal terms)</li>
+<li><strong>Total words processed: 268,589</strong> across all 51 bills</li>
+<li><strong>Average bill length: 5,266 words</strong> per document</li>
 </ul>
-<p>I’m passionate about building systems that combine <strong>data, automation, and AI</strong> to solve real‑world problems.</p>
+<p>State distribution of the 51 usable bills:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>State</th>
+<th>n</th>
+<th>Trifecta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MN</td>
+<td>14</td>
+<td>D</td>
+</tr>
+<tr class="even">
+<td>PA</td>
+<td>5</td>
+<td>Divided</td>
+</tr>
+<tr class="odd">
+<td>MO</td>
+<td>4</td>
+<td>D→R (2026)</td>
+</tr>
+<tr class="even">
+<td>NV</td>
+<td>3</td>
+<td>Divided</td>
+</tr>
+<tr class="odd">
+<td>OH</td>
+<td>3</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>WA</td>
+<td>3</td>
+<td>D</td>
+</tr>
+<tr class="odd">
+<td>AK</td>
+<td>2</td>
+<td>Divided</td>
+</tr>
+<tr class="even">
+<td>CT</td>
+<td>2</td>
+<td>D</td>
+</tr>
+<tr class="odd">
+<td>IL</td>
+<td>2</td>
+<td>D</td>
+</tr>
+<tr class="even">
+<td>MD</td>
+<td>2</td>
+<td>D</td>
+</tr>
+<tr class="odd">
+<td>NC</td>
+<td>2</td>
+<td>Divided</td>
+</tr>
+<tr class="even">
+<td>NE</td>
+<td>2</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>UT</td>
+<td>2</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>KS, MO, NM, OK, WI</td>
+<td>1–2 each</td>
+<td>mixed</td>
+</tr>
+</tbody>
+</table>
+<p>Trifecta breakdown of the 51 usable bills: - <strong>Unified Republican: 13 bills</strong> (MO, OH, NE, UT, KS, OK, IN) - <strong>Unified Democratic: 24 bills</strong> (MN, WA, IL, CT, MD, NJ, NM) - <strong>Divided Government: 14 bills</strong> (PA, NV, NC, AK, VA, WI)</p>
+</section>
+<section id="anything-surprising-or-worth-flagging" class="level2">
+<h2 class="anchored" data-anchor-id="anything-surprising-or-worth-flagging">Anything surprising or worth flagging</h2>
+<p><strong>39% attrition is high.</strong> Losing 32 of 83 bills to PDF extraction failure is significant. The failures appear to be a data quality issue in the source files — several PDFs were extremely small (98 bytes, essentially empty placeholder files). Whether the excluded bills are systematically different from the included ones is unknown; this remains a study limitation.</p>
+<p><strong>Minnesota is still the largest single-state contributor.</strong> MN accounts for 14 of 24 Democratic-trifecta bills (58%). This is a significant improvement over the first data collection round (where MN was 78% of Democratic bills), but it means Democratic findings still partly reflect Minnesota’s distinctive legislative style. This is flagged consistently throughout the analysis.</p>
+<p><strong>Divided Government is now a viable group.</strong> Adding PA, WI, NC, and NV brought the Divided group from 2 bills to 14 — enough to draw cautious conclusions. Findings for this group should still be treated as exploratory given the sample size, but patterns can now be meaningfully discussed.</p>
+</section>
+<section id="what-the-next-script-uses-this-for" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-next-script-uses-this-for">What the next script uses this for</h2>
+<p>Script 03 reads <code>data/bill_dfm.rds</code> and finds which words are most uniquely associated with each trifecta group using a statistical comparison test.</p>
+<p>Script 04 also reads <code>data/bill_dfm.rds</code> and discovers latent policy themes running through the full corpus.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

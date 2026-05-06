@@ -11,7 +11,6 @@ To access to codes and files for our team analysis please click on the following
 --- 
 **Files:**
 - [Setup Script](00_setup.R)
-- [Legiscan Draft 1](LegiscanDraft 1.R)
 - [Metadata Processing](01_metadata.R)
 - [Data Preprocessing](02_preprocessing.R)
 - [TF-IDF Analysis](03_tfidf.R)  

@@ -43,5 +43,23 @@
   },
   "speaker.qmd": {
     "speaker.html": "bd3f8e66"
+  },
+  "02_preprocessing_explained.md": {
+    "02_preprocessing_explained.html": "2b1e7245"
+  },
+  "03_tfidf_explained.md": {
+    "03_tfidf_explained.html": "8913e0d0"
+  },
+  "04_lda_explained.md": {
+    "04_lda_explained.html": "df86a120"
+  },
+  "05_llm_explained.md": {
+    "05_llm_explained.html": "c1757110"
+  },
+  "06_validation_explained.md": {
+    "06_validation_explained.html": "297483d9"
+  },
+  "voting-bills-analysis.qmd": {
+    "voting-bills-analysis.html": "4a95831f"
   }
 }
