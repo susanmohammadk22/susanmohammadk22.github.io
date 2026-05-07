@@ -10,7 +10,7 @@ The **QEvent Application** is a specialized system built with R and Shiny for ev
 
 You can interact with the live system below.
 
-<iframe src="https://qevent.shinyapps.io/QEvent/" width="100%" height="800px" style="border:none;">
+<iframe src="https://qevent.shinyapps.io/qevent_app/" width="100%" height="900px" style="border:none;">
 
 </iframe>
 
