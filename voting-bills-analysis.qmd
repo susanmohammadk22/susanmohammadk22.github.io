@@ -18,5 +18,5 @@ I did the litreture review and ran the LDA, ngram analysis.
 - [Topic Modeling](04_Ida.R) - [LLM Classification](05_llm_classification.R) - [Validation Code](06_validation.R) - [AI Collaboration Log](07_ai_collab_log.R)
 
 **Documentation:** - [Preprocessing Guide](02_preprocessing_explained.html) \| [Markdown](02_preprocessing_explained.md) - [TF-IDF Guide](03_tfidf_explained.html) \| [Markdown](03_tfidf_explained.md) - [LDA Guide](04_Ida_explained.html) \| [Markdown](04_Ida_explained.md) - [LLM Guide](05_llm_explained.html) \| [Markdown](05_llm_explained.md) - [Validation Documentation](06_validation_explained.md) 
-- [Team Presentation Slides](EPPS6323_Voting_Bills_Presentation%203%20(1).pptx)
+- [Team Presentation Slides](EPPS6323_Voting_Bills_Presentation 3.pptx)
 - [Final Written Report](group final report.pdf)
