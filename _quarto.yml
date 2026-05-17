@@ -4,12 +4,13 @@ project:
 
 website:
   title: "Susan Mohammad"
+  description: "Aspiring AI Engineer | Machine Learning | Data Science"
   search: true
 
   navbar:
-    background: primary
-    type: dark
-    right:
+    background: dark
+    foreground: light
+    left:
       - href: index.qmd
         text: Home
       - href: about.qmd
@@ -50,16 +51,21 @@ website:
         text: CV
       - icon: github
         href: https://github.com/susanmohammadk22 
+      - icon: linkedin
+        href: "https://linkedin.com/in/susan-mohammad"
 
 
 format:
   html:
-    theme: 
-      - Lux   
+    theme:
+      light: flatly
+      dark: darkly
     css: styles.css
     toc: true
     toc-location: right
-
+    smooth-scroll: true
+    code-copy: true
+    
 editor: visual
 
 

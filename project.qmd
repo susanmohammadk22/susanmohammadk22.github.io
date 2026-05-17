@@ -1,10 +1,20 @@
 ---
 title: "Projects"
 ---
+## Featured Projects
 
-# Project Name: QEvent Application
+::: {.grid}
 
-The **QEvent Application** is a specialized system built with R and Shiny for event logic and response tracking. It utilizes a country detection algorithm and a SQLite backend to manage participant questions in real-time. It allows speakers to filter, classify, and display audience questions during live events.
+::: {.g-col-12 .g-col-md-6}
+
+### QIntel Application – Live Event Q&A System with AI Extension
+**R + Shiny • SQLite • AI Embeddings (In Progress)**
+
+Built a real-time audience question management system for large events. AI module using text embeddings for duplicate detection and topic classification.
+
+[Live Demo](https://qevent.shinyapps.io/qevent_app/) | [Final Report](Final Project.pdf) | [Presentation](Presentation.pdf)
+:::
+
 
 ### Live Application
 
@@ -14,8 +24,7 @@ You can interact with the live system below.
 
 </iframe>
 
-**Read the full report:** [Final Project.pdf](Final Project.pdf)
-**View the presentation:** [Presentation.pdf](Presentation.pdf)
+**Read the full report:** [Final Project.pdf](Final%20Project.pdf) **View the presentation:** [Presentation.pdf](Presentation.pdf)
 
 ## AI Extension (In Progress)
 
