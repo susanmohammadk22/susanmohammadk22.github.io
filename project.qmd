@@ -10,11 +10,12 @@ The **Python Quiz App** is an interactive learning tool that tests Python knowle
 
 You can interact with the live system below.
 
-<iframe src="https://python-quiz-app-tzkf.onrender.com/static.html" width="100%" height="700px" style="border:none;">
-
+<iframe src="https://python-quiz-app-tzkf.onrender.com/static/static.html" width="100%" height="700px" style="border:none;">
 </iframe>
 
+
 **View the code:** [GitHub Repository](https://github.com/susanmohammadk22/Python-Quiz-App)
+**Live Demo:** [Python Quiz App](https://python-quiz-app-tzkf.onrender.com/)
 
 ### Features
 
@@ -46,10 +47,11 @@ You can interact with the live system below.
 
 **Read the full report:** [Final Project.pdf](Final Project.pdf)
 **View the presentation:** [Presentation.pdf](Presentation.pdf)
+**Live demo:**[QIntel app](https://qevent.shinyapps.io/qevent_app/) 
 
-## AI Extension (In Progress)
+## AI Extension 
 
-I am developing an AI module that:
+I developed an AI module that:
 
 -   Detects duplicate questions using text embeddings\
 -   Classifies questions by topic\
