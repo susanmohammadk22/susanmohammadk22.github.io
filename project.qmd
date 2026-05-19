@@ -44,11 +44,11 @@ You can interact with the live system below.
 
 </iframe>
 
-**Read the full report:** [Read the full report](Final-Project.pdf)
+**Read the full report:** [Final-Report.pdf](Final-Project.pdf)
 
 **View the presentation:** [Presentation.pdf](Presentation.pdf) 
 
-**Live demo:**[QIntel app](https://qevent.shinyapps.io/qevent_app/)
+**Live demo:** [QIntel app](https://qevent.shinyapps.io/qevent_app/)
 
 ## AI Extension
 
