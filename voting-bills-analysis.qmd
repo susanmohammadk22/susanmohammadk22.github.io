@@ -6,9 +6,10 @@ title: "Voting Bills Analysis"
 
 ## Voting Bills Across Red, Blue, and Purple States
 
-## My contribution:
+## Summary:
 
-I did the litreture review and ran the LDA, ngram analysis.
+In this project we analyzed voting legislation across U.S. states using AI and Natural Language Processing techniques. We collected legislative bills from the LegiScan API, extracted text from PDFs, transformed them into machine-readable representations, and applied NLP models like TF-IDF, LDA topic modeling, and Wordfish ideological scaling to identify differences in legislative language, policy themes, and voting restrictions across Republican, Democratic, and divided-government states.
+The project demonstrated how AI and NLP can uncover systematic political and policy patterns from large-scale unstructured legislative text.
 
 ## Files and codes:
 
@@ -17,6 +18,4 @@ I did the litreture review and ran the LDA, ngram analysis.
 **Files:** - [Setup Script](00_setup.R) - [Metadata Processing](01_metadata.R) - [Data Preprocessing](02_preprocessing.R) - [TF-IDF Analysis](03_tfidf.R)\
 - [Topic Modeling](04_Ida.R) - [LLM Classification](05_llm_classification.R) - [Validation Code](06_validation.R) - [AI Collaboration Log](07_ai_collab_log.R)
 
-**Documentation:** - [Preprocessing Guide](02_preprocessing_explained.html) \| [Markdown](02_preprocessing_explained.md) - [TF-IDF Guide](03_tfidf_explained.html) \| [Markdown](03_tfidf_explained.md) - [LDA Guide](04_Ida_explained.html) \| [Markdown](04_Ida_explained.md) - [LLM Guide](05_llm_explained.html) \| [Markdown](05_llm_explained.md) - [Validation Documentation](06_validation_explained.md) 
-- [Team Presentation Slides](EPPS6323_Voting_Bills_Presentation 3.pptx)
-- [Final Written Report](group final report.pdf)
+**Documentation:** - [Preprocessing Guide](02_preprocessing_explained.html) \| [Markdown](02_preprocessing_explained.md) - [TF-IDF Guide](03_tfidf_explained.html) \| [Markdown](03_tfidf_explained.md) - [LDA Guide](04_Ida_explained.html) \| [Markdown](04_Ida_explained.md) - [LLM Guide](05_llm_explained.html) \| [Markdown](05_llm_explained.md) - [Validation Documentation](06_validation_explained.md) - [Team Presentation Slides](EPPS6323_Voting_Bills_Presentation%203.pptx) - [Final Written Report](group%20final%20report.pdf)
