@@ -4,7 +4,9 @@ title: " Research Project"
 
 # Research Question:
 
-What language patterns differentiate voting bills that pass from bills that fail? Area/Topic:
+What language patterns differentiate voting bills that pass from bills that fail?
+
+Area/Topic:
 
 State legislature bills on voting. As voting in the US is conducted on the state level, states have a wide breadth of authority over their own internal voting laws. Policies like voter ID, voter registration requirements, and ballot access laws are topics of debate within state legislatures. By examining these laws and proposed laws in close detail, patterns can start to emerge and be noted.
 
@@ -18,4 +20,8 @@ Method:
 
 Knowledge mining text analysis methods would be utilized to analyze the content of state legislature election bills. This text data mining will help highlight relationships and patterns within the text and can handle larger amounts of text than a human would be able to.
 
-Step 1: N-gram analysis ↓ Identify key multi-word phrases that distinguish bills (e.g., "reasonable impediment" vs "strict photo ID") ↓ Step 2: Topic modeling ↓ Discover if bills cluster by substantive themes Test if passed/failed bills differ in topic proportions ↓ Step 3: Wordfish ↓ Scale bills on underlying restrictiveness dimension Test if dimension predicts passage (logistic regression)
+Step 1: N-gram analysis: Identify key multi-word phrases that distinguish bills
+
+Step 2: Topic modeling: Discover if bills cluster by substantive themes. Test if passed/failed bills differ in topic proportions
+
+Step 3: Wordfish : Scale bills on underlying restrictiveness dimension. Test if dimension predicts passage (logistic regression)

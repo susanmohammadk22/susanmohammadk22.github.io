@@ -4,36 +4,40 @@ title: "Susan Mohammad"
 
 ## Welcome
 
-I am a Process Transformation Engineer with seven years of experience improving operational performance across banking, IT, and large‑scale digital platforms. My work focuses on using **data, automation, and emerging AI techniques** to streamline workflows, reduce risk, and support smarter decision‑making.
+I am a Process Transformation Engineer with more than seven years of experience leading process improvement, workflow automation, operational transformation, and data-driven decision-making initiatives across banking, technology, and service organizations.
 
-I combine a strong quantitative foundation—through my Master of Economics—with hands‑on experience in automation, KPI modeling, and intelligent systems design. I enjoy building tools that make complex processes simpler, faster, and more transparent.
+My expertise spans business process reengineering, automation strategy, process governance, analytics, and technology enablement. I have partnered with business and technology teams to streamline operations, improve controls, strengthen compliance, and deliver scalable solutions that enhance efficiency and customer experience.
 
----
+In addition to my professional experience, I explore practical applications of artificial intelligence, data analytics, and automation technologies. Through personal projects, I develop analytical solutions using SQL, R, PostgreSQL, and locally hosted large language models (LLMs) to support knowledge management, information retrieval, and business insights.
 
+This website highlights selected projects, technical work, and areas of professional interest related to process transformation, analytics, automation, and AI.
 
-###  Technical Toolbox
-::: {.grid}
+------------------------------------------------------------------------
 
-::: {.g-col-6}
+### Technical Toolbox
 
+:::: grid
+::: g-col-6
 
-**Programming** 
-R (Tidyverse, Shiny, Quarto)
-Python (Pandas, Numpy)
-SQL
+### Process Transformation & Automation
 
+-   Business Process Management (BPM)\
+-   Process Mapping & Reengineering\
+-   Workflow Automation\
+-   Lean Six Sigma\
+-   Power Apps\
+-   Power Automate\
+-   SharePoint
 ### Analytics & Modeling
-- Econometrics  
-- Time Series  
-- Statistical Modeling  
-- Machine Learning (Foundational)  
 
-### Automation & Systems
-- Power Apps  
-- Power Automate  
-- RPA  
-- GitHub Actions  
-- SharePoint 
-:::
-:::
+-   Econometrics\
+-   Time Series Analysis\
+-   Statistical Modeling\
+-   PostgreSQL\
+-   SQLite\
+-   R (Tidyverse, Shiny, Quarto)\
+-   Topic Modeling (LDA)\
+-   Large Language Models (LLMs)
 
+:::
+::::

@@ -13,11 +13,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
-      - href: research.qmd
-        text: Research
-      - text: Project
+      - text: Projects
         menu:
           - href: project.qmd
             text: Applications
@@ -47,8 +43,7 @@ website:
           - href: im-assignment4.qmd
             text: IM-Assignment 4
             
-      - href: cv.pdf
-        text: CV
+
       - icon: github
         href: https://github.com/susanmohammadk22 
       - icon: linkedin
