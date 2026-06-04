@@ -28,6 +28,7 @@ This website highlights selected projects, technical work, and areas of professi
 -   Power Apps\
 -   Power Automate\
 -   SharePoint
+
 ### Analytics & Modeling
 
 -   Econometrics\
