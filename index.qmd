@@ -129,10 +129,11 @@ Political text mining project analyzing state-level voting legislation across th
 
 <div class="projects-grid">
 
+<!-- Lean Six Sigma Black Belt Card -->
 <div class="project-card cert-card">
 <div class="cert-image-container">
-<a href="assets/certifications/black-belt.pdf" target="_blank" rel="noopener noreferrer">
-<img src="assets/certifications/black-belt.png" alt="Lean Six Sigma Black Belt Certificate" class="cert-thumb">
+<a href="black-belt.pdf" target="_blank" rel="noopener noreferrer">
+<img src="black-belt.png" alt="Lean Six Sigma Black Belt Certificate" class="cert-thumb">
 </a>
 </div>
 <div class="project-body">
@@ -143,7 +144,28 @@ Political text mining project analyzing state-level voting legislation across th
 <span class="tag">DMAIC</span>
 </div>
 <div class="project-links">
-<a href="assets/certifications/black-belt.pdf" target="_blank" rel="noopener noreferrer">View Original PDF ↗</a>
+<a href="black-belt.pdf" target="_blank" rel="noopener noreferrer">View Original PDF ↗</a>
+</div>
+</div>
+</div>
+
+<!-- iGrafx Process Design Administration Card -->
+<div class="project-card cert-card">
+<div class="cert-image-container">
+<a href="igrafx-cert.pdf" target="_blank" rel="noopener noreferrer">
+<img src="igrafx-cert.png" alt="iGrafx Process Design Administration Level 100" class="cert-thumb">
+</a>
+</div>
+<div class="project-body">
+<h3>Process Design Administration (Level 100)</h3>
+<p class="cert-issuer">iGrafx University · Process360 Live</p>
+<div class="tags">
+<span class="tag">Process Modeling</span>
+<span class="tag">BPMN</span>
+<span class="tag">Workflow Design</span>
+</div>
+<div class="project-links">
+<a href="igrafx-cert.pdf" target="_blank" rel="noopener noreferrer">View Original PDF ↗</a>
 </div>
 </div>
 </div>
