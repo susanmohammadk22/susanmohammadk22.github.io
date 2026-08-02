@@ -20,7 +20,7 @@ website:
           - href: voting-bills-analysis.qmd
             text: "Voting Bills Analysis"
       - text: "Certifications"
-        href: certifications.qmd
+        href: index.qmd#certifications
 
       - text: Coursework
         menu:

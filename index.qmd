@@ -129,27 +129,24 @@ Political text mining project analyzing state-level voting legislation across th
 
 <div class="projects-grid">
 
-  <!-- Lean Six Sigma Black Belt Thumbnail Card -->
-  <div class="project-card cert-card">
-    <div class="cert-image-container">
-      <a href="assets/certifications/black-belt.pdf" target="_blank" rel="noopener noreferrer">
-        <img src="assets/certifications/black-belt.png" alt="Lean Six Sigma Black Belt Certificate" class="cert-thumb">
-      </a>
-    </div>
-    <div class="project-body">
-      <h3>Lean Six Sigma Black Belt</h3>
-      <p class="cert-issuer">Council for Six Sigma Certification (CSSC)</p>
-      <div class="tags">
-        <span class="tag">Process Excellence</span>
-        <span class="tag">DMAIC</span>
-      </div>
-      <div class="project-links">
-        <a href="assets/certifications/black-belt.pdf" target="_blank" rel="noopener noreferrer">
-          View Original PDF ↗
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="project-card cert-card">
+<div class="cert-image-container">
+<a href="assets/certifications/black-belt.pdf" target="_blank" rel="noopener noreferrer">
+<img src="assets/certifications/black-belt.png" alt="Lean Six Sigma Black Belt Certificate" class="cert-thumb">
+</a>
+</div>
+<div class="project-body">
+<h3>Lean Six Sigma Black Belt</h3>
+<p class="cert-issuer">Council for Six Sigma Certification (CSSC)</p>
+<div class="tags">
+<span class="tag">Process Excellence</span>
+<span class="tag">DMAIC</span>
+</div>
+<div class="project-links">
+<a href="assets/certifications/black-belt.pdf" target="_blank" rel="noopener noreferrer">View Original PDF ↗</a>
+</div>
+</div>
+</div>
 
 </div>
 </section>
