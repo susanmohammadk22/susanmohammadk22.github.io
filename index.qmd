@@ -9,7 +9,6 @@ toc: false
 <div class="hero">
 <canvas id="graph"></canvas>
 <div class="hero-content">
-<div class="eyebrow">Susan Mohammad</div>
 <h1>I turn process expertise into AI-powered systems.</h1>
 <div class="role-line"><span id="typed"></span><span class="cursor">|</span></div>
 <p class="bio">

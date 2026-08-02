@@ -242,3 +242,39 @@ section {
     grid-template-columns: 1fr;
   }
 }
+/* Ensure top navbar is clearly visible against the dark background */
+.navbar {
+  background-color: #0B1220 !important;
+  border-bottom: 1px solid #1E2C42;
+}
+
+/* Brighten header title and navigation links */
+.navbar-brand, 
+.navbar-nav .nav-link {
+  color: #F1EEE6 !important; /* High contrast soft white */
+  font-weight: 500;
+}
+
+/* Glow teal when hovered */
+.navbar-nav .nav-link:hover,
+.navbar-brand:hover {
+  color: #2DD4BF !important;
+}
+
+/* Ensure mobile menu toggle icon is visible on dark background */
+.navbar-toggler {
+  border-color: #2DD4BF !important;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}.navbar .dropdown-menu {
+  background-color: #101B2D;
+  border: 1px solid #1E2C42;
+}
+.navbar .dropdown-menu .dropdown-item {
+  color: #F1EEE6;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #1E2C42;
+  color: #2DD4BF;
+}
