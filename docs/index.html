@@ -322,24 +322,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<!-- Hero Section with Canvas Background -->
 <div class="hero">
 <canvas id="graph">
 </canvas>
 <div class="hero-content">
-<pre><code>&lt;div class="eyebrow"&gt;Susan Mohammad&lt;/div&gt;
-&lt;h1&gt;I turn process expertise into AI-powered systems.&lt;/h1&gt;
-&lt;div class="role-line"&gt;&lt;span id="typed"&gt;&lt;/span&gt;&lt;span class="cursor"&gt;|&lt;/span&gt;&lt;/div&gt;
-&lt;p class="bio"&gt;
-  &lt;strong&gt;7+ years&lt;/strong&gt; driving process transformation, continuous improvement, and operational efficiency across tech and banking — cutting manual coordination effort by &lt;strong&gt;90%&lt;/strong&gt; through workflow automation. Now building the ML models, LLM pipelines, and vector databases that solve complex business problems with code.
-&lt;/p&gt;
-&lt;div class="cta-row"&gt;
-  &lt;a class="btn primary" href="#featured-research"&gt;View Research&lt;/a&gt;
-  &lt;a class="btn" href="#featured-apps"&gt;View Applications&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+<div class="eyebrow">
+Susan Mohammad
+</div>
+<h1>
+I turn process expertise into AI-powered systems.
+</h1>
+<div class="role-line">
+<span id="typed"></span><span class="cursor">|</span>
+</div>
+<p class="bio">
+<strong>7+ years</strong> driving process transformation, continuous improvement, and operational efficiency across tech and banking — cutting manual coordination effort by <strong>90%</strong> through workflow automation. Now building the ML models, LLM pipelines, and vector databases that solve complex business problems with code.
+</p>
+<div class="cta-row">
+<p><a class="btn primary" href="#featured-research">View Research</a> <a class="btn" href="#featured-apps">View Applications</a></p>
 </div>
 </div>
-<!-- Featured NLP Research -->
+</div>
 <section id="featured-research">
 <div class="section-label">
 Featured Research
@@ -348,27 +351,22 @@ Featured Research
 Legislative Text Analysis
 </h2>
 <div class="project-card featured-card">
-<pre><code>&lt;div class="project-body"&gt;
-  &lt;div class="tags"&gt;
-    &lt;span class="tag"&gt;NLP&lt;/span&gt;
-    &lt;span class="tag"&gt;TF-IDF&lt;/span&gt;
-    &lt;span class="tag"&gt;LDA Topic Modeling&lt;/span&gt;
-    &lt;span class="tag"&gt;Wordfish Scaling&lt;/span&gt;
-    &lt;span class="tag"&gt;LLM Tagging&lt;/span&gt;
-    &lt;span class="tag"&gt;R&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;h3&gt;Voting Bills Analysis Across Red, Blue &amp;amp; Purple States&lt;/h3&gt;
-  &lt;p&gt;
-    Political text mining project analyzing state-level voting legislation across the U.S. using Natural Language Processing and LLM classification. Parsed 83 legislative bills and 51 supporting research documents to discover policy themes, language patterns, and ideological shifts. Evaluated automated tagging rigor with human-in-the-loop agreement (Cohen's &amp;kappa; = 0.831).
-  &lt;/p&gt;
-  &lt;div class="project-links"&gt;
-    &lt;a href="voting-bills-analysis.qmd"&gt;Read Full Methodology &amp;amp; Code&lt;/a&gt;
-    &lt;a href="https://github.com/susanmohammadk22" target="_blank" rel="noopener noreferrer"&gt;GitHub Repo&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+<div class="project-body">
+<div class="tags">
+<p><span class="tag">NLP</span> <span class="tag">TF-IDF</span> <span class="tag">LDA Topic Modeling</span> <span class="tag">Wordfish Scaling</span> <span class="tag">LLM Tagging</span> <span class="tag">R</span></p>
+</div>
+<h3 class="anchored">
+Voting Bills Analysis Across Red, Blue &amp; Purple States
+</h3>
+<p>
+Political text mining project analyzing state-level voting legislation across the U.S. using Natural Language Processing and LLM classification. Parsed 83 legislative bills and 51 supporting research documents to discover policy themes, language patterns, and ideological shifts. Evaluated automated tagging rigor with human-in-the-loop agreement (Cohen’s κ = 0.831).
+</p>
+<div class="project-links">
+<p><a href="./voting-bills-analysis.html">Read Full Methodology &amp; Code</a> <a href="[https://github.com/susanmohammadk22](https://github.com/susanmohammadk22)" target="_blank" rel="noopener noreferrer">GitHub Repo</a></p>
+</div>
+</div>
 </div>
 </section>
-<!-- Featured Applications -->
 <section id="featured-apps">
 <div class="section-label">
 Selected Work
@@ -377,56 +375,56 @@ Selected Work
 AI &amp; Data Applications
 </h2>
 <div class="projects-grid">
-<pre><code>&lt;div class="project-card"&gt;
-  &lt;div class="project-body"&gt;
-    &lt;h3&gt;QIntel — Live Event Q&amp;amp;A Intelligence&lt;/h3&gt;
-    &lt;p&gt;Real-time audience interaction engine backed by a star-schema vector database pipeline. Detects duplicate questions via semantic embeddings, classifies topics, and suggests live answers.&lt;/p&gt;
-    &lt;div class="tags"&gt;
-      &lt;span class="tag"&gt;R + Shiny&lt;/span&gt;
-      &lt;span class="tag"&gt;Embeddings&lt;/span&gt;
-      &lt;span class="tag"&gt;PostgreSQL&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="project-links"&gt;
-      &lt;a href="https://qevent.shinyapps.io/qevent_app/" target="_blank" rel="noopener noreferrer"&gt;Live Demo&lt;/a&gt;
-      &lt;a href="https://susanmohammadk22.github.io/Final-Project.pdf" target="_blank" rel="noopener noreferrer"&gt;Report&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="project-card"&gt;
-  &lt;div class="project-body"&gt;
-    &lt;h3&gt;Python Quiz App with AI Tutor&lt;/h3&gt;
-    &lt;p&gt;Interactive assessment tool built with FastAPI and SQLite. Uses a local LLM (Ollama + DeepSeek-Coder) to provide plain-language explanations for wrong answers and dynamically generate new questions.&lt;/p&gt;
-    &lt;div class="tags"&gt;
-      &lt;span class="tag"&gt;FastAPI&lt;/span&gt;
-      &lt;span class="tag"&gt;Local LLM&lt;/span&gt;
-      &lt;span class="tag"&gt;SQLite&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="project-links"&gt;
-      &lt;a href="https://python-quiz-app-tzkf.onrender.com/" target="_blank" rel="noopener noreferrer"&gt;Live Demo&lt;/a&gt;
-      &lt;a href="https://github.com/susanmohammadk22/Python-Quiz-App" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="project-card full-width"&gt;
-  &lt;div class="project-body"&gt;
-    &lt;h3&gt;Flight Delay Risk Prediction (DFW Airport Analysis)&lt;/h3&gt;
-    &lt;p&gt;Predictive analytics pipeline built for the American Airlines / UTD Hackathon. Connects directly to live weather APIs via an ETL data pipeline, flagging high-risk airport pairs using Random Forest and Lasso regression models.&lt;/p&gt;
-    &lt;div class="tags"&gt;
-      &lt;span class="tag"&gt;R&lt;/span&gt;
-      &lt;span class="tag"&gt;Random Forest&lt;/span&gt;
-      &lt;span class="tag"&gt;Lasso Regression&lt;/span&gt;
-      &lt;span class="tag"&gt;ETL&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="project-links"&gt;
-      &lt;a href="https://github.com/susanmohammadk22/airline-weather-risk-analysis" target="_blank" rel="noopener noreferrer"&gt;GitHub Repository &amp;amp; Code&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+<div class="project-card">
+<div class="project-body">
+<h3 class="anchored">
+QIntel — Live Event Q&amp;A Intelligence
+</h3>
+<p>
+Real-time audience interaction engine backed by a star-schema vector database pipeline. Detects duplicate questions via semantic embeddings, classifies topics, and suggests live answers.
+</p>
+<div class="tags">
+<p><span class="tag">R + Shiny</span> <span class="tag">Embeddings</span> <span class="tag">PostgreSQL</span></p>
+</div>
+<div class="project-links">
+<p><a href="[https://qevent.shinyapps.io/qevent_app/](https://qevent.shinyapps.io/qevent_app/)" target="_blank" rel="noopener noreferrer">Live Demo</a> <a href="[https://susanmohammadk22.github.io/Final-Project.pdf](https://susanmohammadk22.github.io/Final-Project.pdf)" target="_blank" rel="noopener noreferrer">Report</a></p>
+</div>
+</div>
+</div>
+<div class="project-card">
+<div class="project-body">
+<h3 class="anchored">
+Python Quiz App with AI Tutor
+</h3>
+<p>
+Interactive assessment tool built with FastAPI and SQLite. Uses a local LLM (Ollama + DeepSeek-Coder) to provide plain-language explanations for wrong answers and dynamically generate new questions.
+</p>
+<div class="tags">
+<p><span class="tag">FastAPI</span> <span class="tag">Local LLM</span> <span class="tag">SQLite</span></p>
+</div>
+<div class="project-links">
+<p><a href="[https://python-quiz-app-tzkf.onrender.com/](https://python-quiz-app-tzkf.onrender.com/)" target="_blank" rel="noopener noreferrer">Live Demo</a> <a href="[https://github.com/susanmohammadk22/Python-Quiz-App](https://github.com/susanmohammadk22/Python-Quiz-App)" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+</div>
+</div>
+</div>
+<div class="project-card full-width">
+<div class="project-body">
+<h3 class="anchored">
+Flight Delay Risk Prediction (DFW Airport Analysis)
+</h3>
+<p>
+Predictive analytics pipeline built for the American Airlines / UTD Hackathon. Connects directly to live weather APIs via an ETL data pipeline, flagging high-risk airport pairs using Random Forest and Lasso regression models.
+</p>
+<div class="tags">
+<p><span class="tag">R</span> <span class="tag">Random Forest</span> <span class="tag">Lasso Regression</span> <span class="tag">ETL</span></p>
+</div>
+<div class="project-links">
+<p><a href="[https://github.com/susanmohammadk22/airline-weather-risk-analysis](https://github.com/susanmohammadk22/airline-weather-risk-analysis)" target="_blank" rel="noopener noreferrer">GitHub Repository &amp; Code</a></p>
+</div>
+</div>
+</div>
 </div>
 </section>
-<!-- Experience Section -->
 <section>
 <div class="section-label">
 Career
@@ -435,21 +433,38 @@ Career
 Experience
 </h2>
 <div class="exp-list">
-<pre><code>&lt;div class="exp-row"&gt;
-  &lt;div class="exp-meta"&gt;&lt;span class="role"&gt;Process Transformation Engineer&lt;/span&gt;Comerica Bank&lt;br&gt;Feb 2025 – Present&lt;/div&gt;
-  &lt;div class="exp-body"&gt;&lt;p&gt;Supported end-to-end process transformation for restitution project; built Power Platform automations that reduced manual coordination effort by 90% and provided real-time operational visibility to leadership. Contributed in data migration project through merging process of Comerica Bank and Fifth Third Bank.&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="exp-row"&gt;
-  &lt;div class="exp-meta"&gt;&lt;span class="role"&gt;Continuous Improvement Expert&lt;/span&gt;Snapp (100M+ users)&lt;br&gt;Nov 2020 – Dec 2023&lt;/div&gt;
-  &lt;div class="exp-body"&gt;&lt;p&gt;Led a Face ID authentication initiative—presented the business case to executive leadership—cutting verification steps and improving experience ~45%; redesigned regional support workflows, increasing team productivity by 35%.&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="exp-row"&gt;
-  &lt;div class="exp-meta"&gt;&lt;span class="role"&gt;Process Excellence &amp;amp; Governance&lt;/span&gt;Hyper-Me · Shatel&lt;br&gt;Jun 2015 – Nov 2020&lt;/div&gt;
-  &lt;div class="exp-body"&gt;&lt;p&gt;Centralized process documentation, SOPs, and governance frameworks across two organizations, reducing redundancy 30% and accelerating onboarding 25% while achieving 80% adoption on process rollouts.&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+<div class="exp-row">
+<div class="exp-meta">
+<span class="role">Process Transformation Engineer</span>Comerica Bank<br>Feb 2025 – Present
+</div>
+<div class="exp-body">
+<p>
+Supported end-to-end process transformation for restitution project; built Power Platform automations that reduced manual coordination effort by 90% and provided real-time operational visibility to leadership. Contributed to a data migration project merging processes between Comerica Bank and Fifth Third Bank.
+</p>
+</div>
+</div>
+<div class="exp-row">
+<div class="exp-meta">
+<span class="role">Continuous Improvement Expert</span>Snapp (100M+ users)<br>Nov 2020 – Dec 2023
+</div>
+<div class="exp-body">
+<p>
+Led a Face ID authentication initiative—presented the business case to executive leadership—cutting verification steps and improving experience ~45%; redesigned regional support workflows, increasing team productivity by 35%.
+</p>
+</div>
+</div>
+<div class="exp-row">
+<div class="exp-meta">
+<span class="role">Process Excellence &amp; Governance</span>Hyper-Me · Shatel<br>Jun 2015 – Nov 2020
+</div>
+<div class="exp-body">
+<p>
+Centralized process documentation, SOPs, and governance frameworks across two organizations, reducing redundancy 30% and accelerating onboarding 25% while achieving 80% adoption on process rollouts.
+</p>
+</div>
+</div>
 </div>
 </section>
-<!-- Skills Section -->
 <section>
 <div class="section-label">
 Toolkit
@@ -458,91 +473,116 @@ Toolkit
 Skills &amp; Capabilities
 </h2>
 <div class="skills-grid">
-<pre><code>&lt;div class="skill-chip"&gt;Python&lt;/div&gt;
-&lt;div class="skill-chip"&gt;R&lt;/div&gt;
-&lt;div class="skill-chip"&gt;SQL&lt;/div&gt;
-&lt;div class="skill-chip"&gt;LLMs (Ollama)&lt;/div&gt;
-&lt;div class="skill-chip"&gt;NLP / TF-IDF&lt;/div&gt;
-&lt;div class="skill-chip"&gt;Random Forest&lt;/div&gt;
-&lt;div class="skill-chip"&gt;Lasso Regression&lt;/div&gt;
-&lt;div class="skill-chip"&gt;Shiny&lt;/div&gt;
-&lt;div class="skill-chip"&gt;PostgreSQL&lt;/div&gt;
-&lt;div class="skill-chip"&gt;SQLite&lt;/div&gt;
-&lt;div class="skill-chip"&gt;Process Mapping&lt;/div&gt;
-&lt;div class="skill-chip"&gt;Lean Six Sigma Black Belt&lt;/div&gt;
-&lt;div class="skill-chip"&gt;Econometrics&lt;/div&gt;</code></pre>
+<div class="skill-chip">
+Python
+</div>
+<div class="skill-chip">
+R
+</div>
+<div class="skill-chip">
+SQL
+</div>
+<div class="skill-chip">
+LLMs (Ollama)
+</div>
+<div class="skill-chip">
+NLP / TF-IDF
+</div>
+<div class="skill-chip">
+Random Forest
+</div>
+<div class="skill-chip">
+Lasso Regression
+</div>
+<div class="skill-chip">
+Shiny
+</div>
+<div class="skill-chip">
+PostgreSQL
+</div>
+<div class="skill-chip">
+SQLite
+</div>
+<div class="skill-chip">
+Process Mapping
+</div>
+<div class="skill-chip">
+Lean Six Sigma Black Belt
+</div>
+<div class="skill-chip">
+Econometrics
+</div>
 </div>
 </section>
-<!-- Animated Background & Typing Effect Script -->
 <script>
-  const roles = ["Process Transformation Engineer", "AI & ML Builder", "Continuous Improvement Expert"];
-  const typedEl = document.getElementById('typed');
-  let r = 0, c = 0, deleting = false;
-  
-  function tick(){
-    if (!typedEl) return;
-    const word = roles[r];
-    typedEl.textContent = deleting ? word.slice(0, c--) : word.slice(0, c++);
-    if(!deleting && c === word.length + 1){ deleting = true; setTimeout(tick, 1200); return; }
-    if(deleting && c === 0){ deleting = false; r = (r+1) % roles.length; }
-    setTimeout(tick, deleting ? 40 : 85);
-  }
-  tick();
+const roles = ["Process Transformation Engineer", "AI & ML Builder", "Continuous Improvement Expert"];
+const typedEl = document.getElementById('typed');
+let r = 0, c = 0, deleting = false;
 
-  const canvas = document.getElementById('graph');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    function resize(){ 
-      canvas.width = canvas.parentElement.offsetWidth; 
-      canvas.height = canvas.parentElement.offsetHeight; 
-    }
-    resize(); 
-    window.addEventListener('resize', resize);
-    
-    const N = 40;
-    const pts = Array.from({length:N}, () => ({
-      x: Math.random()*canvas.width, 
-      y: Math.random()*canvas.height,
-      vx: (Math.random()-0.5)*0.25, 
-      vy: (Math.random()-0.5)*0.25
-    }));
-    
-    function draw(){
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      for(const p of pts){
-        p.x += p.vx; 
-        p.y += p.vy;
-        if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
-        if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
-      }
-      
-      for(let i = 0; i < N; i++){
-        for(let j = i + 1; j < N; j++){
-          const dx = pts[i].x - pts[j].x;
-          const dy = pts[i].y - pts[j].y;
-          const d = Math.sqrt(dx * dx + dy * dy);
-          if(d < 140){
-            ctx.strokeStyle = `rgba(45,212,191,${0.15 * (1 - d / 140)})`;
-            ctx.beginPath();
-            ctx.moveTo(pts[i].x, pts[i].y);
-            ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-      
-      for(const p of pts){
-        ctx.fillStyle = 'rgba(242,166,90,0.7)';
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      
-      requestAnimationFrame(draw);
-    }
-    draw();
-  }
+function tick(){
+if (!typedEl) return;
+const word = roles[r];
+typedEl.textContent = deleting ? word.slice(0, c--) : word.slice(0, c++);
+if(!deleting && c === word.length + 1){ deleting = true; setTimeout(tick, 1200); return; }
+if(deleting && c === 0){ deleting = false; r = (r+1) % roles.length; }
+setTimeout(tick, deleting ? 40 : 85);
+}
+tick();
+
+const canvas = document.getElementById('graph');
+if (canvas) {
+const ctx = canvas.getContext('2d');
+function resize(){
+canvas.width = canvas.parentElement.offsetWidth;
+canvas.height = canvas.parentElement.offsetHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+const N = 40;
+const pts = Array.from({length:N}, () => ({
+x: Math.random()*canvas.width,
+y: Math.random()*canvas.height,
+vx: (Math.random()-0.5)*0.25,
+vy: (Math.random()-0.5)*0.25
+}));
+
+function draw(){
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+for(const p of pts){
+p.x += p.vx;
+p.y += p.vy;
+if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
+if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
+}
+
+for(let i = 0; i < N; i++){
+for(let j = i + 1; j < N; j++){
+const dx = pts[i].x - pts[j].x;
+const dy = pts[i].y - pts[j].y;
+const d = Math.sqrt(dx * dx + dy * dy);
+if(d < 140){
+ctx.strokeStyle = `rgba(45,212,191,${0.15 * (1 - d / 140)})`;
+ctx.beginPath();
+ctx.moveTo(pts[i].x, pts[i].y);
+ctx.lineTo(pts[j].x, pts[j].y);
+ctx.stroke();
+}
+}
+}
+
+for(const p of pts){
+ctx.fillStyle = 'rgba(242,166,90,0.7)';
+ctx.beginPath();
+ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+ctx.fill();
+}
+
+requestAnimationFrame(draw);
+}
+draw();
+}
 </script>
 
 
