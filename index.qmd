@@ -40,8 +40,8 @@ toc: false
 Political text mining project analyzing state-level voting legislation across the U.S. using Natural Language Processing and LLM classification. Parsed 83 legislative bills and 51 supporting research documents to discover policy themes, language patterns, and ideological shifts. Evaluated automated tagging rigor with human-in-the-loop agreement (Cohen's &kappa; = 0.831).
 </p>
 <div class="project-links">
-<a href="voting-bills-analysis.qmd">Read Full Methodology &amp; Code</a>
-<a href="[https://github.com/susanmohammadk22](https://github.com/susanmohammadk22)" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+<a href="voting-bills-analysis.qmd">Read Full Methodology &amp; Code ↗</a>
+<a href="[https://github.com/susanmohammadk22](https://github.com/susanmohammadk22)" target="_blank" rel="noopener noreferrer">GitHub Repo ↗</a>
 </div>
 </div>
 </div>
@@ -63,8 +63,8 @@ Political text mining project analyzing state-level voting legislation across th
 <span class="tag">PostgreSQL</span>
 </div>
 <div class="project-links">
-<a href="[https://qevent.shinyapps.io/qevent_app/](https://qevent.shinyapps.io/qevent_app/)" target="_blank" rel="noopener noreferrer">Live Demo</a>
-<a href="[https://susanmohammadk22.github.io/Final-Project.pdf](https://susanmohammadk22.github.io/Final-Project.pdf)" target="_blank" rel="noopener noreferrer">Report</a>
+<a href="[https://qevent.shinyapps.io/qevent_app/](https://qevent.shinyapps.io/qevent_app/)" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+<a href="Final-Project.pdf" target="_blank" rel="noopener noreferrer">Report ↗</a>
 </div>
 </div>
 </div>
@@ -79,8 +79,8 @@ Political text mining project analyzing state-level voting legislation across th
 <span class="tag">SQLite</span>
 </div>
 <div class="project-links">
-<a href="[https://python-quiz-app-tzkf.onrender.com/](https://python-quiz-app-tzkf.onrender.com/)" target="_blank" rel="noopener noreferrer">Live Demo</a>
-<a href="[https://github.com/susanmohammadk22/Python-Quiz-App](https://github.com/susanmohammadk22/Python-Quiz-App)" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a href="[https://python-quiz-app-tzkf.onrender.com/](https://python-quiz-app-tzkf.onrender.com/)" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+<a href="[https://github.com/susanmohammadk22/Python-Quiz-App](https://github.com/susanmohammadk22/Python-Quiz-App)" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 </div>
 </div>
 </div>
@@ -96,7 +96,7 @@ Political text mining project analyzing state-level voting legislation across th
 <span class="tag">ETL</span>
 </div>
 <div class="project-links">
-<a href="[https://github.com/susanmohammadk22/airline-weather-risk-analysis](https://github.com/susanmohammadk22/airline-weather-risk-analysis)" target="_blank" rel="noopener noreferrer">GitHub Repository &amp; Code</a>
+<a href="[https://github.com/susanmohammadk22/airline-weather-risk-analysis](https://github.com/susanmohammadk22/airline-weather-risk-analysis)" target="_blank" rel="noopener noreferrer">GitHub Repository &amp; Code ↗</a>
 </div>
 </div>
 </div>
