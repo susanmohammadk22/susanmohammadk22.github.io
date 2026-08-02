@@ -1,1 +1,235 @@
-/* css styles */
+/* ==========================================================================
+   GLOBAL THEME (Applies to all pages)
+   ========================================================================== */
+:root {
+  --ink: #0B1220;      /* Dark slate background */
+  --ink-2: #101B2D;    /* Card background */
+  --cream: #F1EEE6;    /* Soft white text */
+  --slate: #8B98A9;    /* Subtitle text */
+  --teal: #2DD4BF;     /* Primary accent */
+  --amber: #F2A65A;    /* Highlight accent */
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--cream);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+a {
+  color: var(--teal);
+}
+
+a:hover {
+  color: var(--amber);
+}
+
+/* ==========================================================================
+   HOMEPAGE SPECIFIC STYLES (Only triggers on elements present in index.qmd)
+   ========================================================================== */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+#graph {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.45;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 740px;
+}
+
+.eyebrow {
+  font-family: monospace;
+  color: var(--teal);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.role-line {
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--amber);
+  margin-bottom: 20px;
+  min-height: 1.5em;
+}
+
+.cursor {
+  color: var(--amber);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.bio {
+  color: var(--slate);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.bio strong {
+  color: var(--cream);
+}
+
+.cta-row {
+  display: flex;
+  gap: 14px;
+}
+
+.btn {
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: var(--teal);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.2);
+}
+
+/* Section Layouts */
+section {
+  padding: 45px 0;
+}
+
+.section-label {
+  font-family: monospace;
+  color: var(--teal);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* Grid & Cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--ink-2);
+  border-radius: 10px;
+  border: 1px solid #1E2C42;
+  padding: 22px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-3px);
+}
+
+.featured-card {
+  border-color: var(--amber);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tag {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  border-radius: 16px;
+  padding: 2px 9px;
+}
+
+.project-links a {
+  color: var(--teal);
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 16px;
+}
+
+/* Experience List */
+.exp-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid #1E2C42;
+}
+
+.exp-meta {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--slate);
+}
+
+.exp-meta .role {
+  color: var(--cream);
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+}
+
+/* Skill Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.skill-chip {
+  background: var(--ink-2);
+  border: 1px solid #1E2C42;
+  border-radius: 6px;
+  padding: 12px 8px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--cream);
+}
+
+@media (max-width: 768px) {
+  .projects-grid, .exp-row {
+    grid-template-columns: 1fr;
+  }
+}

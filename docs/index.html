@@ -311,99 +311,241 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
-  <ul class="collapse">
-  <li><a href="#technical-toolbox" id="toc-technical-toolbox" class="nav-link" data-scroll-target="#technical-toolbox">Technical Toolbox</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Susan Mohammad</h1>
+
+
+
+<!-- Hero Section with Canvas Background -->
+<div class="hero">
+<canvas id="graph">
+</canvas>
+<div class="hero-content">
+<pre><code>&lt;div class="eyebrow"&gt;Susan Mohammad&lt;/div&gt;
+&lt;h1&gt;I turn process expertise into AI-powered systems.&lt;/h1&gt;
+&lt;div class="role-line"&gt;&lt;span id="typed"&gt;&lt;/span&gt;&lt;span class="cursor"&gt;|&lt;/span&gt;&lt;/div&gt;
+&lt;p class="bio"&gt;
+  &lt;strong&gt;7+ years&lt;/strong&gt; driving process transformation, continuous improvement, and operational efficiency across tech and banking — cutting manual coordination effort by &lt;strong&gt;90%&lt;/strong&gt; through workflow automation. Now building the ML models, LLM pipelines, and vector databases that solve complex business problems with code.
+&lt;/p&gt;
+&lt;div class="cta-row"&gt;
+  &lt;a class="btn primary" href="#featured-research"&gt;View Research&lt;/a&gt;
+  &lt;a class="btn" href="#featured-apps"&gt;View Applications&lt;/a&gt;
+&lt;/div&gt;</code></pre>
 </div>
+</div>
+<!-- Featured NLP Research -->
+<section id="featured-research">
+<div class="section-label">
+Featured Research
+</div>
+<h2 class="anchored">
+Legislative Text Analysis
+</h2>
+<div class="project-card featured-card">
+<pre><code>&lt;div class="project-body"&gt;
+  &lt;div class="tags"&gt;
+    &lt;span class="tag"&gt;NLP&lt;/span&gt;
+    &lt;span class="tag"&gt;TF-IDF&lt;/span&gt;
+    &lt;span class="tag"&gt;LDA Topic Modeling&lt;/span&gt;
+    &lt;span class="tag"&gt;Wordfish Scaling&lt;/span&gt;
+    &lt;span class="tag"&gt;LLM Tagging&lt;/span&gt;
+    &lt;span class="tag"&gt;R&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;h3&gt;Voting Bills Analysis Across Red, Blue &amp;amp; Purple States&lt;/h3&gt;
+  &lt;p&gt;
+    Political text mining project analyzing state-level voting legislation across the U.S. using Natural Language Processing and LLM classification. Parsed 83 legislative bills and 51 supporting research documents to discover policy themes, language patterns, and ideological shifts. Evaluated automated tagging rigor with human-in-the-loop agreement (Cohen's &amp;kappa; = 0.831).
+  &lt;/p&gt;
+  &lt;div class="project-links"&gt;
+    &lt;a href="voting-bills-analysis.qmd"&gt;Read Full Methodology &amp;amp; Code&lt;/a&gt;
+    &lt;a href="https://github.com/susanmohammadk22" target="_blank" rel="noopener noreferrer"&gt;GitHub Repo&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</section>
+<!-- Featured Applications -->
+<section id="featured-apps">
+<div class="section-label">
+Selected Work
+</div>
+<h2 class="anchored">
+AI &amp; Data Applications
+</h2>
+<div class="projects-grid">
+<pre><code>&lt;div class="project-card"&gt;
+  &lt;div class="project-body"&gt;
+    &lt;h3&gt;QIntel — Live Event Q&amp;amp;A Intelligence&lt;/h3&gt;
+    &lt;p&gt;Real-time audience interaction engine backed by a star-schema vector database pipeline. Detects duplicate questions via semantic embeddings, classifies topics, and suggests live answers.&lt;/p&gt;
+    &lt;div class="tags"&gt;
+      &lt;span class="tag"&gt;R + Shiny&lt;/span&gt;
+      &lt;span class="tag"&gt;Embeddings&lt;/span&gt;
+      &lt;span class="tag"&gt;PostgreSQL&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="project-links"&gt;
+      &lt;a href="https://qevent.shinyapps.io/qevent_app/" target="_blank" rel="noopener noreferrer"&gt;Live Demo&lt;/a&gt;
+      &lt;a href="https://susanmohammadk22.github.io/Final-Project.pdf" target="_blank" rel="noopener noreferrer"&gt;Report&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="project-card"&gt;
+  &lt;div class="project-body"&gt;
+    &lt;h3&gt;Python Quiz App with AI Tutor&lt;/h3&gt;
+    &lt;p&gt;Interactive assessment tool built with FastAPI and SQLite. Uses a local LLM (Ollama + DeepSeek-Coder) to provide plain-language explanations for wrong answers and dynamically generate new questions.&lt;/p&gt;
+    &lt;div class="tags"&gt;
+      &lt;span class="tag"&gt;FastAPI&lt;/span&gt;
+      &lt;span class="tag"&gt;Local LLM&lt;/span&gt;
+      &lt;span class="tag"&gt;SQLite&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="project-links"&gt;
+      &lt;a href="https://python-quiz-app-tzkf.onrender.com/" target="_blank" rel="noopener noreferrer"&gt;Live Demo&lt;/a&gt;
+      &lt;a href="https://github.com/susanmohammadk22/Python-Quiz-App" target="_blank" rel="noopener noreferrer"&gt;GitHub&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-
-<div class="quarto-title-meta">
-
-    
+&lt;div class="project-card full-width"&gt;
+  &lt;div class="project-body"&gt;
+    &lt;h3&gt;Flight Delay Risk Prediction (DFW Airport Analysis)&lt;/h3&gt;
+    &lt;p&gt;Predictive analytics pipeline built for the American Airlines / UTD Hackathon. Connects directly to live weather APIs via an ETL data pipeline, flagging high-risk airport pairs using Random Forest and Lasso regression models.&lt;/p&gt;
+    &lt;div class="tags"&gt;
+      &lt;span class="tag"&gt;R&lt;/span&gt;
+      &lt;span class="tag"&gt;Random Forest&lt;/span&gt;
+      &lt;span class="tag"&gt;Lasso Regression&lt;/span&gt;
+      &lt;span class="tag"&gt;ETL&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="project-links"&gt;
+      &lt;a href="https://github.com/susanmohammadk22/airline-weather-risk-analysis" target="_blank" rel="noopener noreferrer"&gt;GitHub Repository &amp;amp; Code&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</section>
+<!-- Experience Section -->
+<section>
+<div class="section-label">
+Career
+</div>
+<h2 class="anchored">
+Experience
+</h2>
+<div class="exp-list">
+<pre><code>&lt;div class="exp-row"&gt;
+  &lt;div class="exp-meta"&gt;&lt;span class="role"&gt;Process Transformation Engineer&lt;/span&gt;Comerica Bank&lt;br&gt;Feb 2025 – Present&lt;/div&gt;
+  &lt;div class="exp-body"&gt;&lt;p&gt;Supported end-to-end process transformation for restitution project; built Power Platform automations that reduced manual coordination effort by 90% and provided real-time operational visibility to leadership. Contributed in data migration project through merging process of Comerica Bank and Fifth Third Bank.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="exp-row"&gt;
+  &lt;div class="exp-meta"&gt;&lt;span class="role"&gt;Continuous Improvement Expert&lt;/span&gt;Snapp (100M+ users)&lt;br&gt;Nov 2020 – Dec 2023&lt;/div&gt;
+  &lt;div class="exp-body"&gt;&lt;p&gt;Led a Face ID authentication initiative—presented the business case to executive leadership—cutting verification steps and improving experience ~45%; redesigned regional support workflows, increasing team productivity by 35%.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="exp-row"&gt;
+  &lt;div class="exp-meta"&gt;&lt;span class="role"&gt;Process Excellence &amp;amp; Governance&lt;/span&gt;Hyper-Me · Shatel&lt;br&gt;Jun 2015 – Nov 2020&lt;/div&gt;
+  &lt;div class="exp-body"&gt;&lt;p&gt;Centralized process documentation, SOPs, and governance frameworks across two organizations, reducing redundancy 30% and accelerating onboarding 25% while achieving 80% adoption on process rollouts.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</section>
+<!-- Skills Section -->
+<section>
+<div class="section-label">
+Toolkit
+</div>
+<h2 class="anchored">
+Skills &amp; Capabilities
+</h2>
+<div class="skills-grid">
+<pre><code>&lt;div class="skill-chip"&gt;Python&lt;/div&gt;
+&lt;div class="skill-chip"&gt;R&lt;/div&gt;
+&lt;div class="skill-chip"&gt;SQL&lt;/div&gt;
+&lt;div class="skill-chip"&gt;LLMs (Ollama)&lt;/div&gt;
+&lt;div class="skill-chip"&gt;NLP / TF-IDF&lt;/div&gt;
+&lt;div class="skill-chip"&gt;Random Forest&lt;/div&gt;
+&lt;div class="skill-chip"&gt;Lasso Regression&lt;/div&gt;
+&lt;div class="skill-chip"&gt;Shiny&lt;/div&gt;
+&lt;div class="skill-chip"&gt;PostgreSQL&lt;/div&gt;
+&lt;div class="skill-chip"&gt;SQLite&lt;/div&gt;
+&lt;div class="skill-chip"&gt;Process Mapping&lt;/div&gt;
+&lt;div class="skill-chip"&gt;Lean Six Sigma Black Belt&lt;/div&gt;
+&lt;div class="skill-chip"&gt;Econometrics&lt;/div&gt;</code></pre>
+</div>
+</section>
+<!-- Animated Background & Typing Effect Script -->
+<script>
+  const roles = ["Process Transformation Engineer", "AI & ML Builder", "Continuous Improvement Expert"];
+  const typedEl = document.getElementById('typed');
+  let r = 0, c = 0, deleting = false;
   
+  function tick(){
+    if (!typedEl) return;
+    const word = roles[r];
+    typedEl.textContent = deleting ? word.slice(0, c--) : word.slice(0, c++);
+    if(!deleting && c === word.length + 1){ deleting = true; setTimeout(tick, 1200); return; }
+    if(deleting && c === 0){ deleting = false; r = (r+1) % roles.length; }
+    setTimeout(tick, deleting ? 40 : 85);
+  }
+  tick();
+
+  const canvas = document.getElementById('graph');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    function resize(){ 
+      canvas.width = canvas.parentElement.offsetWidth; 
+      canvas.height = canvas.parentElement.offsetHeight; 
+    }
+    resize(); 
+    window.addEventListener('resize', resize);
     
-  </div>
-  
+    const N = 40;
+    const pts = Array.from({length:N}, () => ({
+      x: Math.random()*canvas.width, 
+      y: Math.random()*canvas.height,
+      vx: (Math.random()-0.5)*0.25, 
+      vy: (Math.random()-0.5)*0.25
+    }));
+    
+    function draw(){
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      for(const p of pts){
+        p.x += p.vx; 
+        p.y += p.vy;
+        if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      }
+      
+      for(let i = 0; i < N; i++){
+        for(let j = i + 1; j < N; j++){
+          const dx = pts[i].x - pts[j].x;
+          const dy = pts[i].y - pts[j].y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if(d < 140){
+            ctx.strokeStyle = `rgba(45,212,191,${0.15 * (1 - d / 140)})`;
+            ctx.beginPath();
+            ctx.moveTo(pts[i].x, pts[i].y);
+            ctx.lineTo(pts[j].x, pts[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      
+      for(const p of pts){
+        ctx.fillStyle = 'rgba(242,166,90,0.7)';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+</script>
 
 
-</header>
-
-
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
-<p>I am a Process Transformation Engineer with more than seven years of experience leading process improvement, workflow automation, operational transformation, and data-driven decision-making initiatives across banking, technology, and service organizations.</p>
-<p>My expertise spans business process reengineering, automation strategy, process governance, analytics, and technology enablement. I have partnered with business and technology teams to streamline operations, improve controls, strengthen compliance, and deliver scalable solutions that enhance efficiency and customer experience.</p>
-<p>In addition to my professional experience, I explore practical applications of artificial intelligence, data analytics, and automation technologies. Through personal projects, I develop analytical solutions using SQL, R, PostgreSQL, and locally hosted large language models (LLMs) to support knowledge management, information retrieval, and business insights.</p>
-<p>This website highlights selected projects, technical work, and areas of professional interest related to process transformation, analytics, automation, and AI.</p>
-<hr>
-<section id="technical-toolbox" class="level3">
-<h3 class="anchored" data-anchor-id="technical-toolbox">Technical Toolbox</h3>
-</section>
-<div class="grid">
-<div class="g-col-6">
-<section id="process-transformation-automation" class="level3">
-<h3 class="anchored" data-anchor-id="process-transformation-automation">Process Transformation &amp; Automation</h3>
-<ul>
-<li>Business Process Management (BPM)<br>
-</li>
-<li>Process Mapping &amp; Reengineering<br>
-</li>
-<li>Workflow Automation<br>
-</li>
-<li>Lean Six Sigma<br>
-</li>
-<li>Power Apps<br>
-</li>
-<li>Power Automate<br>
-</li>
-<li>SharePoint</li>
-</ul>
-</section>
-<section id="analytics-modeling" class="level3">
-<h3 class="anchored" data-anchor-id="analytics-modeling">Analytics &amp; Modeling</h3>
-<ul>
-<li>Econometrics<br>
-</li>
-<li>Time Series Analysis<br>
-</li>
-<li>Statistical Modeling<br>
-</li>
-<li>PostgreSQL<br>
-</li>
-<li>SQLite<br>
-</li>
-<li>R (Tidyverse, Shiny, Quarto)<br>
-</li>
-<li>Topic Modeling (LDA)<br>
-</li>
-<li>Large Language Models (LLMs)</li>
-</ul>
-</section>
-</div>
-</div>
-
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
