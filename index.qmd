@@ -154,7 +154,7 @@ Career
 :::
 
 ::: exp-body
-<p>Mapped operational workflows, using root-cause analysis to prioritize improvement opportunities; drove <strong>20% immediate adoption</strong> on simplification and automation initiatives.</p>
+<p>Mapped operational workflows, using root-cause analysis to prioritize improvement opportunities.</p>
 :::
 :::::
 
@@ -164,7 +164,7 @@ Career
 :::
 
 ::: exp-body
-<p>Designed IVR call-flow architecture and a crisis-response routing system for high-volume customer communications; built change-management frameworks <strong>achieving 80% team adoption</strong>.</p>
+<p>Designed IVR call-flow architecture and a crisis-response routing system for high-volume customer communications.</strong>.</p>
 :::
 :::::
 :::::::::::::::
@@ -199,7 +199,7 @@ Amazon Web Services (AWS)
 </p>
 
 ::: tags
-[Generative AI]{.tag} [Machine Learning]{.tag} [AWS Cloud]{.tag}
+[Generative AI]{.tag} [Machine Learning]{.tag}
 :::
 
 ::: project-links
