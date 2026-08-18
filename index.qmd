@@ -184,8 +184,8 @@ Credentials
 
 ::::::: {.project-card .cert-card}
 ::: cert-image-container
-<a href="aws-ai-practitioner.pdf" target="_blank" rel="noopener noreferrer"> 
-  <img src="aws-ai-practitioner.png" alt="AWS Certified AI Practitioner Certificate" class="cert-thumb"/> 
+<a href="aws-ai-practitioner.pdf" target="_blank" rel="noopener noreferrer">
+<img src="aws-ai-practitioner.png" alt="AWS Certified AI Practitioner Certificate" class="cert-thumb"/>
 </a>
 :::
 
@@ -193,9 +193,7 @@ Credentials
 <h3>AWS Certified AI Practitioner</h3>
 
 <p class="cert-issuer">
-
 Amazon Web Services (AWS)
-
 </p>
 
 ::: tags
