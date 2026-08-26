@@ -5,18 +5,16 @@ page-layout: full
 toc: false
 ---
 
-\`\`\`{=html}
+
 
 :::::: hero
-<canvas id="graph">
-
-</canvas>
+<canvas id="graph"></canvas>
 
 ::::: hero-content
 <h1>I turn process expertise into AI-powered systems.</h1>
 
 ::: role-line
-[\|]{.cursor}
+<span id="typed"></span>[\|]{.cursor}
 :::
 
 <p class="bio">
@@ -164,7 +162,7 @@ Career
 :::
 
 ::: exp-body
-<p>Designed IVR call-flow architecture and a crisis-response routing system for high-volume customer communications.</strong>.</p>
+<p>Designed IVR call-flow architecture and a crisis-response routing system for high-volume customer communications.</p>
 :::
 :::::
 :::::::::::::::
@@ -325,7 +323,7 @@ Econometrics
 
 </section>
 
-```{=html}
+
 <script>
 const roles = ["Process Transformation Engineer", "AI & ML Builder", "Continuous Improvement Expert"];
 const typedEl = document.getElementById('typed');
@@ -396,4 +394,4 @@ requestAnimationFrame(draw);
 draw();
 }
 </script>
-```
+
