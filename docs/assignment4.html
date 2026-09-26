@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -194,13 +165,6 @@ window.Quarto = {
   <li><a href="#brief-of-journalism-in-the-age-of-data" id="toc-brief-of-journalism-in-the-age-of-data" class="nav-link" data-scroll-target="#brief-of-journalism-in-the-age-of-data">Brief of Journalism in the age of Data</a></li>
   <li><a href="#merrele-practice" id="toc-merrele-practice" class="nav-link" data-scroll-target="#merrele-practice">Merrele practice:</a></li>
   </ul></li>
-  <li><a href="#read-data--" id="toc-read-data--" class="nav-link" data-scroll-target="#read-data--">—- Read data —-</a></li>
-  <li><a href="#filter-to-2025--" id="toc-filter-to-2025--" class="nav-link" data-scroll-target="#filter-to-2025--">—- Filter to 2025 —-</a></li>
-  <li><a href="#scatterplot-life-expectancy-vs-hpi--" id="toc-scatterplot-life-expectancy-vs-hpi--" class="nav-link" data-scroll-target="#scatterplot-life-expectancy-vs-hpi--">—- Scatterplot: Life Expectancy vs HPI —-</a></li>
-  <li><a href="#histogram-of-hpi-scores--" id="toc-histogram-of-hpi-scores--" class="nav-link" data-scroll-target="#histogram-of-hpi-scores--">—- Histogram of HPI scores —-</a></li>
-  <li><a href="#boxplot-of-hpi--" id="toc-boxplot-of-hpi--" class="nav-link" data-scroll-target="#boxplot-of-hpi--">—- Boxplot of HPI —-</a></li>
-  <li><a href="#pie-chart-ecological-footprint-category--" id="toc-pie-chart-ecological-footprint-category--" class="nav-link" data-scroll-target="#pie-chart-ecological-footprint-category--">—- Pie chart: Ecological Footprint category —-</a></li>
-  <li><a href="#d-perspective-surface-demo-plot--" id="toc-d-perspective-surface-demo-plot--" class="nav-link" data-scroll-target="#d-perspective-surface-demo-plot--">—- 3D perspective surface (demo plot) —-</a></li>
   </ul>
 </nav>
     </div>
@@ -252,55 +216,111 @@ window.Quarto = {
 <p>Histogram- Random data Y &lt;- rnorm(50) Make sure no Y exceed [-3.5, 3.5] Y[Y &lt; -3.5 | Y &gt; 3.5] &lt;- NA x &lt;- seq(-3.5, 3.5, .1) dn &lt;- dnorm(x) par(mar=c(4.5, 4.1, 3.1, 0)) hist(Y, breaks=seq(-3.5, 3.5), ylim=c(0, 0.5), col=“gray80”, freq=FALSE) lines(x, dnorm(x), lwd=2) par(mar=c(5.1, 4.1, 4.1, 2.1))</p>
 <p>Barplot- Modified from example(barplot) par(mar=c(2, 3.1, 2, 2.1)) midpts &lt;- barplot(VADeaths, col=gray(0.1 + seq(1, 9, 2)/11), names=rep(““, 4)) mtext(sub(” “,”“, colnames(VADeaths)), at=midpts, side=1, line=0.5, cex=0.5) text(rep(midpts, each=5), apply(VADeaths, 2, cumsum) - VADeaths/2, VADeaths, col=rep(c(”white”, “black”), times=3:2), cex=0.8) par(mar=c(5.1, 4.1, 4.1, 2.1))</p>
 <p>Boxplot- Modified example(boxplot) - itself from suggestion by Roger Bivand par(mar=c(3, 4.1, 2, 0)) boxplot(len ~ dose, data = ToothGrowth, boxwex = 0.25, at = 1:3 - 0.2, subset= supp == “VC”, col=“white”, xlab=““, ylab=”tooth length”, ylim=c(0,35)) mtext(“Vitamin C dose (mg)”, side=1, line=2.5, cex=0.8) boxplot(len ~ dose, data = ToothGrowth, add = TRUE, boxwex = 0.25, at = 1:3 + 0.2,</p>
-<pre><code>         subset= supp == "OJ")
- legend(1.5, 9, c("Ascorbic acid", "Orange juice"), 
-        fill = c("white", "gray"), 
-        bty="n")</code></pre>
-<p>par(mar=c(5.1, 4.1, 4.1, 2.1))</p>
-<p>Persp- Almost exactly example(persp) x &lt;- seq(-10, 10, length= 30) y &lt;- x f &lt;- function(x,y) { r &lt;- sqrt(x<sup>2+y</sup>2); 10 * sin(r)/r } z &lt;- outer(x, y, f) z[is.na(z)] &lt;- 1 0.5 to include z axis label par(mar=c(0, 0.5, 0, 0), lwd=0.5) persp(x, y, z, theta = 30, phi = 30,</p>
-<pre><code>       expand = 0.5)</code></pre>
-<p>par(mar=c(5.1, 4.1, 4.1, 2.1), lwd=1)</p>
-<p>Piechart- Example 4 from help(pie) par(mar=c(0, 2, 1, 2), xpd=FALSE, cex=0.5) pie.sales &lt;- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12) names(pie.sales) &lt;- c(“Blueberry”, “Cherry”, “Apple”, “Boston Cream”, “Other”, “Vanilla”) pie(pie.sales, col = gray(seq(0.3,1.0,length=6)))</p>
-<p><img src="images/clipboard-2670679410.png" class="img-fluid"></p>
-<p>Hist() creates a whole plot lines() adds something to the existing plot</p>
-<p>when I wanted to read the excel sheet as it had several sheets I ran this code to see the name of sheets excel_sheets(“C:/Users/smvic/Downloads/HPI2_2026.xlsx”) then I wanted to read the “all countries” sheet that I ran this code: hpi &lt;- read_excel( “C:/Users/smvic/Downloads/HPI2_2026.xlsx”, sheet = “1. All countries” ) then I check the headings title: head(hpi) axis() controls the tick marks and labels displayed on a specific plot axis.</p>
-<p><img src="images/clipboard-4139347273.png" class="img-fluid"></p>
-<p><img src="images/clipboard-1079207173.png" class="img-fluid"></p>
-<p>library(readxl)</p>
-</section>
-</section>
-<section id="read-data--" class="level1">
-<h1>—- Read data —-</h1>
-<p>hpi_all &lt;- read_excel( “C:/Users/smvic/Downloads/HPI2_2026.xlsx”, sheet = “All Data”, range = “A2:T2451” )</p>
-<p>names(hpi_all) sort(unique(hpi_all$Year))</p>
-</section>
-<section id="filter-to-2025--" class="level1">
-<h1>—- Filter to 2025 —-</h1>
-<p>hpi_2025 &lt;- subset(hpi_all, Year == 2025) dim(hpi_2025) head(hpi_2025) length(unique(hpi_2025$Country))</p>
-</section>
-<section id="scatterplot-life-expectancy-vs-hpi--" class="level1">
-<h1>—- Scatterplot: Life Expectancy vs HPI —-</h1>
-<p>par(mar = c(5, 5, 3, 2)) plot( hpi_2025<span class="math inline">\(`Life Expectancy`,
-  hpi_2025\)</span>HPI, xlab = “Life Expectancy”, ylab = “Happy Planet Index”, main = “Life Expectancy and HPI, 2025” ) box()</p>
-</section>
-<section id="histogram-of-hpi-scores--" class="level1">
-<h1>—- Histogram of HPI scores —-</h1>
-<p>hist( hpi_2025$HPI, main = “Distribution of HPI Scores, 2025”, xlab = “Happy Planet Index”, ylab = “Number of Countries” )</p>
-</section>
-<section id="boxplot-of-hpi--" class="level1">
-<h1>—- Boxplot of HPI —-</h1>
-<p>boxplot( hpi_2025$HPI, main = “HPI Distribution, 2025”, ylab = “Happy Planet Index” )</p>
-</section>
-<section id="pie-chart-ecological-footprint-category--" class="level1">
-<h1>—- Pie chart: Ecological Footprint category —-</h1>
-<p>footprint_counts &lt;- table(hpi_2025$<code>Footprint category</code>) names(footprint_counts) &lt;- paste(“Category”, names(footprint_counts)) pie( footprint_counts, main = “Countries by Ecological Footprint Category, 2025” )</p>
-</section>
-<section id="d-perspective-surface-demo-plot--" class="level1">
-<h1>—- 3D perspective surface (demo plot) —-</h1>
-<p>x &lt;- seq(-10, 10, length.out = 30) y &lt;- seq(-10, 10, length.out = 30) z &lt;- outer(x, y, function(x, y) sin(sqrt(x^2 + y^2)))</p>
-<p>persp( x, y, z, theta = 30, phi = 25, expand = 0.7, xlab = “X”, ylab = “Y”, zlab = “Z”, main = “3D Perspective Surface” )</p>
+<pre><code>     subset= supp == "OJ")</code></pre>
+<p>legend(1.5, 9, c(“Ascorbic acid”, “Orange juice”), fill = c(“white”, “gray”), bty=“n”)</p>
+<pre><code>
+par(mar=c(5.1, 4.1, 4.1, 2.1))
+
+Persp- Almost exactly example(persp) x \&lt;- seq(-10, 10, length= 30) y \&lt;- x f \&lt;- function(x,y) { r \&lt;- sqrt(x^2+y^2); 10 \* sin(r)/r } z \&lt;- outer(x, y, f) z\[is.na(z)\] \&lt;- 1 0.5 to include z axis label par(mar=c(0, 0.5, 0, 0), lwd=0.5) persp(x, y, z, theta = 30, phi = 30,
+</code></pre>
+<pre><code>   expand = 0.5)</code></pre>
+<pre><code>
+par(mar=c(5.1, 4.1, 4.1, 2.1), lwd=1)
+
+Piechart- Example 4 from help(pie) par(mar=c(0, 2, 1, 2), xpd=FALSE, cex=0.5) pie.sales \&lt;- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12) names(pie.sales) \&lt;- c("Blueberry", "Cherry", "Apple", "Boston Cream", "Other", "Vanilla") pie(pie.sales, col = gray(seq(0.3,1.0,length=6)))
+
+![](fee057a0-333c-4b22-a6fc-9745befa5cd0.png)
+
+Hist() creates a whole plot lines() adds something to the existing plot
+
+when I wanted to read the excel sheet as it had several sheets I ran this code to see the name of sheets excel_sheets("C:/Users/smvic/Downloads/HPI2_2026.xlsx") then I wanted to read the "all countries" sheet that I ran this code: hpi \&lt;- read_excel( "C:/Users/smvic/Downloads/HPI2_2026.xlsx", sheet = "1. All countries" ) then I check the headings title: head(hpi) axis() controls the tick marks and labels displayed on a specific plot axis.
+
+![](Rplot08.png)
+
+![](Rplot9.png)
 
 
+library(readxl)
+
+```r
+library(readxl)
+
+--- Check sheets and load data ---
+excel_sheets("C:/Users/smvic/Downloads/HPI2_2026.xlsx")
+
+hpi &lt;- read_excel(
+  "C:/Users/smvic/Downloads/HPI2_2026.xlsx", 
+  sheet = "1. All countries"
+)
+head(hpi)
+
+hpi_all &lt;- read_excel(
+  "C:/Users/smvic/Downloads/HPI2_2026.xlsx",
+  sheet = "All Data",
+  range = "A2:T2451"
+)
+
+names(hpi_all)
+sort(unique(hpi_all$Year))
+
+--- Filter to 2025 ---
+hpi_2025 &lt;- subset(hpi_all, Year == 2025)
+dim(hpi_2025)
+head(hpi_2025)
+length(unique(hpi_2025$Country))
+
+--- Scatterplot: Life Expectancy vs HPI ---
+par(mar = c(5, 5, 3, 2))
+plot(
+  hpi_2025$`Life Expectancy`,
+  hpi_2025$HPI,
+  xlab = "Life Expectancy",
+  ylab = "Happy Planet Index",
+  main = "Life Expectancy and HPI, 2025"
+)
+box()
+
+--- Histogram of HPI scores ---
+hist(
+  hpi_2025$HPI,
+  main = "Distribution of HPI Scores, 2025",
+  xlab = "Happy Planet Index",
+  ylab = "Number of Countries"
+)
+
+--- Boxplot of HPI ---
+boxplot(
+  hpi_2025$HPI,
+  main = "HPI Distribution, 2025",
+  ylab = "Happy Planet Index"
+)
+
+--- Pie chart: Ecological Footprint category ---
+footprint_counts &lt;- table(hpi_2025$`Footprint category`)
+names(footprint_counts) &lt;- paste("Category", names(footprint_counts))
+pie(
+  footprint_counts,
+  main = "Countries by Ecological Footprint Category, 2025"
+)
+
+--- 3D perspective surface (demo plot) ---
+x &lt;- seq(-10, 10, length.out = 30)
+y &lt;- seq(-10, 10, length.out = 30)
+z &lt;- outer(x, y, function(x, y) sin(sqrt(x^2 + y^2)))
+
+persp(
+  x, y, z,
+  theta = 30,
+  phi = 25,
+  expand = 0.7,
+  xlab = "X",
+  ylab = "Y",
+  zlab = "Z",
+  main = "3D Perspective Surface"
+)</code></pre>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -50,20 +50,31 @@ par(mar=c(5.1, 4.1, 4.1, 2.1), lwd=1)
 
 Piechart- Example 4 from help(pie) par(mar=c(0, 2, 1, 2), xpd=FALSE, cex=0.5) pie.sales \<- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12) names(pie.sales) \<- c("Blueberry", "Cherry", "Apple", "Boston Cream", "Other", "Vanilla") pie(pie.sales, col = gray(seq(0.3,1.0,length=6)))
 
-![](images/clipboard-2670679410.png)
+![](fee057a0-333c-4b22-a6fc-9745befa5cd0.png)
 
 Hist() creates a whole plot lines() adds something to the existing plot
 
 when I wanted to read the excel sheet as it had several sheets I ran this code to see the name of sheets excel_sheets("C:/Users/smvic/Downloads/HPI2_2026.xlsx") then I wanted to read the "all countries" sheet that I ran this code: hpi \<- read_excel( "C:/Users/smvic/Downloads/HPI2_2026.xlsx", sheet = "1. All countries" ) then I check the headings title: head(hpi) axis() controls the tick marks and labels displayed on a specific plot axis.
 
-![](images/clipboard-4139347273.png)
+![](Rplot08.png)
 
-![](images/clipboard-1079207173.png)
+![](Rplot9.png)
 
 
 library(readxl)
 
----- Read data ----
+```r
+library(readxl)
+
+--- Check sheets and load data ---
+excel_sheets("C:/Users/smvic/Downloads/HPI2_2026.xlsx")
+
+hpi <- read_excel(
+  "C:/Users/smvic/Downloads/HPI2_2026.xlsx", 
+  sheet = "1. All countries"
+)
+head(hpi)
+
 hpi_all <- read_excel(
   "C:/Users/smvic/Downloads/HPI2_2026.xlsx",
   sheet = "All Data",
@@ -73,13 +84,13 @@ hpi_all <- read_excel(
 names(hpi_all)
 sort(unique(hpi_all$Year))
 
----- Filter to 2025 ----
+--- Filter to 2025 ---
 hpi_2025 <- subset(hpi_all, Year == 2025)
 dim(hpi_2025)
 head(hpi_2025)
 length(unique(hpi_2025$Country))
 
----- Scatterplot: Life Expectancy vs HPI ----
+--- Scatterplot: Life Expectancy vs HPI ---
 par(mar = c(5, 5, 3, 2))
 plot(
   hpi_2025$`Life Expectancy`,
@@ -90,7 +101,7 @@ plot(
 )
 box()
 
----- Histogram of HPI scores ----
+--- Histogram of HPI scores ---
 hist(
   hpi_2025$HPI,
   main = "Distribution of HPI Scores, 2025",
@@ -98,13 +109,14 @@ hist(
   ylab = "Number of Countries"
 )
 
----- Boxplot of HPI ----
+--- Boxplot of HPI ---
 boxplot(
   hpi_2025$HPI,
   main = "HPI Distribution, 2025",
   ylab = "Happy Planet Index"
 )
- ---- Pie chart: Ecological Footprint category ----
+
+--- Pie chart: Ecological Footprint category ---
 footprint_counts <- table(hpi_2025$`Footprint category`)
 names(footprint_counts) <- paste("Category", names(footprint_counts))
 pie(
@@ -112,7 +124,7 @@ pie(
   main = "Countries by Ecological Footprint Category, 2025"
 )
 
----- 3D perspective surface (demo plot) ----
+--- 3D perspective surface (demo plot) ---
 x <- seq(-10, 10, length.out = 30)
 y <- seq(-10, 10, length.out = 30)
 z <- outer(x, y, function(x, y) sin(sqrt(x^2 + y^2)))
@@ -127,4 +139,4 @@ persp(
   zlab = "Z",
   main = "3D Perspective Surface"
 )
-
+```
