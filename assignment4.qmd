@@ -36,15 +36,15 @@ Boxplot- Modified example(boxplot) - itself from suggestion by Roger Bivand par(
  legend(1.5, 9, c("Ascorbic acid", "Orange juice"), 
         fill = c("white", "gray"), 
         bty="n")
-```
+
 
 par(mar=c(5.1, 4.1, 4.1, 2.1))
 
 Persp- Almost exactly example(persp) x \<- seq(-10, 10, length= 30) y \<- x f \<- function(x,y) { r \<- sqrt(x^2+y^2); 10 \* sin(r)/r } z \<- outer(x, y, f) z\[is.na(z)\] \<- 1 0.5 to include z axis label par(mar=c(0, 0.5, 0, 0), lwd=0.5) persp(x, y, z, theta = 30, phi = 30,
 
-```         
+         
        expand = 0.5)
-```
+
 
 par(mar=c(5.1, 4.1, 4.1, 2.1), lwd=1)
 
@@ -63,10 +63,10 @@ when I wanted to read the excel sheet as it had several sheets I ran this code t
 
 library(readxl)
 
-```r
+
 library(readxl)
 
---- Check sheets and load data ---
+
 excel_sheets("C:/Users/smvic/Downloads/HPI2_2026.xlsx")
 
 hpi <- read_excel(
@@ -84,7 +84,7 @@ hpi_all <- read_excel(
 names(hpi_all)
 sort(unique(hpi_all$Year))
 
---- Filter to 2025 ---
+Filter to 2025 ---
 hpi_2025 <- subset(hpi_all, Year == 2025)
 dim(hpi_2025)
 head(hpi_2025)
@@ -101,7 +101,7 @@ plot(
 )
 box()
 
---- Histogram of HPI scores ---
+ Histogram of HPI scores ---
 hist(
   hpi_2025$HPI,
   main = "Distribution of HPI Scores, 2025",
@@ -109,14 +109,14 @@ hist(
   ylab = "Number of Countries"
 )
 
---- Boxplot of HPI ---
+ Boxplot of HPI ---
 boxplot(
   hpi_2025$HPI,
   main = "HPI Distribution, 2025",
   ylab = "Happy Planet Index"
 )
 
---- Pie chart: Ecological Footprint category ---
+ Pie chart: Ecological Footprint category ---
 footprint_counts <- table(hpi_2025$`Footprint category`)
 names(footprint_counts) <- paste("Category", names(footprint_counts))
 pie(
@@ -124,7 +124,7 @@ pie(
   main = "Countries by Ecological Footprint Category, 2025"
 )
 
---- 3D perspective surface (demo plot) ---
+3D perspective surface (demo plot) ---
 x <- seq(-10, 10, length.out = 30)
 y <- seq(-10, 10, length.out = 30)
 z <- outer(x, y, function(x, y) sin(sqrt(x^2 + y^2)))
@@ -139,4 +139,39 @@ persp(
   zlab = "Z",
   main = "3D Perspective Surface"
 )
-```
+
+
+
+# Assignment 3 - 09/30/26
+
+Document the scatterplot:
+par(las=1, mar=c(4, 4, 2, 4), cex=.7)    # adjust fonts of the text around the table
+plot.new()                               # make an empty page
+plot.window(range(x), c(0, 6))           # defining X and Y range
+lines(x, y1)                             # design line for Y1
+lines(x, y2)                             # design line for Y2
+points(x, y1, pch=16, cex=2)             # adding plots
+points(x, y2, pch=21, bg="white", cex=2) # adding plots
+axis(1, at=seq(0, 16, 4))                # design the axis
+axis(2, at=seq(0, 6, 2))                 # design the axis
+axis(4, at=seq(0, 6, 2))                 # design the axis
+box(bty="u")                             # adding a box
+mtext("Travel Time (s)", side=1, line=2, cex=0.8) # title for axis
+text(4, 5, "Bird 131")
+
+
+
+2) Anscombe's 
+
+![](Annscombes.png)
+after running this I understood that all has same R squered but when we map them we see differences
+m1 <- lm(y1 ~ x1, data = anscombe)
+m2 <- lm(y2 ~ x2, data = anscombe)
+m3 <- lm(y3 ~ x3, data = anscombe)
+m4 <- lm(y4 ~ x4, data = anscombe)
+
+summary(m1)
+summary(m2)
+summary(m3)
+summary(m4)
+
