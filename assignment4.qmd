@@ -104,3 +104,7 @@ summary(m1) summary(m2) summary(m3) summary(m4)
 ## Assignment 8 & 9 Dashboard
 
 <https://susanmohammadk22.github.io/my-assignment9-mapping/maps.html>
+
+dashboard:
+
+[https://qevent.shinyapps.io/epps6356-assignment9-mapping/](https://qevent.shinyapps.io/epps6356-assignment9-mapping/)
