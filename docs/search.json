@@ -280,6 +280,13 @@
     "text": "He analysed data sets and designed the graphed in 4 figures. The first graph is belonging to the data set 1., and it was a straight line among data showing the regression and it seems correct. In data sent 2 figure, Y has a smooth curved relation with x and there is little residual variability. In Figure 3 is more like a figure one but there is an observation lied close to the straight line and one observation is far from the line ( an outlier). Figure 4 is like figure 1 showing data forming well. all information about the slope of the regression line shows that we need to consider the mapping of the regression and residuals while we are considering the math and equations. Figures are as important as mathematical process as we can see the outliers in the maps easier and faster than the math."
   },
   {
+    "objectID": "assignment4.html#assignment-8-9-dashboard",
+    "href": "assignment4.html#assignment-8-9-dashboard",
+    "title": "Assignments.qmd",
+    "section": "Assignment 8 & 9 Dashboard",
+    "text": "Assignment 8 & 9 Dashboard\nhttps://susanmohammadk22.github.io/my-assignment9-mapping/maps.html\ndashboard:\nhttps://qevent.shinyapps.io/epps6356-assignment9-mapping/"
+  },
+  {
     "objectID": "im-assignment4.html",
     "href": "im-assignment4.html",
     "title": "IM-Assignment 4",
@@ -306,12 +313,5 @@
     "title": "Research Project",
     "section": "",
     "text": "Research Question:\nWhat language patterns differentiate voting bills that pass from bills that fail?\nArea/Topic:\nState legislature bills on voting. As voting in the US is conducted on the state level, states have a wide breadth of authority over their own internal voting laws. Policies like voter ID, voter registration requirements, and ballot access laws are topics of debate within state legislatures. By examining these laws and proposed laws in close detail, patterns can start to emerge and be noted.\nResearch Statement:\nMany bills are proposed and passed within state legislatures even when restricting to bills only related to voting. Due to the large number of bills and their length, it is difficult for a single individual or even a team or researchers to analyze them all in depth. By employing knowledge mining methodology these bills can be examined more in depth.\nKnowledge mining methods would be applied to identify patterns in proposed bills that did not end up passing when compared to bills that did end up passing. Additionally, these bills can be analyzed in conjunction with state and legislature specific factors such as partisanship.\nMethod:\nKnowledge mining text analysis methods would be utilized to analyze the content of state legislature election bills. This text data mining will help highlight relationships and patterns within the text and can handle larger amounts of text than a human would be able to.\nStep 1: N-gram analysis: Identify key multi-word phrases that distinguish bills\nStep 2: Topic modeling: Discover if bills cluster by substantive themes. Test if passed/failed bills differ in topic proportions\nStep 3: Wordfish : Scale bills on underlying restrictiveness dimension. Test if dimension predicts passage (logistic regression)"
-  },
-  {
-    "objectID": "assignment4.html#assignment-8-9-dashboard",
-    "href": "assignment4.html#assignment-8-9-dashboard",
-    "title": "Assignments.qmd",
-    "section": "Assignment 8 & 9 Dashboard",
-    "text": "Assignment 8 & 9 Dashboard\nhttps://susanmohammadk22.github.io/my-assignment9-mapping/maps.html"
   }
 ]
